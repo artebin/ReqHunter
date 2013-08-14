@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xsd:schema xmlns:RARE="http://trevize.net/RARE" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://trevize.net/RARE">
+
+	<xsd:element name="requirement" type="RARE:requirement_t" />
+
+	<xsd:complexType name="requirement_t">
+		<xsd:sequence maxOccurs="1" minOccurs="0">
+			<xsd:element name="id" type="xsd:string" maxOccurs="1"
+				minOccurs="1" />
+			<xsd:element name="category" type="xsd:string" maxOccurs="1"
+				minOccurs="0" />
+			<xsd:element name="name" type="xsd:string" maxOccurs="1"
+				minOccurs="1" />
+			<xsd:element name="priority" type="RARE:priority_t"
+				maxOccurs="1" minOccurs="1" />
+			<xsd:element name="description" type="xsd:string"
+				maxOccurs="1" minOccurs="1" />
+			<xsd:element name="verification" type="RARE:verification_t"
+				maxOccurs="1" minOccurs="1" />
+			<xsd:element name="source" type="xsd:string" maxOccurs="unbounded"
+				minOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="priority_t">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="M" />
+			<xsd:enumeration value="D" />
+			<xsd:enumeration value="O" />
+			<xsd:enumeration value="X" />
+			<xsd:enumeration value="R" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="verification_t">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="T" />
+			<xsd:enumeration value="R" />
+			<xsd:enumeration value="I" />
+			<xsd:enumeration value="TBD" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ReqHunter" default="build_dist" basedir=".">
+	<property name="build_dir" value="dist" />
+	<property name="version" value="1.1" />
+	<property name="date" value="2011.11.14" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+
+	<target name="clean">
+		<delete dir="${build_dir}" />
+		<mkdir dir="${build_dir}" />
+	</target>
+
+	<target name="build_dist">
+		<antcall target="clean" />
+
+		<mkdir dir="./${build_dir}/src" />
+		<copy todir="./${build_dir}/src">
+			<fileset dir="./src" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/config" />
+		<copy todir="./${build_dir}/config">
+			<fileset dir="./config" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/documentation" />
+		<copy todir="./${build_dir}/documentation">
+			<fileset dir="./documentation" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/gfx" />
+		<copy todir="./${build_dir}/gfx">
+			<fileset dir="./gfx" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/html" />
+		<copy todir="./${build_dir}/html">
+			<fileset dir="./html" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/lib" />
+		<copy todir="./${build_dir}/lib">
+			<fileset dir="./lib" />
+		</copy>
+
+		<mkdir dir="${build_dir}/plugins" />
+		<copy todir="./${build_dir}/plugins">
+			<fileset dir="./plugins" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/schemas" />
+		<copy todir="./${build_dir}/schemas">
+			<fileset dir="./schemas" />
+		</copy>
+
+		<mkdir dir="./${build_dir}/testing" />
+		<copy todir="./${build_dir}/testing">
+			<fileset dir="./testing" />
+		</copy>
+
+		<exec dir="./${build_dir}" executable="/bin/sh">
+			<arg line="./schemas/generate-XML-binding.sh" />
+		</exec>
+
+		<copy todir="./${build_dir}">
+			<fileset file="./ReqHunter.sh" />
+			<fileset file="./ReqHunter.bat" />
+			<fileset file="./COPYING" />
+			<fileset file="./README" />
+			<fileset file="./reqhunter.rc" />
+		</copy>
+
+		<path id="ReqHunter.classpath">
+			<pathelement location="bin" />
+			<fileset dir="./${build_dir}/lib" includes="**/*.jar" />
+		</path>
+
+		<echo message="ReqHunter.classpath=${toString:ReqHunter.classpath}" />
+
+		<mkdir dir="./${build_dir}/bin" />
+
+		<javac debug="true" debuglevel="${debuglevel}" destdir="./${build_dir}/bin" source="${source}" target="${target}">
+			<src path="./${build_dir}/src" />
+			<classpath refid="ReqHunter.classpath" />
+		</javac>
+
+		<javadoc destdir="./${build_dir}/javadoc" author="true" version="true" use="true" windowtitle="ReqHunter API">
+			<packageset dir="src" defaultexcludes="yes">
+			</packageset>
+		</javadoc>
+
+		<jar destfile="./${build_dir}/ReqHunter-${version}-${date}.jar">
+			<fileset dir="./${build_dir}/bin" />
+			<fileset dir="./${build_dir}/src" />
+			<fileset dir="./${build_dir}/javadoc" />
+		</jar>
+	</target>
+</project>

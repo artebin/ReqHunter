@@ -1,0 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2010-2011 Nicolas James.
+ * All rights reserved.
+ * ReqHunter is published under the GPLv3 Licence, see the COPYING file.
+ *
+ * Nicolas James
+ * email: nicolas.james@gmail.com
+ * web: http://njames.trevize.net
+ ******************************************************************************/
+
+                      ReqHunter 1.1 (November 14, 2011)
+
+This is version 1.1 of ReqHunter, a software for managing project requirements.
+
+Installation Instructions
+=========================
+Simply execute the shell script ReqHunter.sh if you are using a GNU/Linux 
+system, or the batch file ReqHunter.bat if you are not lucky and you have to
+use MS-Windows.

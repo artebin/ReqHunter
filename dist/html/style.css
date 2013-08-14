@@ -1,0 +1,26 @@
+body {
+font-size: 14px; 
+font-family: arial, helvetica, sans-serif;
+}
+
+a:hover {
+background-color: #cccccc;
+}
+
+.head_separator {
+border-bottom: 2px solid black;
+}
+
+.imgborder {
+border: 1px solid #000000;
+margin: 5px 0px 5px 0px;
+}
+
+li {
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.center {
+text-align: center;
+}

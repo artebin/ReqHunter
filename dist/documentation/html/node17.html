@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Content extraction</TITLE>
+<META NAME="description" CONTENT="Content extraction">
+<META NAME="keywords" CONTENT="document">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="document.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html213"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html211"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html205"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html214"
+  HREF="node18.html">Requirements database</A>
+<B> Up:</B> <A NAME="tex2html212"
+  HREF="node14.html">ReqHunter</A>
+<B> Previous:</B> <A NAME="tex2html206"
+  HREF="node16.html">Implementation of the API</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00033000000000000000">
+Content extraction</A>
+</H2>
+
+<P>
+The content extraction process is provided by the Apache POI library (the Java API for Microsoft Documents), http://poi.apache.org/.
+
+<P>
+
+<UL>
+<LI>The extraction is fairly based on the style associated to paragraphs. You have to define a specific style for the content you want to extract.
+</LI>
+<LI>Execute the code located in net.trevize.rare.WordDocExtractor to list the styles encapsulated in your Word document.
+</LI>
+<LI>Search for the styles you have defined and modify the class net.trevize.rare.WordDocExtractor to parse your content and create Requirement objects (actually your implementation of the Requirement interface).
+</LI>
+</UL>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:import_illu"></A><A NAME="105"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Screenshot of a Word document and a user requirement.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>	<IMG
+  WIDTH="1115" HEIGHT="385" ALIGN="BOTTOM" BORDER="0"
+ SRC="./import_req_illu.png"
+ ALT="Image import_req_illu"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Nicolas James
+2011-07-19
+</ADDRESS>
+</BODY>
+</HTML>

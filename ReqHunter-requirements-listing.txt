@@ -1,0 +1,20 @@
+That's the Motto of ReqHunter?
+Simplify the work on requirements in large projects?
+
+Considering SWRL for encoding the project rules.
+
+UI Requirements:
+  * the table cells could be multi-line, Desirable: the cells have a max height but may be multilines.
+  * undo/redo
+  * commitment to the requirements are explicit to the user
+  * UI is configurable via a property file
+  * the maximum heigth for a cell may be specified via the configuration file (for multiline cells).
+
+Function Requirements:
+  * ReqHunter shall be able to constitute a list of requirements from a Word Document, Mandatory
+  * ReqHunter shall be able to generate MS-Word documents, Mandatory.
+  * logging
+  * versioning
+  * configurable via a property file
+  * customizable to requirements needed by specific projects
+  * dependency checking

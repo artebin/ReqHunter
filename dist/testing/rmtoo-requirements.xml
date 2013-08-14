@@ -1,0 +1,2726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:requirements xmlns:ns2="http://trevize.net/RMTOO">
+    <requirement>
+        <id>0</id>
+        <name>Output of PDF Configuration</name>
+        <type>design decision</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The output PDF module \textbf{must} support configuration options in the way that different attributes can separately switched on.</description>
+        <rationale>Often there is the need that different information should be written in different documents,</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>management:8</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>1</id>
+        <name>Modular Output</name>
+        <type>design decision</type>
+        <invented_on>2010-03-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The output generation \textbf{must} be modular on a requirement tag level.</description>
+        <rationale>This means, that the class for handling (i.e. parsing) is also responsible for the output.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+    </requirement>
+    <requirement>
+        <id>2</id>
+        <name>Output XML Example Implementation</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>customers</owner>
+        <description>\textsl{rmtoo} \textbf{must} implement an example XML output class.</description>
+        <rationale>To show how to implement (customer) specific XML output modules, this example XML output can be used as a reference implementation. </rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>development:2 customers:2</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>3</id>
+        <name>Constraints Inheritance</name>
+        <type>requirement</type>
+        <invented_on>2011-02-17</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Constrains \textbf{must} be inherited from the dependent requirements. </description>
+        <rationale>A constraint for a whole solution must be valid for each part (if not: this is not a constraint!).</rationale>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>4</id>
+        <name>Requirements Owner</name>
+        <type>requirement</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a owner tag.</description>
+        <rationale>The ower is the stakeholder who defines the requirment (sometimes different from the one, who writes it down --- which is the 'Invented by' person).</rationale>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>5</id>
+        <name>Evaluate Pricing Information: Graph</name>
+        <type>requirement</type>
+        <invented_on>2010-09-09</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be the possibility to evaluate the pricing information by using the pricing sheet to generate a graph.</description>
+        <solved_by>EvalPriceGraphColor EvalPriceGraphCosts</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>6</id>
+        <name>Man Page Analytics Description Words</name>
+        <type>requirement</type>
+        <invented_on>2010-08-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the Description Words analytic module.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>7</id>
+        <name>Version Control System</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} use a Version Control System for history handling like baselining.</description>
+        <rationale>A major use case is working with different sets of requirements: e.g. develop version 2 while adding features to version 1. </rationale>
+        <solved_by>VCSInterval</solved_by>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>8</id>
+        <name>Requirements Invented On</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a 'invented on' tag.</description>
+        <rationale>This is the date when the requirement was written.</rationale>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>9</id>
+        <name>Default Configuration for maximum line length using in Topics</name>
+        <type>requirement</type>
+        <invented_on>2010-12-23</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The default maximum line length used in topics \textbf{must} be 80.</description>
+        <rationale>This is the old and ever used value for this.</rationale>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>10</id>
+        <name>Emace Mode to Support Traceablility</name>
+        <type>design decision</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs mode \textsl{must} support tracability.</description>
+        <rationale>Maybe this might include automatic timestamp update.</rationale>
+        <status>not done</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>11</id>
+        <name>Emacs Mode for Requirements</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an Emacs mode which supports the requirements file format.</description>
+        <status>finished</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>12</id>
+        <name>Debian Package</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} be distributed as a Debian package. </description>
+        <rationale>This is the main development platform --- and currently the most used platform for \textsl{rmtoo}.</rationale>
+        <status>finished</status>
+        <topic>Deployment</topic>
+        <class>implementable</class>
+        <priority>management:8</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>13</id>
+        <name>Text Base Description Requirement References</name>
+        <type>requirement</type>
+        <invented_on>2010-03-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The text base description for the different output formats \textbf{must} be organized in a way that requirements can reference to one specific part.</description>
+        <rationale>During writing a requirement it is (mostly) clear to which topic the requirement belongs to.  So it makes sense to define it there. </rationale>
+        <note>The 'specific part' will by typically a chapter or section in an document.\par This is implemented using 'topics'.</note>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>14</id>
+        <name>Output of Pricing Table: Input Cell Dependent On</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to define the dependent on relation for each requirement.</description>
+        <rationale>Different vendors might want to split up the costs to different departments.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>15</id>
+        <name>Status: Assigned Value</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The status 'assigned' \textbf{must} be followed by the name of a person (separated with a colon) which works on the requirement and the date when the work was assigned to the person. </description>
+        <note>The name of the person should be checked against a configured list.\par Example: Status: assigned:Mustermann:2011-04-27</note>
+        <status>finished:Florath:2011-04-27:2h</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>16</id>
+        <name>Documentation Man Page for Artifacts</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with (*nix) man pages describing the generated artifacts.</description>
+        <solved_by>ManSecArtDocuments ManSecArtElements</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>17</id>
+        <name>Requirement Tags</name>
+        <type>requirement</type>
+        <invented_on>2010-05-16</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement description \textbf{must} include a set of tag-value pairs.</description>
+        <rationale>This can be easily implemented.</rationale>
+        <solved_by>ReqTagDescription ReqTagInventedBy ReqTagInventedOn ReqTagStatus ReqTagTopic ReqTagsAgile ReqTagsBasic</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>18</id>
+        <name>Output: Include Version Identifier of Requirements</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>All \textsl{rmtoo} output modules \textbf{must} include the Version Control System identifier of the used requirements.</description>
+        <rationale>This can be one identifier for e.g. documents or an interval for statistic output.</rationale>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>19</id>
+        <name>Output XML for GanttProject Second Generation</name>
+        <type>requirement</type>
+        <invented_on>2010-09-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>customers</owner>
+        <description>\textsl{rmtoo} \textbf{must} support generation of topic based XML output which can be read in by the GanttProject.</description>
+        <rationale>For experimentation there should be a output module implementation which supports output of the GanttProject XML file.</rationale>
+        <note>This was suggested by a customer - but currently some details are unknown.  So the first version will be a implementation to get the requirements sorted.\par This is similar to the GantProject output (without a number) - but is now based on the topics.</note>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>management:10 development:10 customers:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>20</id>
+        <name>Man Page Artifact Requirement Dependency Graph</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the output requirement dependency graph.</description>
+        <rationale>This documentation must describe the different colors (circle, font), lines, ...\par Also this must include the configuration options.</rationale>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>21</id>
+        <name>Files in File System</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} use files located in the file system as input.</description>
+        <rationale>This can e.g. the checked out working copy of the requirements from the Version Control System.  But the files can also be completely independent from any Version Control System.</rationale>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>22</id>
+        <name>Documentation Man Page</name>
+        <type>design decision</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a (*nix) man page describing the basic behaviour.</description>
+        <rationale>This typically describes the input and output and all the parameters needed (but not the ideas behind).</rationale>
+        <solved_by>ManEmacsMode ManOverview ManSecAnalytics ManSecArtifacts ManSecFileFormats ManSecGeneric</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>23</id>
+        <name>Output of Priority List</name>
+        <type>design decision</type>
+        <invented_on>2010-02-13</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible, to output a list of all \textsl{open} requirements sorted by priority.</description>
+        <rationale>This are typically those requirments which must be worked on first in an agile development process.</rationale>
+        <solved_by>PrioOutputEft PrioOutputInGraph PrioOutputLaTeX PrioOutputOrderByClass</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>24</id>
+        <name>Evaluate Pricing Information: Completeness Checks</name>
+        <type>requirement</type>
+        <invented_on>2010-09-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Pricing information \textbf{must} be checked if they are complete. </description>
+        <rationale>For each requirement of the used requirement set there must be exactly one set of parameters.  Therefore there is the need to check if all requirements are available and if all parameters are complete and correct.</rationale>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>25</id>
+        <name>Man Page Overview</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with an overview man page. </description>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+    </requirement>
+    <requirement>
+        <id>26</id>
+        <name>Topic</name>
+        <type>design decision</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{should} have a topic tag.</description>
+        <rationale>The topic tag defines the relation of requirement to a special topic.</rationale>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>27</id>
+        <name>Semantic Checks</name>
+        <type>design decision</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check the requirements for semantic errors.</description>
+        <rationale>Semantic errors are errors which affect the meaning of a set of requirements.</rationale>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:9</priority>
+    </requirement>
+    <requirement>
+        <id>28</id>
+        <name>Output of Pricing Table: Input Cell Compliant</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible that the vendor can define the compliant of each requirement.</description>
+        <note>This is typically done with the help of \textsl{full}, \textsl{partially} or \textsl{none}.</note>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>29</id>
+        <name>Txt Comment Semantics</name>
+        <type>requirement</type>
+        <invented_on>2010-12-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Comments (resp. empty lines) \textbf{must} be treated as comments which describe the next tag.</description>
+        <rationale>This definition is needed to have the possibility to re-arrange or extend existing requirements.</rationale>
+        <solved_by>TxtComments TxtEmptyLines</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>30</id>
+        <name>Version in Application</name>
+        <type>requirement</type>
+        <invented_on>2011-03-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Version information \textbf{must} be available in all applications. </description>
+        <note>This includes every single script which can be executed. If there is someday a GUI there must be a function to display the version.</note>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <priority>users:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>31</id>
+        <name>Topics must be supported</name>
+        <type>requirement</type>
+        <invented_on>2010-05-16</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support the possibility to define topics which can be referenced to create different output documents.</description>
+        <rationale>This gives the possibility to link a requirement itself to a topic / theme / chapter.</rationale>
+        <solved_by>EMTopics TopicGenFormat TopicGenTagOrder TopicTags</solved_by>
+        <status>finished</status>
+        <topic>Topic</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>32</id>
+        <name>Man Page Emacs Mode Topic</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with man pages describing the Emacs Mode for topics.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>33</id>
+        <name>Requirement generics: Order of Tags</name>
+        <type>requirement</type>
+        <invented_on>2010-05-16</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The order of tags in a requirements description \textbf{must} be independent of the semantic.</description>
+        <rationale>Order doesn't matter.</rationale>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>34</id>
+        <name>Test Integration</name>
+        <type>requirement</type>
+        <invented_on>2010-03-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>For each requirement there \textbf{must} be a integration test which tests the requirement in a larger context.</description>
+        <rationale>This tests the interaction between the different layers of implementation and makes sure that the interaction works.</rationale>
+        <solved_by>TestTool</solved_by>
+        <status>not done</status>
+        <topic>Testing</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>35</id>
+        <name>Requirements Type</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a type tag which must be one of &quot;master requirement&quot;, &quot;initial requirement&quot;, &quot;requirement&quot; or &quot;design decision&quot;.</description>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>36</id>
+        <name>Output of Text Document must be configurable</name>
+        <type>requirement</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The output of the created document \textbf{must} be configurable. </description>
+        <note>This can be done e.g. by supporting LaTeX macros or HTML CSS tags. </note>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>37</id>
+        <name>Documentation</name>
+        <type>requirement</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} be documented.</description>
+        <solved_by>DocManPage DocSlides Version</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <priority>development:6 customers:5</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>38</id>
+        <name>Man Page Artifact Elaboration List</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the output of the elaboration list.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>39</id>
+        <name>Analytics: Requirement Topic Coherence</name>
+        <type>requirement</type>
+        <invented_on>2010-08-05</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an analytics module which compares the coherence of one requirement inside one topic to the outside of a topic. </description>
+        <rationale>If there are too many links to the outside, the requirement might be in the wrong topic.</rationale>
+        <status>finished</status>
+        <topic>Analytics</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>40</id>
+        <name>Man Page Analytics Requirement Topic Coherence</name>
+        <type>requirement</type>
+        <invented_on>2010-08-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the Requirement Topic Coherence analytic module.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>41</id>
+        <name>Output Statistics about Persons: Time</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The amount of time which were finished by a person \textbf{must} be included into the person statistics.</description>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>42</id>
+        <name>Output of Pricing Table: Computation of Dependent Costs</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The document \textbf{must} compute the costs of all the dependent requirements.</description>
+        <rationale>This must be based on the customer's input of dependent requirements.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>43</id>
+        <name>Graph Check for Strongly Connected Component</name>
+        <type>requirement</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check that there is no strongly connected component in the requirement dependency with a size of two or larger.</description>
+        <rationale>Directed circles are strongly connected components.  A lot of other algorithms and assumptions do not work any more, if there are circles in the requirement graph.</rationale>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>44</id>
+        <name>Output of Dependency Graph: Topics based</name>
+        <type>design decision</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of a requirements dependency graph which is topic based.</description>
+        <rationale>A graph says more than thousand words.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+    </requirement>
+    <requirement>
+        <id>45</id>
+        <name>Emacs Mode Indentation</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs mode \textbf{must} provide functionality for automatic indentation.</description>
+        <status>finished</status>
+        <topic>EmacsMode</topic>
+        <class>implementable</class>
+        <priority>customers:6</priority>
+    </requirement>
+    <requirement>
+        <id>46</id>
+        <name>Packaging</name>
+        <type>requirement</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} be distributed as a package. </description>
+        <rationale>This makes it very easy to install and update \textsl{rmtoo}. </rationale>
+        <solved_by>PackDebian TestBeforePack</solved_by>
+        <status>not done</status>
+        <topic>Deployment</topic>
+        <priority>management:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>47</id>
+        <name>Test Tool: python-nose</name>
+        <type>design decision</type>
+        <invented_on>2010-03-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Test \textbf{must} be started with \textsl{nosetests}.</description>
+        <rationale>\textsl{nosetests} is a common used test tool which integrates fine in the \textsl{rmtoo} development environment.\par It also can check the test coverage.</rationale>
+        <status>not done</status>
+        <topic>Testing</topic>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>48</id>
+        <name>Traceability</name>
+        <type>requirement</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>When a requirement changes, all dependency requirements \textbf{must} be marked.</description>
+        <rationale>Maked means e.g. colorized in the graph. There is the need for a tag 'last changed' and 'last checked'.</rationale>
+        <solved_by>EMTraceability NoDirectedCircles</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:5</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>49</id>
+        <name>Default Configuration</name>
+        <type>requirement</type>
+        <invented_on>2010-12-23</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>At all places where it makes sense, a default configuration \textbf{must} be given.</description>
+        <note>This simplifies the normal use of rmtoo: not all aspects must be defined always (but can).</note>
+        <solved_by>ConfigTopicMaxLineLength ConfigTopicMaxLineLengthDefault</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>50</id>
+        <name>No Directed Circles Allowed</name>
+        <type>requirement</type>
+        <invented_on>2010-02-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Directed circles in requirements dependencies \textbf{must} be rejected.</description>
+        <rationale>Directed circles make no sense in requirements management and make traceability impossible.</rationale>
+        <status>finished</status>
+        <topic>Checks</topic>
+        <class>implementable</class>
+        <priority>development:9</priority>
+    </requirement>
+    <requirement>
+        <id>51</id>
+        <name>Analytics: Topic Coherence</name>
+        <type>requirement</type>
+        <invented_on>2010-08-05</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an analytics module which compares the coherence inside one topic to the outside of a topic.</description>
+        <rationale>If there are too many links to the outside, a topic is mostly not well chosen.</rationale>
+        <note>This means that all the links inside a topic are counted and compared to the ones which point to the outside.</note>
+        <status>finished</status>
+        <topic>Analytics</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>52</id>
+        <name>Man Page Analytics HotSpot</name>
+        <type>requirement</type>
+        <invented_on>2010-08-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the HotSpot analytic module.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>53</id>
+        <name>Effort Estimation Measure</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The effort estimation \textbf{must} be given as (abstract) effort points.</description>
+        <rationale>This given an independence between 'real' effort (e.g. days) and estimated which can be easy re-based to a 'real' effort after some (SCRUM) Sprints.</rationale>
+        <solved_by>EftAllowedMeasure</solved_by>
+        <status>finished</status>
+        <topic>ReqTagEffortDesc</topic>
+        <class>implementable</class>
+    </requirement>
+    <requirement>
+        <id>54</id>
+        <name>Output of Text Document Use Same Base</name>
+        <type>requirement</type>
+        <invented_on>2010-03-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The output of the text document \textbf{must} use the same description for all different outputs.</description>
+        <rationale>I.e. with the help of one document description, it must be possible to generate different formats.</rationale>
+        <note>This is implemented using so called 'topics'.</note>
+        <solved_by>OutputHTML OutputPDF</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>55</id>
+        <name>Use Txt</name>
+        <type>design decision</type>
+        <invented_on>2010-02-08</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} use txt-files for documenting requirments. </description>
+        <rationale>There is no need for a special editor - normal editors (such as emacs and vi) can be used.</rationale>
+        <solved_by>Checks TxtCommentSemantics</solved_by>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>56</id>
+        <name>Output of Pricing Table: Input Cell Dayrate</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to define the dayrate for each requirement.</description>
+        <rationale>Different requirements might need different people which might be payed different.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>57</id>
+        <name>Emacs Mode Highlight Tags</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs mode \textbf{must} provide tag highlighting.</description>
+        <status>finished</status>
+        <topic>EmacsMode</topic>
+    </requirement>
+    <requirement>
+        <id>58</id>
+        <name>Effort Estimation Allowed Measure Unit</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The effort estimation \textbf{must} be one of {0, 1, 2, 3, 5, 8, 13, 21}.</description>
+        <rationale>This is the typically used start of the fibonacci numbers for this.  0 is no effort, 1 is tiny effort and so on until 21 is huge effort.</rationale>
+        <status>finished</status>
+        <topic>ReqTagEffortDesc</topic>
+        <class>implementable</class>
+    </requirement>
+    <requirement>
+        <id>59</id>
+        <name>Evaluate Pricing Information: Checks</name>
+        <type>requirement</type>
+        <invented_on>2010-09-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Pricing information \textbf{must} be checked.</description>
+        <solved_by>EvalPriceChecksCompleteness EvalPriceChecksComplicance</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>60</id>
+        <name>Requirements Description</name>
+        <type>requirement</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a description tag.</description>
+        <rationale>This is the description what the requirment must fulfill.</rationale>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>61</id>
+        <name>Graph Check for Exact One Master Requirement</name>
+        <type>requirement</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check that there exactly one master requirement.</description>
+        <rationale>The master requirement does not have any successors.  It is the only requirement without successors.  There must be only one master requirement --- which is the base or root of everything. </rationale>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>62</id>
+        <name>Output Statistics about Work: Relation</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The relation between the abstract EfE units and the real spent working hours \textbf{must} be included in the work amount statistics.</description>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>2</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>63</id>
+        <name>Status: Assigned</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The status \textbf{must} be set to 'assigned' when a person works on this requirement.</description>
+        <rationale>Work is typically not atomic.  The assigned state means, that one persons works on this.  This could be seen as a mutex: only the one which successfully checks in the assigned with his name is allowed to work on this requirement.</rationale>
+        <note>There are extensions available - please consult the dependent requirements. </note>
+        <solved_by>StatusAssignedValue OutputAssigned ConfigDevelopers</solved_by>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>64</id>
+        <name>Version Control System: Latest Version</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The latest version specified is the version \textsl{rmtoo} \textbf{must} work on.</description>
+        <rationale>This means that all documents and other artifacts which only allow one version as base must use the latest given.</rationale>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>65</id>
+        <name>rmtoo</name>
+        <type>master requirement</type>
+        <invented_on>2010-02-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} exists.</description>
+        <rationale>The world needs a good, usable and free Requirements Management Tool.\par It looks that there are no such programs out.\par But: it's complex! </rationale>
+        <solved_by>Documentation OpenSource Processing Simplicity Testing</solved_by>
+        <status>not done</status>
+        <topic>ReqsDocument</topic>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>66</id>
+        <name>Graph Checks</name>
+        <type>design decision</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check the requirements for graph errors.</description>
+        <rationale>Graph errors are errors which result in a broken requirement dependency graph, e.g. a circular dependency.</rationale>
+        <solved_by>CheckGraphOneComponent CheckGraphOneMaster CheckGraphSCC</solved_by>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:9</priority>
+    </requirement>
+    <requirement>
+        <id>67</id>
+        <name>Configuration of Developers</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The list of persons which can realize / implement requirement \textbf{must} be configurable.</description>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>68</id>
+        <name>Man Page Artifact LaTeX</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the LaTeX output.</description>
+        <rationale>The man page should also give some hints how to use the LaTeX file and the configuration options for this modules.</rationale>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>69</id>
+        <name>Output XML for GanttProject</name>
+        <type>requirement</type>
+        <invented_on>2010-04-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>customers</owner>
+        <description>\textsl{rmtoo} \textbf{must} support generation of XML output which can be read in by the GanttProject.</description>
+        <rationale>For experimentation there should be a output module implementation which supports output of the GanttProject XML file.</rationale>
+        <note>This was suggested by a customer - but currently some details are unknown.  So the first version will be a implementation to get the requirements sorted.\par There are no more requirements for this feature.  So it is seen as finished.</note>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>development:2 customers:2</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>70</id>
+        <name>Status: Finished Value</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The status 'finished' \textbf{may} be followed by the name of a person (separated with a colon) which worked on the requirement, the date when the work was finished and the time in hours how long it took to finish the requirement.</description>
+        <rationale>These information enable rmtoo to create a couple of different statistics, e.g. how many hours were spend in the whole project and an estimation how much is open and how long this will take.\par The information is optional because of compatibility reasons.</rationale>
+        <note>The name of the person should be checked against a configured list.\par Example: Status: finished:Mustermann:2011-04-29:5h</note>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>71</id>
+        <name>Output of Pricing Table: Computation</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The generated document \textbf{must} support automatic computation of the results needed to compare different biddings.</description>
+        <rationale>These are the fields which the document must automatically compute.</rationale>
+        <solved_by>OPCDependent OPCSum</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>72</id>
+        <name>Graph Check for Connected Component</name>
+        <type>requirement</type>
+        <invented_on>2010-06-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check that the requirements dependency graph consists of only one component.</description>
+        <rationale>There must maximal one component - each node must be reachable by the master requirement.</rationale>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>73</id>
+        <name>Emacs Mode: Support Author</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs Mode \textbf{must} be implemented in the way that it supports the author / writer of a requirement.</description>
+        <note>This can be done by e.g. switching on some different commonly used minor modes like flyspell and auto-fill.</note>
+        <solved_by>EMAutoFill EMFlyspellMode EMIndentation</solved_by>
+        <status>finished</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>74</id>
+        <name>Output of Pricing Table: Computation of Sum</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The document \textbf{must} compute the sum of costs of all the dependent requirements plus local requirement costs.</description>
+        <rationale>This must be based on the customer's input.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>75</id>
+        <name>Priority Computation</name>
+        <type>design decision</type>
+        <invented_on>2010-02-13</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The priority \textbf{must} be computed as the normalized average of all stakeholder priorities multiplied by the maximum dependent weight.</description>
+        <rationale>This makes sure that it is possible to zero out things that are not needed and that important things have a higher priority than not so important things.</rationale>
+        <solved_by>PrioFormat</solved_by>
+        <status>finished</status>
+        <topic>ReqTagFormatDesc</topic>
+    </requirement>
+    <requirement>
+        <id>76</id>
+        <name>Output of Assigned List</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible, to output a list of all \textsl{assigned} requirements sorted by date.</description>
+        <rationale>This gives information about the currently work in progress. </rationale>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>77</id>
+        <name>Man Page Emacs Mode</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with man pages describing the Emacs Mode.</description>
+        <solved_by>ManEmacsModeGlo ManEmacsModeReq ManEmacsModeTic</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>78</id>
+        <name>Text Base Description Choose Base Tags</name>
+        <type>requirement</type>
+        <invented_on>2010-03-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The text base description for the different output formats \textbf{must} be organized in a way that it is possible to specify for each output document the tags which will be outputted.</description>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>79</id>
+        <name>Output Requirements</name>
+        <type>requirement</type>
+        <invented_on>2010-12-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>If \textbf{must} be possible to output requirements in the text file format.</description>
+        <rationale>This is needed by different other (automatic) tools which work on the rmtoo input files.  For example a (possible and not yet planned) GUI can write new requirements or changes to existing requirements with the help of this functionality.</rationale>
+        <solved_by>OutputReqsPreserve</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>21</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>80</id>
+        <name>Topic Tags</name>
+        <type>requirement</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each topic \textbf{must} include a set of tag-value pairs.</description>
+        <rationale>This can be easily implemented.</rationale>
+        <solved_by>TopicTagName TopicTagSubTopic</solved_by>
+        <status>finished</status>
+        <topic>Topic</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>81</id>
+        <name>Output of Pricing Table</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support generation of a pricing table which can be easily filled in by vendors.</description>
+        <rationale>This pricing table can be used to get the commercial bidding of different vendors.</rationale>
+        <solved_by>EvaluatePricing OPComputation OPInput</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>82</id>
+        <name>Documentation Slides</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>For documentation purposes there \textbf{must} exists a slide show introducing the major features.</description>
+        <rationale>Software not only needs to be good --- also the 'marketing' aspect should be considered: the more people / companies \textsl{rmtoo} using, the more bug reports and comments there will be, the better \textsl{rmtoo} will be.</rationale>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:10 customers:7</priority>
+    </requirement>
+    <requirement>
+        <id>83</id>
+        <name>Automatic Generation of Results</name>
+        <type>requirement</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support the automatic genration of outputs.</description>
+        <rationale>Because rmtoo is aimed to be used in productive development environments, there is the need that all the different outputs (e.g. PDFs, graphs, ...) must be generated automatically (without user interaction).</rationale>
+        <solved_by>Completed Makefile</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:3</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>84</id>
+        <name>Priority Output in Graph</name>
+        <type>design decision</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The priority output \textbf{must} be included in graph for all open requirements.</description>
+        <rationale>This gives a great overview what must be done.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>development:8</priority>
+    </requirement>
+    <requirement>
+        <id>85</id>
+        <name>Txt Empty Lines</name>
+        <type>requirement</type>
+        <invented_on>2010-12-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support empty lines in the text input files.</description>
+        <rationale>This makes it easier to read requirements.</rationale>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>86</id>
+        <name>Topic generics: Order of Tags</name>
+        <type>requirement</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The order of tags in a topic description \textbf{must not} be independent of the semantic.</description>
+        <rationale>Order does matter.</rationale>
+        <status>finished</status>
+        <topic>Topic</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>87</id>
+        <name>Requirement Tags: Basics</name>
+        <type>requirement</type>
+        <invented_on>2010-08-04</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The basic requirements properties \textbf{must} be supported. </description>
+        <note>The basic requirements properties are the one which depend on this requirement.</note>
+        <solved_by>ReqTagName ReqTagOwner ReqTagType</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>88</id>
+        <name>Output Statistics about Work: Estimated End Date</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The work amount statistics \textbf{must} include an estimated end date which is computed based on the finished work and the relation of the EfE units and real spent hours.</description>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>89</id>
+        <name>Man Page Topic Format</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the topics input file format.</description>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+    </requirement>
+    <requirement>
+        <id>90</id>
+        <name>Output XML File</name>
+        <type>requirement</type>
+        <invented_on>2010-04-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>customers</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of XML output. </description>
+        <rationale>XML is used in many projects to import data or exchange data. This should be an implementation which supports output of one set of requirements.</rationale>
+        <solved_by>OutputXMLExample OutputXMLGanttProject OutputXMLGanttProject2</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>management:10 development:10 customers:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>91</id>
+        <name>Requirements Name</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a name tag.</description>
+        <rationale>This is a short string (headline) for the requirment.</rationale>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>92</id>
+        <name>Status: Finished</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The status \textbf{must} be set to 'finished' when a person finished work on this requirement.</description>
+        <note>There are extensions available - please consult the dependent requirements. </note>
+        <solved_by>StatusFinishedValue OutputFinished ConfigDevelopers</solved_by>
+        <status>finished:Florath:2011-04-27:2h</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>93</id>
+        <name>Output of HTML</name>
+        <type>design decision</type>
+        <invented_on>2010-03-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of HTML output. </description>
+        <rationale>This gives a fast possibility to check requirements.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>management:8</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>94</id>
+        <name>Use Python</name>
+        <type>design decision</type>
+        <invented_on>2010-02-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} use python as language for scripts.</description>
+        <rationale>python applcations are fast to develop.</rationale>
+        <solved_by>TestTool</solved_by>
+        <status>finished</status>
+        <topic>Basics</topic>
+    </requirement>
+    <requirement>
+        <id>95</id>
+        <name>Documentation of Generic Man Page </name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a (*nix) man page describing generic parts of the rmtoo.</description>
+        <note>This includes e.g. the invoking of rmtoo.</note>
+        <solved_by>ManConfig ManInvoking</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>96</id>
+        <name>Output of Elements</name>
+        <type>requirement</type>
+        <invented_on>2010-09-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of different elements.</description>
+        <rationale>Elements are only one small aspect of the whole set of information which are typically used in other output documents because only these elements make no sense at all. Example: file with version number of used requirements set.</rationale>
+        <solved_by>OutputPrio OutputVersion1 OutputAssigned OutputFinished</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>97</id>
+        <name>Version in Documentation</name>
+        <type>requirement</type>
+        <invented_on>2011-03-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Version information \textbf{must} be available in all documents. </description>
+        <note>Documents are: man pages, presentations, requirement documents, graphs, ...</note>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <priority>users:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>98</id>
+        <name>Output Statistics about Work: Finished</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The work amount statistics \textbf{must} include the number of finished work units.</description>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>2</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>99</id>
+        <name>rmtoo Automated Testing</name>
+        <type>requirement</type>
+        <invented_on>2010-03-04</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each feature of \textsl{rmtoo} \textbf{must} be automatically testable.</description>
+        <rationale>This gives the possibility to run a set of regression test and check the whole functionality of rmtoo.</rationale>
+        <solved_by>TestBeforePack TestIntegration TestUnit</solved_by>
+        <status>not done</status>
+        <topic>Testing</topic>
+        <priority>development:10 management:10 customers:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>100</id>
+        <name>Emacs Mode for Topics</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an Emacs mode which supports the topics file format.</description>
+        <status>not done</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>101</id>
+        <name>Requirement Priority</name>
+        <type>requirement</type>
+        <invented_on>2010-02-13</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a priority.</description>
+        <rationale>A priority is a number. The higher the number is, the higher prioritized is the requirment.</rationale>
+        <solved_by>OutputPrio PrioComputation ReqTagPriorityCheck</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <priority>development:8</priority>
+    </requirement>
+    <requirement>
+        <id>102</id>
+        <name>Output Statistics about Work: Assigned</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The work amount statistics \textbf{must} include the number of assigned work units.</description>
+        <status>finished:Florath:2011-04-28:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>2</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>103</id>
+        <name>Ease of Use</name>
+        <type>requirement</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} be easy to use.</description>
+        <rationale>Only then it will be used.</rationale>
+        <solved_by>Packaging</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>management:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>104</id>
+        <name>Evaluate Pricing Information: Graph Color</name>
+        <type>requirement</type>
+        <invented_on>2010-09-09</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The pricing evaluation graph \textbf{must} be dye by using the compliance statement.</description>
+        <rationale>This helps when evaluating incoming filled in pricing sheets. </rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>105</id>
+        <name>Topic generics: Format independent  </name>
+        <type>requirement</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The format of the topic \textbf{must} be output independent. </description>
+        <rationale>It must be possible to create a wide range of possible formats, e.g. least LaTeX and HTML.</rationale>
+        <solved_by>OutputTextSameBase</solved_by>
+        <status>finished</status>
+        <topic>Topic</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>106</id>
+        <name>Version Control System: History Interval Usage</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The specified history interval \textbf{must} be used for statistics.</description>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>107</id>
+        <name>Output Statistics about Persons</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support generation of statistics about each person which works on the project.</description>
+        <solved_by>OutputStatsPersonsUnits OutputStatsPersonsTime OutputStatsPersonsRelation </solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:8</priority>
+    </requirement>
+    <requirement>
+        <id>108</id>
+        <name>Documentation Man Page for Artifacts Elements</name>
+        <type>requirement</type>
+        <invented_on>2010-09-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with (*nix) man pages describing the possible generated elements.</description>
+        <rationale>\textsl{rmtoo} is able to output a wide range of simple and small information which can be used in different documents but which are not a document itself.</rationale>
+        <solved_by>ManArtBacklog ManArtElabList ManArtRHC ManArtVersion1</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>109</id>
+        <name>Output Statistics about Work: Not Done</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The work amount statistics \textbf{must} include the number of not done work units.</description>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>2</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>110</id>
+        <name>Output Statistics about Persons: Units</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The number of abstract EfE units which were finished by a person \textbf{must} be included into the person statistics.</description>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>111</id>
+        <name>Analytics: HotSpots</name>
+        <type>requirement</type>
+        <invented_on>2010-08-05</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an analytics module which checks if there are requirements where the sum of the incoming plus outgoing  links is too high.</description>
+        <rationale>If there are requirements with too many links, typically there is the need to add one level of indirection: Divide et Impera.</rationale>
+        <status>finished</status>
+        <topic>Analytics</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>112</id>
+        <name>Different Inputs</name>
+        <type>requirement</type>
+        <invented_on>2010-05-16</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support different types of input files - one type for each usage.</description>
+        <note>A usage is e.g. documenting requirements or handling topics.</note>
+        <solved_by>Configuration Glossary Requirements Topics UseTxt</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>113</id>
+        <name>Generic Output Requirements</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>All \textsl{rmtoo} output modules \textbf{must} support a common set of functionality.</description>
+        <rationale>There are some functionalities which must be implemented for all requirements.</rationale>
+        <solved_by>OutGenVersionId</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>114</id>
+        <name>Man Page Artifact Backlog</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the backlog output.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>115</id>
+        <name>Easy Extensible</name>
+        <type>requirement</type>
+        <invented_on>2010-02-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textbf{rmtoo} \textbf{must} be easy extensible.</description>
+        <rationale>There must no need to redisign the whole program when e.g. adding a requirements tag. </rationale>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:6</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>116</id>
+        <name>Analytics</name>
+        <type>requirement</type>
+        <invented_on>2010-08-05</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The requirements \textbf{must} be analyzed.</description>
+        <rationale>It is hard to write good requirements - as far as possible rmtoo should support writing good requirements.</rationale>
+        <note>Analytics are implemented using modules with a defined interface. </note>
+        <solved_by>AtcsDescWords AtcsHotSpot AtcsReqTopicCohe AtcsTopicCohe</solved_by>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>117</id>
+        <name>Evaluate Pricing Information</name>
+        <type>requirement</type>
+        <invented_on>2010-09-09</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be the possibility to evaluate the pricing information.</description>
+        <solved_by>EvalPriceChecks EvalPriceGraph</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>118</id>
+        <name>Configuration</name>
+        <type>requirement</type>
+        <invented_on>2010-12-23</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Many aspects of the \textsl{rmtoo} behavior \textbf{must} be configured.</description>
+        <note>The sub-requirements define which aspects must be defined.</note>
+        <solved_by>ConfigCheck ConfigDefault ConfigDevelopers</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>119</id>
+        <name>Status</name>
+        <type>design decision</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Status \textbf{must} have one of the following states: 'not done', 'assigned', 'finished'. </description>
+        <solved_by>StatusNotDone StatusAssigned StatusFinished</solved_by>
+        <status>assigned:Florath:2011-04-27</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>1</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>120</id>
+        <name>Open Source rmtoo</name>
+        <type>requirement</type>
+        <invented_on>2010-02-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} be Open Source.</description>
+        <rationale>There is the hope, that some people might use this. There is also the hope that there are some people which add the one or other feature.</rationale>
+        <status>finished</status>
+        <topic>Basics</topic>
+    </requirement>
+    <requirement>
+        <id>121</id>
+        <name>Requirements Status</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a status tag.</description>
+        <solved_by>Status</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>122</id>
+        <name>Topic Name</name>
+        <type>requirement</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each topic \textbf{must} have a name tag.</description>
+        <rationale>This is a short string (headline) for the topic.</rationale>
+        <status>finished</status>
+        <topic>Topic</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>123</id>
+        <name>Makefile Dependencies</name>
+        <type>requirement</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Dependency support for Makefile \textbf{must} be implemented.</description>
+        <rationale>The major problem handling everything within a Makefile are the needed dependencies.</rationale>
+        <status>not done</status>
+        <topic>AutoCreationOfArtifacts</topic>
+        <class>implementable</class>
+        <priority>customers:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>124</id>
+        <name>Configuration Check</name>
+        <type>requirement</type>
+        <invented_on>2010-12-23</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The configuration \textbf{must} be checked.</description>
+        <rationale>There might be typos in the configuration.  Everything what is possible to check should be checked.  Especially types and ranges.</rationale>
+        <note>There are some major reasons to do this at one point and not to spread it over the different classes - especially those things which are used in multiple classes.</note>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>125</id>
+        <name>Documentation Man Page for Artifacts Documents</name>
+        <type>requirement</type>
+        <invented_on>2010-09-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with (*nix) man pages describing the generated output documents.</description>
+        <solved_by>ManArtLaTeX ManArtPricing1 ManArtRDG ManArtRDG2</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>126</id>
+        <name>Topic SubTopics</name>
+        <type>requirement</type>
+        <invented_on>2010-05-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each topic \textbf{might} have one ore more sub-topics.</description>
+        <note>The subtopic must point to another topic. The subtopic is included in the next hierarchy level with the subtopic's name as the headline - and possible sub-sub-topics as sub-sections.</note>
+        <status>finished</status>
+        <topic>Topic</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>127</id>
+        <name>Man Page Emacs Mode Glossary</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with man pages describing the Emacs Mode for glossary.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>128</id>
+        <name>Simplicity</name>
+        <type>requirement</type>
+        <invented_on>2010-02-08</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} be simple.</description>
+        <rationale>To get started, concentrate on the major things, which are really needed.\par Use techniques which are available.</rationale>
+        <solved_by>EaseOfUse EasyEditable EasyExtensible UsePython</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:9</priority>
+        <effort_estimation>21</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>129</id>
+        <name>Man Page Artifact Requirement Dependency Graph - version 2</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the output requirement dependency graph version 2.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>130</id>
+        <name>Evaluate Pricing Information: Compliance Checks</name>
+        <type>requirement</type>
+        <invented_on>2010-09-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Compliance information \textbf{must} be checked.</description>
+        <rationale>There are some cases to check if the given compliance statements make sense.  It is e.g. not possible to have a 'fully compliant' statement if one of the dependent requirements is not or partially compliant.</rationale>
+        <note>It might be possible to put these information into the graph.</note>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>131</id>
+        <name>Output of Different Artifacts</name>
+        <type>requirement</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support generation of different outputs. </description>
+        <rationale>It's not very easy to e.g. visualize the dependency graph. Also typically for the testing department a document is needed that decribes the requirements (features) of the product.</rationale>
+        <solved_by>ModularOutput OutputDocument OutputElements OutputGeneric OutputRequirements OutputStatsReqCnt OutputXML OutputStatsWork OutputStatsPersons </solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>34</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>132</id>
+        <name>Status: Not done</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The status \textbf{must} be set to 'not done' when the requirement should be implemented but the work (design / implementation) has not yet started.</description>
+        <note>There are no extensions available for the 'not done' value.</note>
+        <status>not done</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>133</id>
+        <name>Requirments Class</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a class tag.</description>
+        <rationale>The class decides which class type the requirment is.</rationale>
+        <solved_by>Class</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>134</id>
+        <name>Output of Dependency Graph</name>
+        <type>design decision</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of a requirements dependency graph.</description>
+        <rationale>A graph says more than thousand words.</rationale>
+        <solved_by>OutputGraphConfig</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+    </requirement>
+    <requirement>
+        <id>135</id>
+        <name>Requirement Priority Check</name>
+        <type>requirement</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The priority \textbf{must} be a number between (and including) 0 and 10.</description>
+        <rationale>Note that for internal computations the number is normalized. </rationale>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:8</priority>
+    </requirement>
+    <requirement>
+        <id>136</id>
+        <name>Emacs Mode for Glossary</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an Emacs mode which supports the glossary file format.</description>
+        <status>not done</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>137</id>
+        <name>Man Page Config</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the rmtoo configuration.</description>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+    </requirement>
+    <requirement>
+        <id>138</id>
+        <name>Output of Pricing Table: Input Cell Day Count</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to define the number of days for each requirement.</description>
+        <rationale>Different requirements might need different amount of effort.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>139</id>
+        <name>Output of Text Document</name>
+        <type>requirement</type>
+        <invented_on>2010-03-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of different types text documents.</description>
+        <rationale>Different types mean, that it must be possible to convert one document to a LaTeX / PDF document or e.g. to a HTML document.</rationale>
+        <solved_by>OutputBaseReqRefs OutputBaseTags OutputConfgbl OutputHTML OutputPDF OutputTextSameBase</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>140</id>
+        <name>Priority Output LaTeX</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The priority output \textbf{must} have LaTeX format.</description>
+        <rationale>There were first experiments using plain files (*.txt) --- but this was not really usable --- especially when classes were added. </rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+    </requirement>
+    <requirement>
+        <id>141</id>
+        <name>Version Control System: History Interval</name>
+        <type>requirement</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to define a version interval for \textsl{rmtoo} operations.</description>
+        <rationale>This gives the user the possibility to exactly reference one specific version and re-create the documents for a historic version.</rationale>
+        <note>The specification of the version identification is Version Control System dependent.  It should be possible to use symbolic constants like tag names or constants for specifying the latest version (e.g. 'HEAD').</note>
+        <solved_by>VCSIntervalUsage VCSLast</solved_by>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>142</id>
+        <name>Completed Requirement</name>
+        <type>requirement</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to check if a requirement is completed.</description>
+        <rationale>Completed means that i.e. it and all the children are finished.\par  This can be used for a 'not yet finished' list as an output artifact. </rationale>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>management:1</priority>
+    </requirement>
+    <requirement>
+        <id>143</id>
+        <name>Txt Comments</name>
+        <type>requirement</type>
+        <invented_on>2010-12-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support comments in the text input files.</description>
+        <rationale>Sometimes there is the need to comment tags.</rationale>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>144</id>
+        <name>Man Page Analytics Topic Coherence</name>
+        <type>requirement</type>
+        <invented_on>2010-08-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the Topic Coherence analytic module.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>145</id>
+        <name>Processing</name>
+        <type>requirement</type>
+        <invented_on>2010-08-05</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} process the requirements by means of a defined order.</description>
+        <rationale>First the requirements must be read in (and checked for syntactic - and if possible for semantic) problems.\par Then the requirements must be analyzed.\par As a last step the output artifacts must be generated.</rationale>
+        <note>Please see the depended requirements for more details.</note>
+        <solved_by>Analytics AutomaticGeneration Input Output</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>21</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>146</id>
+        <name>Priority Output Order By Class</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The priority output \textbf{must} be ordered by class.</description>
+        <rationale>It makes no sense to have one big common list of all prioritized requirments.\par  For real daily live use the lists must be separated and ordered by  the class. So there is one list for the developer (e.g. the backlog)  and one list for the SCRUM master who can then elaborate the highest  prioritized requirements.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+    </requirement>
+    <requirement>
+        <id>147</id>
+        <name>Makefile</name>
+        <type>requirement</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Automatic generation of artifacts \textbf{must} be possible by using a Makefile.</description>
+        <rationale>This gives the users a simple to 'make all' thing, which in turn calls the needed commands.</rationale>
+        <solved_by>MakefileDeps</solved_by>
+        <status>not done</status>
+        <topic>AutoCreationOfArtifacts</topic>
+        <class>implementable</class>
+        <priority>customers:8</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>148</id>
+        <name>Requirement Tag Effort Estimation</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{may} have a tag 'Effort estimation'. </description>
+        <rationale>This gives a hint how much effort is pending.</rationale>
+        <solved_by>EftMeasure PrioOutputEft</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <class>implementable</class>
+        <priority>customers:10</priority>
+    </requirement>
+    <requirement>
+        <id>149</id>
+        <name>Test Before Packaging</name>
+        <type>requirement</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The packaging procedure \textbf{must} guarantee that all tests are successfully run before packaging.</description>
+        <rationale>This gives the possibility to run a set of regression test and check the whole functionality of rmtoo.</rationale>
+        <status>not done</status>
+        <topic>Testing</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>150</id>
+        <name>Emacs Mode</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>There \textbf{must} be an Emacs mode which supports the text file format used by \textsl{rmtoo}.</description>
+        <solved_by>EMHighLightTags EMInput EMSupportAuthor EMValueHighlight</solved_by>
+        <status>not done</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>151</id>
+        <name>Class</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The class tag \textbf{must} be one of: 'implementable' or 'detailable'. </description>
+        <rationale>This is a short string (headline) for the requirment.  'implementable' means that the requirment is that detailed, that is can be implemented. 'detailable' means that the requirment is not directly implementable but must be broken down and elaborated more to be implementable.</rationale>
+        <solved_by>PrioOutputOrderByClass</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>152</id>
+        <name>Documentation Man Page for Analytics</name>
+        <type>requirement</type>
+        <invented_on>2010-08-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with (*nix) man pages describing the analytics modules.</description>
+        <solved_by>ManAnaDescWords ManAnaHotSpot ManAnaReqTopicCohe ManAnaTopicCohe</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>153</id>
+        <name>Requirement Constraints</name>
+        <type>requirement</type>
+        <invented_on>2011-02-17</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to add constraints to a requirement. </description>
+        <rationale>Typically a solution has some boundary conditions or constrains which limit the solution space.\par In other requirements management resources this is often named \textsl{non functional requirements} - nevertheless mostly the definition of the difference between a \textsl{functional requirement} and a \textsl{non functional requirement} is vague.\par In \textbf{rmtoo} the definition of a constraint is clear and well defined.</rationale>
+        <solved_by>ConstraintsInheritance</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>154</id>
+        <name>Output of Pricing Table: Input Cell Comment</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible that the vendor can comment each requirement.</description>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>155</id>
+        <name>Man Page Emacs Mode Requirements</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with man pages describing the Emacs Mode for requirements.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>156</id>
+        <name>Output Statistics about Work: Start Date</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The start date of the work amount statistics \textbf{must} be configurable.</description>
+        <status>finished:Florath:2011-04-28:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>2</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>157</id>
+        <name>Output Requirements: Preserve Everything which is Possible</name>
+        <type>requirement</type>
+        <invented_on>2010-12-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>When changing an already existing requirement, everything which is possible \textbf{must} be preserved.</description>
+        <rationale>This is especially true for comments and empty lines.</rationale>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>21</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>158</id>
+        <name>Output of Version Number</name>
+        <type>design decision</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of a file which contains the Version Control System unique identifier for the used set of requirements.</description>
+        <rationale>This is typically a version number; for git this is the hex hash string.\par This is very important to automatically include the version number in different output documents.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>management:8</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>159</id>
+        <name>Emace Mode Auto Fill Mode</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs mode \textsl{must} switch on auto-fill-mode by default. </description>
+        <status>finished</status>
+        <topic>EmacsMode</topic>
+        <class>implementable</class>
+        <priority>customers:6</priority>
+    </requirement>
+    <requirement>
+        <id>160</id>
+        <name>Output of Finished List</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible, to output a list of all \textsl{finished} requirements sorted by date.</description>
+        <rationale>This gives information about the finished work.</rationale>
+        <status>finished:Florath:2011-04-27:1h</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>161</id>
+        <name>Man Page Artifact Requirements History Count</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the output of the requirements history count graph.</description>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>162</id>
+        <name>Easy Editable</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The requirements used by \textsl{rmtoo} \textbf{must} be easy editable.</description>
+        <rationale>It must not be a pain to change or add something.</rationale>
+        <solved_by>EmacsMode Traceability</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:3 customers:3</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>163</id>
+        <name>Output of Pricing Table: Input Cell Material</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>It \textbf{must} be possible to define the costs of the material for each requirement.</description>
+        <rationale>Different requirements might need different amount of money.</rationale>
+        <note>Material is everything which is not day or day rate, e.g. hardware costs, license costs, ...</note>
+        <status>not done</status>
+        <topic>Output</topic>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>164</id>
+        <name>rmtoo must work on Requirments</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} work on requirements.</description>
+        <rationale>That's is what's about.</rationale>
+        <solved_by>EMRequirements FilesInFS ReqGenTagOrder ReqTags VersionControlSystem Constraints</solved_by>
+        <status>finished</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>165</id>
+        <name>Man Page Artifact Version1</name>
+        <type>design decision</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the version1 output.</description>
+        <rationale>The man page should include the configuration options for this modules.</rationale>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>166</id>
+        <name>Glossary must be available</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support the possibility to define terms in a glossary.</description>
+        <rationale>Typically a requirements management document used specific terms over and over.  The glossary gives a possibility to define those terms once.\par Different output modules can use them for e.g. automatically linking the terms to their explanation.</rationale>
+        <solved_by>EMGlossary</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <class>detailable</class>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>167</id>
+        <name>Man Page Invoking rmtoo</name>
+        <type>design decision</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the invoking of rmtoo.</description>
+        <rationale>This must include the command line parameters.</rationale>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>168</id>
+        <name>Output of PDF</name>
+        <type>design decision</type>
+        <invented_on>2010-02-12</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of PDF output. </description>
+        <rationale>Typically the PDF output holds all the requirements and additional explanations.</rationale>
+        <note>This might be implemented in the way of an additional layout layer, e.g. LaTeX.</note>
+        <solved_by>OutputPDFConfig</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>management:8</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>169</id>
+        <name>Output Statistics about Work</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support generation of statistics about the amount of work.</description>
+        <solved_by>OutputStatsWorkStartDate OutputStatsWorkNotDone OutputStatsWorkAssigned OutputStatsWorkFinished OutputStatsWorkEstEndDate OutputStatsWorkRelation</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>170</id>
+        <name>Priority Format</name>
+        <type>design decision</type>
+        <invented_on>2010-02-13</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Priority \textbf{must} be specified in a format, that each stakeholder can give a priority for each requirment.</description>
+        <status>finished</status>
+        <topic>ReqTagFormatDesc</topic>
+        <class>implementable</class>
+    </requirement>
+    <requirement>
+        <id>171</id>
+        <name>Output of Dependency Graph Configuration</name>
+        <type>design decision</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The graph output module \textbf{must} be configurable in the way that different node attributes can separately switched on.</description>
+        <rationale>For internal use the more information the better. For external use only some information is typically needed.</rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+    </requirement>
+    <requirement>
+        <id>172</id>
+        <name>Checks</name>
+        <type>design decision</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check requirements.</description>
+        <rationale>Because there is no database or other implicit check, \textsl{rmtoo} must do consistency checks every time it reads in the requirements. </rationale>
+        <solved_by>CheckGraph CheckSemantic CheckSyntax</solved_by>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:8 management:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>173</id>
+        <name>Syntax Checks</name>
+        <type>design decision</type>
+        <invented_on>2010-03-01</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} check the requirements for syntax errors.</description>
+        <rationale>Syntax errors are parse errors or other 'low level' errors. </rationale>
+        <solved_by>ReqTagPriorityCheck</solved_by>
+        <status>finished</status>
+        <topic>Input</topic>
+        <priority>development:9</priority>
+    </requirement>
+    <requirement>
+        <id>174</id>
+        <name>Output Statistics about Persons: Relation</name>
+        <type>requirement</type>
+        <invented_on>2011-04-27</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The relation between the abstract EfE units and the real spent working hours \textbf{must} be included in the person amount statistics.</description>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+    </requirement>
+    <requirement>
+        <id>175</id>
+        <name>Output of Number of Requirements</name>
+        <type>design decision</type>
+        <invented_on>2010-08-18</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of requirements statistics where the number of requirements related to the point of time.</description>
+        <status>finished</status>
+        <topic>Output</topic>
+    </requirement>
+    <requirement>
+        <id>176</id>
+        <name>Man Page Artifact Requirement Pricing</name>
+        <type>design decision</type>
+        <invented_on>2010-08-16</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the output of the pricing module.</description>
+        <rationale>This documentation must describe the different input and output fields.  It must also contain an overview over the process behind the pricing.</rationale>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>177</id>
+        <name>Emace Mode Value Highlighting</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs mode \textsl{must} highlight values which are limited to a set of possible values.</description>
+        <rationale>E.g. in the Status line 'not done' and 'finished' should be highlighted --- but these words should not highlighted in e.g. the Description section.</rationale>
+        <status>not done</status>
+        <topic>EmacsMode</topic>
+        <class>detailable</class>
+        <priority>customers:6</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>178</id>
+        <name>Analytics: Description Words</name>
+        <type>requirement</type>
+        <invented_on>2010-08-05</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The description \textbf{must} be analyzed by means of a heuristic which evaluates regular expressions.</description>
+        <rationale>This is a easy and fast way to get some hint of the quality of the description itself.</rationale>
+        <status>finished</status>
+        <topic>Analytics</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>179</id>
+        <name>Configuration for maximum line length using in Topics</name>
+        <type>requirement</type>
+        <invented_on>2010-12-23</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The maximum line length used in topic input file \textbf{must} be configurable.</description>
+        <rationale>Some customers like strict length limitations where other do not like any limitation at all.</rationale>
+        <solved_by>ConfigTopicMaxLineLengthDefault</solved_by>
+        <status>not done</status>
+        <topic>Basics</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>180</id>
+        <name>Document Output</name>
+        <type>requirement</type>
+        <invented_on>2010-09-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} support genration of different types output documents.</description>
+        <rationale>Different output documents might display different aspects of the requirements, Some might e.g. include the text, others the dependency graph.</rationale>
+        <solved_by>OutputGraph OutputGraph2 OutputPricing OutputTextDocument</solved_by>
+        <status>finished</status>
+        <topic>Output</topic>
+        <priority>customers:8</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>181</id>
+        <name>Emacs Mode for all Inputs</name>
+        <type>requirement</type>
+        <invented_on>2010-08-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>For each input format ther \textbf{must} be an Emacs mode which supports the file format.</description>
+        <solved_by>EMGlossary EMRequirements EMTopics EMTraceability</solved_by>
+        <status>not done</status>
+        <topic>EmacsMode</topic>
+        <priority>development:7</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>182</id>
+        <name>Output of Pricing Table: Input Cells</name>
+        <type>requirement</type>
+        <invented_on>2010-08-15</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The generated document \textbf{must} support input fields for pricing information.</description>
+        <rationale>These are the fields which the vendors must fill in.</rationale>
+        <solved_by>OPIComment OPICompliant OPIDayCnt OPIDayrate OPIDependentOn OPIMaterial</solved_by>
+        <status>not done</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>183</id>
+        <name>Priority output Include Effort Estimation</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The priority output list \textbf{must} include the effort estimation for each requirement.  If no effort estimation is given, the output must be an empty field.</description>
+        <rationale>This gives a good overview which requirements need which effort. </rationale>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+    </requirement>
+    <requirement>
+        <id>184</id>
+        <name>Requirements Invented By</name>
+        <type>requirement</type>
+        <invented_on>2010-02-11</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Each requirement \textbf{must} have a 'invented by' tag.</description>
+        <rationale>This names the original (initial) author of the requirment.</rationale>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+    </requirement>
+    <requirement>
+        <id>185</id>
+        <name>Requirement Tags: Basics</name>
+        <type>requirement</type>
+        <invented_on>2010-08-04</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Requirement properties which are needed for agile development \textbf{must} be supported. </description>
+        <note>The requirement properties are the one which depend on this requirement.</note>
+        <solved_by>ReqTagClass ReqTagEffortEst ReqTagPriority</solved_by>
+        <status>finished</status>
+        <topic>ReqTags</topic>
+        <priority>development:10</priority>
+        <effort_estimation>3</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>186</id>
+        <name>Emace Mode Flyspell Mode</name>
+        <type>design decision</type>
+        <invented_on>2010-02-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The Emacs mode \textsl{must} switch on flyspell-mode by default. </description>
+        <status>finished</status>
+        <topic>EmacsMode</topic>
+        <class>implementable</class>
+        <priority>customers:6</priority>
+    </requirement>
+    <requirement>
+        <id>187</id>
+        <name>Documentation Man Page for File Formats</name>
+        <type>requirement</type>
+        <invented_on>2010-07-26</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with (*nix) man pages describing the different (input) file formats.</description>
+        <solved_by>ManReqFormat ManTopicFormat</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <class>detailable</class>
+        <priority>development:10 customers:5</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>188</id>
+        <name>Unit Testing</name>
+        <type>requirement</type>
+        <invented_on>2010-03-10</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>For each code path there \textbf{must} be a unit test.</description>
+        <rationale>Each class, function and method must be tested.  Each decision and error condition must be tested.</rationale>
+        <solved_by>TestTool</solved_by>
+        <status>not done</status>
+        <topic>Testing</topic>
+        <priority>development:10</priority>
+        <effort_estimation>13</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>189</id>
+        <name>Man Page Requirements Format</name>
+        <type>design decision</type>
+        <invented_on>2010-03-06</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>\textsl{rmtoo} \textbf{must} come with a man page which describes the requirement input file format.</description>
+        <status>finished</status>
+        <topic>Documentation</topic>
+        <class>implementable</class>
+        <priority>development:3 customers:7</priority>
+    </requirement>
+    <requirement>
+        <id>190</id>
+        <name>Evaluate Pricing Information: Graph Costs</name>
+        <type>requirement</type>
+        <invented_on>2010-09-09</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>The pricing evaluation graph \textbf{must} include the dependent pricing as well as the local requirement pricing.</description>
+        <status>finished</status>
+        <topic>Output</topic>
+        <class>implementable</class>
+        <priority>development:10</priority>
+        <effort_estimation>8</effort_estimation>
+    </requirement>
+    <requirement>
+        <id>191</id>
+        <name>Version</name>
+        <type>requirement</type>
+        <invented_on>2011-03-14</invented_on>
+        <invented_by>flonatel</invented_by>
+        <owner>development</owner>
+        <description>Version information \textbf{must} be available.</description>
+        <note>This is valid for the documentation and all program files: see Solved by dependencies.</note>
+        <solved_by>VersionDocumentation VersionApplication</solved_by>
+        <status>not done</status>
+        <topic>Documentation</topic>
+        <priority>users:10</priority>
+        <effort_estimation>5</effort_estimation>
+    </requirement>
+</ns2:requirements>

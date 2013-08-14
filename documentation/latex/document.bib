@@ -1,0 +1,4260 @@
+% This file was created with JabRef 2.4.
+% Encoding: UTF-8
+
+@ARTICLE{ardizzoni1999wrb,
+  author = {Ardizzoni, S. and Bartolini, I. and Patella, M.},
+  title = {Windsurf: Region-based image retrieval using wavelets},
+  journal = {DEXA Workshop},
+  year = {1999},
+  pages = {167--173},
+  abstract = {In this paper we present WINDSURF (Wavelet-Based Indexing of Images
+	Using Region Fragmentation), a new approach to content-based image
+	retrieval. 
+	
+	The method uses wavelet transform to extract color and texture feature
+	from an image and applies a clustering technique to partition the
+	image into a set of "homogeneous" regions.
+	
+	Similarity between images is assessed by using the Bhattacharyya distance
+	to compare region descriptors, and then combining the results at
+	image level.
+	
+	Experimentals results on a testbed of 10,000 general-purpose images
+	shows that our appoach is very effective in retrieving images that
+	are "semantically" similar to the query image.
+	
+	In particular, we compared results of WINDSURF with the approach by
+	Stricker and Orengo in [Stricker, M. and Orengo, M., Similarity of
+	color images, 1995], showing that a significant improvement is obtained
+	in the quality of the result.},
+  owner = {nicolas},
+  review = {WINDSURF est réutilisé dans IMAGINATION pour le calcul des descripteurs
+	(couleur et texture), et pour le calcul des k-NN.
+	
+	
+	cite un travail de Faloutsos, C. de 1994 (dans lequel il présente
+	QBIC d'IBM), Photobook (MIT), un système de Columbia de J.R. Smith
+	principalement basé sur les textures (un autre que VisualSEEK), VisualSEEK
+	(Columbia), Blobworld (berkeley), WBIIS (Wang, J.S., Stanford, celui
+	qui a fait Simplicity et Alipr, WBIIS utilise aussi les wavelets,
+	et un sketch retrieval comme dans imgseek), WALRUS (Natsev, utilise
+	des wavelets).
+	
+	
+	(A noter que ImgSeek (qui n'est pas cité, il est posterieur au papier)
+	utilise aussi des wavelets (multiresolution wavelet decomposition
+	of the query and database images)).
+	
+	
+	L'approche proposée dans WINDSURF est d'utiliser des transformées
+	en ondelettes discrètes sur les canaux de couleurs pour analyser
+	chaque image dans le domaine spatial-frèquence. Cela correspond à
+	considérer combinés les informations de couleur et de texture pour
+	représenter le contenu de l'image, à l'opposé des approches quie
+	considère couleur et texture comme des features séparées. Ces informations
+	sont ensuite utilisées pour diviser l'image en région homgènes en
+	couleur et en texture.
+	
+	
+	
+	WINDSURF utilise des Discrete Wavelet Transform pour extraire un ensemble
+	de feature pour representer chaque image dans un espace color-texture.
+	
+	
+	La similarité d'une paire d'images dans WINDSURF est évaluée par la
+	similarité de leurs régions. Chaque région est représentée par les
+	moyennes d'un domaine des features (couleur, texture etc.) en utilisant
+	une métrique spécifique pour ce domaine.
+	
+	
+	Ces features sont ensuite utilisées pour fragmenter l'image en région
+	homogènes en utilisant un algorithme de clustering (k-means avec
+	une fonction de validité pour déterminer le paramètre k optimal semblable
+	à celle proposée pour le fuzzy k-means [Xie, X.L., Beni, G., A validity
+	measure for fuzzy clustering]) sur les coefficients de la DWT.
+	
+	
+	La fonction de distance pour le k-means est Mahalanobis.
+	
+	Pour avoir des régions qui sont sémantiquement sensées, les clusters
+	de taille inférieures à un certain seuil sont ignorés.
+	
+	
+	L'un de défauts principaux de cet type d'approche est que le regroupement
+	des pixels pour la fragmentation est réalisé par un clustering sur
+	les coefficients des wavelets qui ne peuvent contenir que des informations
+	de couleur ou de texture, le système ne pourra pas inclure de relations
+	spatiales.
+	
+	
+	La similarité entre les images est calculée en comparant les coefficients
+	des wavelets pour les régions extraites et en combinants les résultats
+	pour chaque images. Les régions sont indexés dans un ensemble de
+	features similaires.},
+  timestamp = {2008.04.22}
+}
+
+@INPROCEEDINGS{banerjee02cicling,
+  author = {Satanjeev Banerjee and Ted Pedersen},
+  title = {An Adapted Lesk Algorithm for Word Sense Disambiguation Using WordNet},
+  booktitle = {CICLing '02: Proceedings of the Third International Conference on
+	Computational Linguistics and Intelligent Text Processing},
+  year = {2002},
+  pages = {136--145},
+  address = {London, UK},
+  publisher = {Springer-Verlag},
+  isbn = {3-540-43219-1}
+}
+
+@INPROCEEDINGS{Barnard03theeffects,
+  author = {Kobus Barnard and Pinar Duygulu and Raghavendra Guru and Prasad Gabbur
+	and David Forsyth},
+  title = {The effects of segmentation and feature choice in a translation model
+	of object recognition},
+  booktitle = {In IEEE Conf. on Computer Vision and Pattern Recognition},
+  year = {2003},
+  pages = {675--682},
+  timestamp = {2009.03.09}
+}
+
+@INPROCEEDINGS{BarJohn05,
+  author = {Kobus Barnard and Matthew Johnson},
+  title = {Word sense disambiguation with pictures},
+  year = {2005},
+  volume = {167},
+  number = {1-2},
+  pages = {13--30},
+  address = {Essex, UK},
+  publisher = {Elsevier Science Publishers Ltd.},
+  doi = {http://dx.doi.org/10.1016/j.artint.2005.04.009},
+  issn = {0004-3702},
+  journal = {Artif. Intell.}
+}
+
+@ARTICLE{bartolini:iai,
+  author = {Bartolini, I. and Ciaccia, P.},
+  title = {Imagination: Accurate Image Annotation Using Link-analysis Techniques},
+  journal = {5th International Workshop on Adaptive Multimedia Retrieval (AMR
+	2007), Paris},
+  year = {2007},
+  owner = {nicolas},
+  review = {Exploration des techniques d'analyses de lien basés sur des graphes
+	pour le développement d'un système d'annotation semi-automatique.
+	
+	
+	Le but des recherches des auteurs est de définir un moyen d'annoter
+	une nouvelle image composée de certaines régions en exploitant la
+	connaissance d'un jeu d'image en prédisant un bon ensemble de terme
+	pour caractériser de façon effective de contenu de la nouvelle image.
+	
+	
+	problèmatique de la similarité à un certain niveau sémantique.
+	
+	we can group state-of-the-art solution of images annotation prototype
+	into two main classes: semantic propagation and statistical inference.
+	Dans les deux cas, on utilise un jeu de donnée d'image annotée, et
+	on essaye de découvrir des affinités entre les descripteurs bas niveaux,
+	et les termes qui décrivent l'image, dans le but d'annoter une nouvelle
+	image. 
+	
+	Dans le premier cas, des techniques d'apprentissage supervisée qui
+	compare la similarité à bas niveau sont utilisées et propage les
+	termes sur les images les plus similaire.
+	
+	Dans le second, travaillant avec des modèles d'inférence statistique,
+	une méthode d'apprentissage non supervisée, capture les correspondances
+	entre les features bas-niveau et les termes en estimant les distribution
+	de probabilité jointe.
+	
+	
+	Dans Imagination, chaque image est caractérisée par un ensemble de
+	région desquelles des LDD sont extraites. Un traning set est construit
+	en associant un nombre variable de termes à chaque image, ainsi les
+	termes ne sont pas seulement reliés à une région particulière de
+	l'image, mais des concepts abstrait peuvent être reliés à toute l'image.
+	
+	Les auteurs ont traduit le problème de l'annotation par des problèmes
+	basés sur des graphes. Premièrement, essayer de découvrir des affinités
+	entre les termes et les images non annotées en utilisant un algorithme
+	de Random Walk and Restart (RWR) sur un graphe qui modèle les annotations
+	courantes aussi bien que les similarité entre région. Puis un algo
+	de calcule de corrélation entre termes est utilisé. Finallement,
+	une étape pour combiner les résultats de la corrélations sémantiquement
+	(les termes corrélés affinés) et l'affiner pour la nouvelle image,
+	par un problème de clique de poids maximal, MWCP. Ainsi, le nombre
+	de terme prédit pour chaque image est variable et dépend du contenu
+	de l'image actuelle.
+	
+	
+	Mixed Media Graph.},
+  timestamp = {2008.08.18}
+}
+
+@INPROCEEDINGS{BleiJordan03a,
+  author = {Blei,, David M. and Jordan,, Michael I.},
+  title = {Modeling annotated data},
+  booktitle = {SIGIR '03: Proceedings of the 26th annual international ACM SIGIR
+	conference on Research and development in informaion retrieval},
+  year = {2003},
+  pages = {127--134},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/860435.860460},
+  isbn = {1-58113-646-3},
+  location = {Toronto, Canada},
+  timestamp = {2009.03.09}
+}
+
+@ARTICLE{brin1998als,
+  author = {Brin, S. and Page, L.},
+  title = {The anatomy of a large-scale hypertextual Web search engine},
+  journal = {Computer Networks and ISDN Systems},
+  year = {1998},
+  volume = {30},
+  pages = {107--117},
+  number = {1-7},
+  owner = {nicolas},
+  publisher = {Elsevier},
+  timestamp = {2008.09.22}
+}
+
+@TECHREPORT{cant07,
+  author = {Cant, D.},
+  title = {Java applet for the MPEG-7 annotation of rectangular regions in still
+	images},
+  year = {2007},
+  owner = {nicolas},
+  timestamp = {2009.01.30}
+}
+
+@ARTICLE{chang2003ccb,
+  author = {Chang, E. and Goh, K. and Sychay, G. and Wu, G.},
+  title = {CBSA: content-based soft annotation for multimodal image retrieval
+	using Bayes point machines},
+  journal = {Circuits and Systems for Video Technology, IEEE Transactions on},
+  year = {2003},
+  volume = {13},
+  pages = {26--38},
+  number = {1},
+  owner = {nicolas},
+  review = {Modèle discriminant, basé sur des classifiers.
+	
+	Expérimentations avec des SVM et des Bayes Point Machine (BPM), les
+	résultats montre que leur technique fonctionne mieux avec des BPM.
+	
+	
+	Descripteurs globaux sur l'image, couleur et texture.
+	
+	
+	« Un utilisateur peut commencer une requête par entrer quelques mot
+	clés. Une que quelques images pertinentes pour la requête sont trouvé,
+	le système utilise les caractéristiques perceptuelles de ces images
+	(les features), avec leurs annotations, pour effectuer un raffinement
+	multimodal de la requête ».
+	
+	=> il faut pour ce système des images annotés, d'où la proposition
+	de cet article d'un système qui fournit des images avec plusieurs
+	étiquettes sémantiques (semantic labels).
+	
+	
+	L'entrée initial de CBSA est un jeu de donnée annoté manuellement
+	par une simple étiquette sémantique par image. CBSA fonctionne par
+	propagation de ces étiquettes vers les images non étiquetées aussi
+	bien que celle étiquetée. A la fin du processus d'annotation, chaque
+	image est annoté par un vecteur d'étiquettes, et chaque étiquette
+	à un facteur de confiance.
+	
+	
+	CBSA fonctionne en 3 étapes:
+	
+	1.manuellement étiquetter chaque image d'entraînement avec une des
+	K préselectionnée étiquette sémantique;
+	
+	2.entraînner K classifiers, utilisant les instances étiquettées, utilise
+	BPM ou SVM;
+	
+	3.annotation automatique des images en utilisant les classifier, chaque
+	image est classifiée par les K classifiers, et un score de confiance
+	est associé pour l'étiquette du classifier (c'est la prédiction du
+	classifier). En résultat, un K-nary vecteur d'étiquettes est produit
+	pour chaque image;},
+  timestamp = {2008.09.30}
+}
+
+@ARTICLE{265573,
+  author = {Shih-Fu Chang and John R. Smith and Mandis Beigi and Ana Benitez},
+  title = {Visual information retrieval from large distributed online repositories},
+  journal = {Commun. ACM},
+  year = {1997},
+  volume = {40},
+  pages = {63--71},
+  number = {12},
+  address = {New York, NY, USA},
+  doi = {http://doi.acm.org/10.1145/265563.265573},
+  issn = {0001-0782},
+  publisher = {ACM},
+  review = {Visual information retrieval from large distributed on-line repositories
+	
+	
+	Shih-Fu Chang, John R. Smith, Mandis Beigi, Ana Benitez
+	
+	Department of Electrical Engineering & Center for Telecommunications
+	Research, Columbia University
+	
+	
+	A picture may have different meanings at different levels (description,
+	analysis, interpretation ...)
+	
+	
+	Based on your experience in developing a visual information retrieval
+	system VIRS
+	
+	Different systems have been developped providing efficient tools for
+	users to specify visual queries using images examples or visual sketches:
+	Virage, Photobook, VisualSEEK, VideoQ
+	
+	Multiple visual features are used (eventually in combination with
+	the textual information): color, texture, shape, motion, spatio-temporal
+	composition.
+	
+	One unique characteristics of these VIR systems is that the search
+	is approximate, based on similarity ranking.
+	
+	Other VIRS use the input from humans or supporting data to index the
+	visual information in a semantic way, video incons are generated
+	via manual annotation of objects (e.g. people, boat) or semantic
+	event (e.g. sunsets). Textual indexes are generated from the captions
+	and transcripts of broadcast video.
+	
+	
+	A complementaty function with visual search is summarization.
+	
+	Learning through iterative user interaction is used to map visual
+	feature cluster to semantic class.
+	
+	
+	Or in the future visual content may be submitted autonomously like
+	the way people submit documents to the Usenet today.
+	
+	
+	When the database size grows, subject taxonomies will be very useful
+	in providing hierarchical categories.
+	
+	
+	WebSEEK, a case study of internet VIR: store the metadata, the pointers
+	to the source, but not the actual content.
+	
+	
+	Use of multimedia metadata: Most visual content on-line does not exist
+	alone, it usually is accompanied with a rich set of metadata.
+	
+	Feature extraction: color sets and color histograms.
+	
+	Use of taxonomy and subject classification: a free browsing mechanism
+	is not suitable for a large VIR system, users tend to prefer guided
+	navigation with a clearly defined hierarchical subject category.
+	
+	We use URLs and HTML tags to extract the key terms, which are then
+	used to map the image or video to one or more subject classes in
+	the taxonomy.
+	
+	
+	We are developed a prototype meta image search, MetaSEEk, for proof
+	of concept, the target search engines include VisualSEEk, WebSEEk,
+	QBIC and Virage.
+	
+	
+	The relatively consistent features in most text engines, e.g. TF*IDF,
+	are not available in the visual domain.
+	
+	Unlike the text search engine, matching scores are not returned form
+	VIR, this is partly due to the lack of dominant features in the visual
+	domain.
+	
+	
+	Eigenfaces are a set of eigenvectors used in the computer vision problem
+	of human face recognition. Eigenfaces can be extracted out of the
+	image data by means of a mathematical tool called Principal Component
+	Analysis (PCA).
+	
+	Eigenfaces beginning in 1987 and is considered the first facial recognition
+	technology that worked.
+	
+	
+	Z39.50 est un protocole d'interrogation de base de donnée, client/serveur,
+	ce protocole est utilisé par les bibliothèques pour intérroger simultanément
+	plusieurs catalogues, son évolution est coordonnée par la bibliothèque
+	du congrès des Etats-unis. Ce protocol a donné lieu à une norme ANSI
+	et l'ISO 23950.
+	
+	Depuis 2001, les programmes SRU (Search & Retrieve via URLs, utilise
+	REST) et SRW (Search & Retrieve via Web Services) ont l'ambition
+	de retranscrire les procédures pour les rendre conformes à celle
+	du web, le produit est provisoirement appelé Zing (Z new generation).
+	
+	
+	Dynamic subject hierarchy (for cataloging images)
+	
+	Cataloging images or video to a fixed subject hierarchy will partly
+	solve the problem of the question "howto describe what users search?",
+	but limitation of such traditional cataloging approach are alse well
+	known.
+	
+	
+	knowledge-bearing software agents (agent logiciel avec connaissance,
+	to bear = soutenir).
+	
+	What we have discussed above can be classified into the general paradigm
+	using "pull" technologies. We believe for wide-area visual information
+	access, a different paradigme incorporating "push" technologies.
+	Knowledge-bearing software agents could be trained to learn user
+	preference and then help users to filter interesting visual content.}
+}
+
+@ARTICLE{chen2004dsc,
+  author = {Chen, J.J. and Gao, J. and Liao, B.S. and Hu, J.},
+  title = {Dynamic Semantic Clustering Approach for Web User Interest},
+  publisher = {Springer}
+}
+
+@ARTICLE{datta2005cbi,
+  author = {Datta, R. and Li, J. and Wang, J.Z.},
+  title = {Content-based image retrieval: approaches and trends of the new age},
+  journal = {Proceedings of the 7th ACM SIGMM international workshop on Multimedia
+	information retrieval},
+  year = {2005},
+  pages = {253--262},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  timestamp = {2008.05.13}
+}
+
+@INPROCEEDINGS{Decadt04gambl,
+  author = {Bart Decadt and Véronique Hoste and Walter Daelemans and Antal Van
+	Den Bosch},
+  title = {GAMBL, Genetic Algorithm Optimization of Memory-Based WSD},
+  booktitle = {In Proceedings of ACL/SIGLEX Senseval-3},
+  year = {2004},
+  pages = {108--112},
+  journal = {Senseval-3: Third International Workshop on the Evaluation of Systems
+	for the Semantic Analysis of Text},
+  review = {Synthèse:
+	
+	Une approche qui considère la tâche de WSD comme de la classification,
+	et utilise un algorithme génétique pour paramètrer l'un des deux
+	classifiers qui font partis de leur procédure de désambiguisation.
+	
+	
+	Cet algorithme génétique sert à deux choses:
+	
+	1. optimiser les paramètres du premier classifier;
+	
+	2. sélectionner les caractéristiques communes (je crois comprendre
+	que c'est pour la détection de classes dans les exemples d'entraînement),
+	et donc sert pour la sélection du sens pour le terme ambigu.
+	
+	
+	Le système prend en entrée un mot ambigus et son contexte, un classifier
+	spécialisé sur ce mot lui assigne le sens approprié en fonction du
+	contexte.
+	
+	L'entraîment des expert du mot (le classifier) est fait avec un MBL
+	memory-based learning (voir notes).
+	
+	
+	Deux séries d'expérimentation: LS pour the English Lexical Sample,
+	et AW pour the English All Words.
+	
+	Le corpus d'entraînement est une concaténation de différent texte
+	en anglais avec sens annoté: SemCor, the English Lexical Sample (LS),
+	Senseval, ligne- et hard- et serve-corpora, et les phrases d'exemple
+	de WordNet-1.7.1.
+	
+	
+	Utilise Timbl memory based learning algorithm, et pour l'algo génétique,
+	DeGA.
+	
+	
+	Notes:
+	
+	Interprète la tâche de WSD comme une tâche de classification.
+	
+	Etant donné un un mot ambigu est sont contexte comme caractéristiques
+	d'entrée, un classifier spécialisé sur ce mot assigne le sens le
+	plus approprié en fonction du contexte.
+	
+	Pour chaque word-lemma-POS-tag un classifier est entraîné.
+	
+	Pour entraîner les experts du mot, un apprentissage basé sur la mémoire
+	est utilisé (MBL memory-based learning), une instance du paradigme
+	lazy de l'apprentissage (méthode en contraste avec la méthode d'apprentissage
+	eager tel que les listes de décision).
+	
+	
+	=> Paradigme lazy d'apprentissage: tous les contextes dans lesquels
+	un mots ambigus est présent sont gardés en mémoire, et une abstraction
+	est calculée seulement au moment de la classification en extrapolant
+	une classe des items les plus similaire en mémoire du nouvel item.
+	
+	
+	Dans leurs expérimentations utilisent l'algorithme de MBL TIMBL (d'un
+	des auteurs: Daelemans).
+	
+	Pour la désambiguisation d'un mot, et que ce mot est en dessous d'un
+	seuil (celui de reconnaissance du classifier), alors l'algorithme
+	donne au mot le sens le plus fréquent dans WordNet.
+	
+	Pour chaque désambiguisation, deux classifiers sont utilisés, le premier
+	étant utilisé comme paramètre pour le second. Le premier classifier
+	est entraîné sur les keywords en accord avec un critère statistique,
+	et le second classifier est entraîné sur la prédiction du premier
+	classifier et sur le contexte local de la combinaison de mot.}
+}
+
+@ARTICLE{deselaers:IR08,
+  author = {Thomas Deselaers and Daniel Keysers and Hermann Ney},
+  title = {Features for Image Retrieval: An Experimental Comparison},
+  journal = {Information Retrieval},
+  year = {2008},
+  volume = {11},
+  pages = {77-107},
+  month = {03/2008},
+  abstract = {An experimental comparison of a large number of different
+	
+	image descriptors for content-based image retrieval is presented.
+	
+	Many of the papers describing new techniques and
+	
+	descriptors for content-based image retrieval describe their
+	
+	newly proposed methods as most appropriate without giving
+	
+	an in-depth comparison with all methods that were proposed
+	
+	earlier. In this paper , we first give an overview of a large variety
+	
+	of features for content-based image retrieval and compare
+	
+	them quantitatively on four different tasks: stock photo retrieval,
+	
+	personal photo collection retrieval, building retrieval,
+	
+	and medical image retrieval. For the experiments, five different,
+	
+	publicly available image databases are used and the
+	
+	retrieval performance of the features is analysed in detail.
+	
+	This allows for a direct comparison of all features considered
+	
+	in this work and furthermore will allow a comparison of
+	
+	newly proposed features to these in the future. Additionally,
+	
+	the correlation of the features is analysed, which opens the
+	
+	way for a simple and intuitive method to find an initial set of
+	
+	suitable features for a new task. The article concludes with
+	
+	recommendations which features perform well for what type
+	
+	of data. Interestingly, the often used, but very simple, colour
+	
+	histogram performs well in the comparison and thus can be
+	
+	recommended as a simple baseline for many applications.},
+  address = {The Netherlands},
+  chapter = {77},
+  keywords = {fire, selected},
+  owner = {nicolas},
+  publisher = {Springer},
+  review = {L'auteur fait le constat que peu d'article font de comparaison quantitative
+	vraiment pertinente entre les différentes features qui existe.
+	
+	
+	Dans cet article l'auteur décrit un certain nombre de feature (depuis
+	les historiques jusqu'au derniers dans la littérature), les corrélations
+	possibles entre ces différents descripteurs, et les soumets à différentes
+	tâches de CBIR: stock photo retrieval, personal photo retrieval,
+	building/touristic image retrieval, medical image retrieval.
+	
+	5 jeu de données sont utilisés.
+	
+	Cependant, l'auteur ne prend pas en compte différent espace de couleur.
+	
+	
+	Selon l'auteur, les features peuvent être classé en types:
+	
+	0. appareance based image features (les modèles déformables pour une
+	comparaison directe des images);
+	
+	
+	1. color representations (l'espace de couleur est partitionné, et
+	un comptage des pixels appartenant à chaque partition est effectué
+	=> on obtiens une représentation de la fréquence d'apparition de
+	chaque couleur dans l'image. L'espace de couleur utilisé est RGB,
+	l'auteur ne trouve que peu de différence avec les autres espace de
+	couleur comme montré dans [Smith, J.R., Chang S-F., Tools and techniques
+	for color image retrieval]).
+	
+	Pour comparer les histogrammes, l'auteur utilise the Jeffrey Divergence
+	(JD) et the Jensen-Shannon Divergence (JSD)
+	
+	
+	2. texture representations;
+	
+	
+	3. local features;
+	
+	
+	4. shape features;
+	
+	
+	
+	l'auteur cite [De Vries, A.P., Westerveld T., A comparison of continuous
+	vs. discrete image models for probabilistic image and video retrieval],
+	qui classifie les techniques de CBIR en 2 classes:
+	
+	1. les approches discrètes: inspirées de la recherche sur le texte,
+	utilisant des fichiers inversés et des métriques de recherches sur
+	le texte. L'approche est considérer des formes binaires des features
+	comme des mots (Viper, ou gift, est de cette catégorie).
+	
+	2. les approches continues: similaire à la classification par plus
+	proches voisins.
+	
+	
+	Historiquement, les deux premiers systèmes de CBIR furent QBIC (IBM)
+	et Photobook (MIT).
+	
+	QBIC utilise des histogrammes de couleur, une feature de forme basée
+	sur les moments et un descriptor de texture.
+	
+	Photobook utilise un feature d'apparence, un feature de texture et
+	un feature de forme 2D.
+	
+	
+	un autre système de CBIR bien connu est Blobworld (Berkeley): les
+	images sont représentées en régions par un processus de segmentation
+	basé sur un algorithme EM.
+	
+	SIMBA, CIRES, SIMPLIcity, IRMA, FIRE.
+	
+	
+	Il est intéressant que l'auteur précise que bien souvent un simple
+	histogramme de couleur fonctionne assez bien, et qu'il peut être
+	utilisé pour point de départ pour des applications.
+	
+	Dans FIRE, son prototype, l'auteur utilise une combinaison des features
+	décrits dans l'article.},
+  timestamp = {2008.05.13}
+}
+
+@INPROCEEDINGS{fire:clef06:lncs,
+  author = {Thomas Deselaers and Tobias Weyand and Hermann Ney},
+  title = {Image Retrieval and Annotation Using Maximum Entropy},
+  year = {2007},
+  volume = {4730},
+  series = {LNCS},
+  pages = {725-734},
+  address = {Alicante, Spain},
+  month = {20/09/2006},
+  organization = {Springer},
+  publisher = {Springer},
+  journal = {CLEF Workshop 2006},
+  keywords = {clef,fire, object},
+  owner = {nicolas},
+  review = {Deux projets se concentre principalement sur les low-feature et les
+	distances qui permettent de faire de bon résultat sur des nearest
+	neighbour:
+	
+	* GIFT Viper Group on Multimedia Information Retrieval and Management
+	(Genève)
+	
+	* 
+	
+	
+	Le principe d'entropie maximale consiste lorsqu'on veut représenter
+	une connaissance imparfaitee d'un phénomène par une loi de probabilité,
+	à:
+	
+	1. identifier les contraintes auxquelles cette distribution doit répondre
+	(moyenne etc.);
+	
+	2. choisir de toutes les distributions répondant à ces contraintes
+	celle ayant la plus grande entropie au sens de shannon;
+	
+	De toutes ces distributions, c'est, par définition de l'entropie,
+	la distribution qui à l'entropie maximale qui contient le moins d'information,
+	et elle est donc pour cette raison la moins arbitraite de toute celles
+	qu'on pourrait utiliser.
+	
+	La distribution de probabilité obtenue sert ensuite de probabilité
+	a priori dans un processus classique d'inférence bayésienne.
+	
+	
+	Dans cet article Deselaers & al., participe à 4 tâches de l'évaluation
+	ImageCLEF 2006, et en particulier propose une méthode d'apprentissage
+	des poids des caractéristique dans un système le CBIR FIRE.
+	
+	L'auteur reformule la tâche de retrieval comme une tâche de classification,
+	et les poids pour combiner les caractéristique sont entraînés de
+	façon distriminative en utilisant le principe d'entropie maximale.
+	
+	Ainsi, une requête par QBE apporte une image, et les images de la
+	database doivent être classées pertinente ou non-pertinente en fonction
+	de la requête.
+	
+	Comme méthode de classification les auteurs ont choisi des modèles
+	log-linear qui sont entraînés en utilisant le critère d'entropie
+	maximale et l'algorithm GIS.
+	
+	
+	La formulation de l'ensemble des images pertinente et non-pertinente
+	est intéressante dans cet article...
+	
+	De plus, la liste de leur low-feature pourrait être intéressante:
+	
+	* color histogram
+	
+	* gray histogram
+	
+	* global texture feature
+	
+	* invariant feature histogram
+	
+	* tamura texture feature histogram
+	
+	* 32x32 thumbnail
+	
+	* patch histogram
+	
+	
+	
+	Les expérimentations sur la medical retrieval task montre une grande
+	amélioration par rapport au méthode où les poids sont choisis de
+	façon heuristique. Utilisant leur méthode de classification d'objet,
+	ils ont obtenu les meilleurs résultats sur la medical retrieval task
+	et la object annotation task.
+	
+	
+	L'auteur utilise un ensemble d'image exemples positives et un autre
+	négatif, un peu à la manière de [MS-ASIA, multiple-random walk ...]},
+  timestamp = {2008.08.27}
+}
+
+@ARTICLE{duygulu2002orm,
+  author = {Duygulu, P. and Barnard, K. and de Freitas, N. and Forsyth, D.},
+  title = {Object recognition as machine translation: Learning a lexicon for
+	a fixed image vocabulary},
+  journal = {Proceedings of the 7th European Conference on Computer Vision-Part
+	IV},
+  year = {2002},
+  pages = {97--112},
+  owner = {nicolas},
+  publisher = {Springer},
+  review = {L'idée de l'article vient du besoin de trouver les images qui ont
+	les objets recherchés ou trouver les keywords qui correspond le mieux
+	à son contenu.
+	
+	
+	Le but est donc de mapper les keywords avec des objets image.
+	
+	Traitant à la fois les keywords comme un langage, et à la fois les
+	blob-tokens comme un autre langage, permet de voir le problème de
+	l'annotation d'image comme la traduction d'un langage dans un autre.
+	Utilisant des machines translation classique, la technique permet
+	d'annoter un dataset d'image basé sur un ensemble d'image annotée
+	pour l'entraînement.},
+  timestamp = {2008.05.14}
+}
+
+@INPROCEEDINGS{mrfi,
+  author = {Escalante, H.J. and Montes y Gomez, M. and Sucar, L.E.},
+  title = {Word Co-occurrence and Markov Random Fields for Improving Automatic
+	Image Annotation},
+  booktitle = BMVC07,
+  year = {2007},
+  pages = {xx-yy},
+  bibsource = {#http://www.visionbib.com/bibliography/applicat812.html##TT62050#},
+  owner = {nicolas},
+  review = {constat: la pertinence des CBIA est faible si on utilise que l'annotation
+	la plus probable (ce que Escalante appelle hard-annotation).
+	
+	
+	L'idée de l'article est le même que celui basé sur les réseaux bayésien
+	[Improving Automatic Image Annotation Based on Word Co-Occurrence,
+	Escalante et al.].
+	
+	
+	L'idée est d'améliorer les systèmes "d'amélioration de l'annotation"
+	en utilisant l'ensemble des k keywords les plus probables d'être
+	pertinents pour l'image avec des MRF et une dépendance spatiale entre
+	les régions connectées pour re-ranker.
+	
+	La co-occurence des termes est calculées à partir d'un corpus de caption
+	d'image externe, l'auteur dit que cette approche d'utiliser un corpus
+	de caption pour calculer la co-occurence de terme est une nouvelle
+	approche.
+	
+	
+	il y a d'abord un calcul des annotations par un k-NN, puis une amélioration
+	de l'annotation par un MRF.
+	
+	
+	Pour escalante, dans les systèmes considérant les régions des images,
+	il y a deux approches: hard-annotation (proba 1 pour l'annotation,
+	équivalent à prendre automatiquement le keyword le plus probable),
+	soft-annotation (on obtient un ensemble de keyword probable pour
+	l'image, bartolini avec imagination se place dans cette approche).
+	
+	
+	Pour le jeu de donnée, utilise un sous-ensemble de Corel.
+	
+	Pour la segmentation des images utilise les Nomalized cuts.
+	
+	
+	Critiques: 
+	
+	il n'y a pas vraiment de sémantique, si ce n'est la co-occurence des
+	keywords.
+	
+	
+	L'auteur conclut que le découpage en grid (un partionnement de l'image
+	en path, "p32" dans son article), amène à un meilleur retrieval qu'une
+	segmentation par ncuts.},
+  timestamp = {2008.07.28}
+}
+
+@ARTICLE{felzenszwalb2004egb,
+  author = {Felzenszwalb, P.F. and Huttenlocher, D.P.},
+  title = {Efficient Graph-Based Image Segmentation},
+  journal = {International Journal of Computer Vision},
+  year = {2004},
+  volume = {59},
+  pages = {167--181},
+  number = {2},
+  owner = {nicolas},
+  publisher = {Kluwer Academic Publishers Hingham, MA, USA},
+  timestamp = {2008.08.25}
+}
+
+@ARTICLE{FergusICCV05a,
+  author = {Fergus, R. and Fei-Fei, L. and Perona, P. and Zisserman, A.},
+  title = {Learning object categories from Google's image search},
+  journal = {Computer Vision, 2005. ICCV 2005. Tenth IEEE International Conference
+	on},
+  year = {2005},
+  volume = {2},
+  pages = {1816-1823 Vol. 2},
+  month = {Oct.},
+  doi = {10.1109/ICCV.2005.142},
+  issn = {1550-5499},
+  keywords = {Internet, classification, image classification, image retrieval, search
+	enginesGoogle, Internet, TSI-pLSA, image search engines, object category
+	learning, object category recognition},
+  timestamp = {2009.03.11}
+}
+
+@BOOK{forsyth2002cvm,
+  title = {Computer Vision: A Modern Approach},
+  publisher = {Prentice Hall Professional Technical Reference},
+  year = {2002},
+  author = {Forsyth, D.A. and Ponce, J.},
+  owner = {nicolas},
+  timestamp = {2008.05.13}
+}
+
+@ARTICLE{GodoyDaniela06,
+  author = {Godoy,, Daniela and Amandi,, Anal\'{\i}a},
+  title = {Modeling user interests by conceptual clustering},
+  journal = {Inf. Syst.},
+  year = {2006},
+  volume = {31},
+  pages = {247--265},
+  number = {4},
+  address = {Oxford, UK, UK},
+  doi = {http://dx.doi.org/10.1016/j.is.2005.02.008},
+  issn = {0306-4379},
+  publisher = {Elsevier Science Ltd.}
+}
+
+@ARTICLE{Goodrum00imageinformation,
+  author = {Abby A. Goodrum},
+  title = {Image Information Retrieval: An Overview of Current Research},
+  journal = {Informing Science},
+  year = {2000},
+  volume = {3},
+  pages = {2000}
+}
+
+@ARTICLE{haralick1973tfi,
+  author = {Haralick, R.M. and Shanmugam, K. and Dinstein, I.H.},
+  title = {Textural Features for Image Classification},
+  journal = {Systems, Man and Cybernetics, IEEE Transactions on},
+  year = {1973},
+  volume = {3},
+  pages = {610--621},
+  number = {6},
+  owner = {nicolas},
+  review = {dans cet article les auteurs utilisent des mesures statistiques pour
+	discriminer des structures dans les images. ils proposent quatorze
+	primitives calculées à partir de la matrice de co-occurences qui
+	correspond à des statistiques de second ordre.
+	
+	
+	Les matrices de coocurrences contiennent les moyennes d'espaces du
+	second ordre, 14 indices définis par Haralick qui correspondent à
+	des caractères descriptifs des textures peuvent être calculés à partir
+	de ces matrices.
+	
+	Homogénéité
+	
+	Contraste 
+	
+	Entropie
+	
+	corrélation
+	
+	directivité
+	
+	uniformité
+	
+	sont les plus utilisés.
+	
+	
+	ces indices bien que correlés réduisent l'information contenue dans
+	la matrice de coocurrence et permettent une meilleure discrimination
+	des textures.},
+  timestamp = {2008.05.13}
+}
+
+@ARTICLE{hare:bsg,
+  author = {Hare J. S., Sinclair P.A.S., Lewis P.H., Martinez K., Enser P.G.B.,
+	Sandom C.J.},
+  title = {Bridging the Semantic Gap in Multimedia Information Retrieval: Top-down
+	and Bottom-up approaches},
+  journal = {In: Mastering the Gap: From Information Extraction to Semantic Representation
+	/ 3rd European Semantic Web Conference, 12 June 2006, Budva, Montenegro.},
+  year = {2006},
+  review = {Synthèse:
+	
+	Cet article décrit les approches Top-down (globalement celle dirigée
+	par des ontologies), et Bottom-up (annotation automatique) en recherche
+	de documents multimédia.
+	
+	
+	Bottom-up:
+	
+	typiquement le bottom-up == auto-annotation d'image.
+	
+	TM, CMRM, CRM, LDA, PLDA.
+	
+	[Oliva, Torralba, 2001, Modelling the shape of the scene: A holistic
+	representation of the spatial enveloppe] -> une approche orientée
+	scène, avec des filtres globaux bas-niveau pour des annotations basique
+	de scène comme « buildings » ou « street ».
+	
+	Jeon & al. est le premier à montrer le problème des système d'auto-annotation
+	façon hard-manner, ie. qui applique un certain nombre d'annotations
+	à une image, ce qui peut causer des problèmes pour retrouver des
+	images, ce qui n'est pas le cas des annotateur probabiliste.
+	
+	Duygulu & al., tente de contourner ce problème en créant des cluster
+	de keywords avec des sens similaires.
+	
+	
+	Top-down:
+	
+	Un des premiers travaux pour décrire sémantiquement les images en
+	utilisant des ontologies pour annoter et rechercher les images intelligement
+	est décrit par [Schreiber & al., 2001, Ontology-based photo annotation].
+	
+	Le but d'utiliser des ontologies est d'augmenter l'exactitude du résultat
+	d'une recherche d'information.
+	
+	AceMedia -> une infrastructure de la connaissance pour l'analyse du
+	multimédia (M-OntoMat-Annotizer pour permettre d'annoter manuellement
+	les items multimédia avec des informations sémantiques).
+	
+	
+	Notes:
+	
+	Sémantiser la représentation des informations multimédia est vital
+	pour permettre des possibilité de recherche sur des documents multimédia.
+	
+	Par le passé il y avait une tendance pour orienté la recherche sur
+	des techniques content-based uniquement, ignorant les problèmes des
+	utilisateurs.
+	
+	Cite L. Hollink qui a travaillé sur le modèle utilisateur.
+	
+	Cite [Enser & al.] pour indiquer certains problèmes de l'auto-annotation
+	dû à son manque de richesse comparé à des annotations manuelle dans
+	des collections d'archives.
+	
+	Translation model -> Duygulu
+	
+	le translation model de Duygulu adapté aux informations trans-lingues
+	-> Jeon (CMRM, Cross-media Relevance Model).
+	
+	Jeon a également noté dans son papier qu'utilisé une annotation probabilisée
+	permet d'obtenir de meilleur résultat trié (le ranking est important
+	aussi et à ne pas perdre de vue).
+	
+	Lavrenko & al. -> CRM Continuous Space Model pour construite des fonctions
+	de densité de probabilité continue pour décrire le processus de génération
+	des blob features.
+	
+	Metzler & Manmatha propose un réseau d'inférence pour lier les régions
+	et leurs annotations.
+	
+	Monay, Gatica-Perez -> des modèles Latent Space en utilisant LSA et
+	PLSA.}
+}
+
+@ARTICLE{1039697,
+  author = {L. Hollink and A. Th. Schreiber and B. J. Wielinga and M. Worring},
+  title = {Classification of user image descriptions},
+  journal = {Int. J. Hum.-Comput. Stud.},
+  year = {2004},
+  volume = {61},
+  pages = {601--626},
+  number = {5},
+  address = {Duluth, MN, USA},
+  doi = {http://dx.doi.org/10.1016/j.ijhcs.2004.03.002},
+  issn = {1071-5819},
+  publisher = {Academic Press, Inc.},
+  review = {Les auteurs ont conduits une expérience pour obtenir des informations
+	sur ce que les utilisateurs de moteurs de recherche d'images cherche
+	dans les images. Ont développés un framework pour la classification
+	de "descriptions d'image par l'utilisateur".
+	
+	Cette classification distingue 3 point de vue sur les images:
+	
+	1. les metadata non visuelle.
+	
+	2. les descriptions perceptuelles.
+	
+	3. les descptions conceptuelles.
+	
+	Les résultats montrent (sans surprise) que les utilisateurs préférrent
+	les descriptions générales et non spécifiques ou abstraite.
+	
+	Les catégories les plus utilisées sont objects, events, et les relations
+	entre objets de l'image.
+	
+	
+	Le premier travail de structuration des descriptions du contenu des
+	images est Panofsky, 1962, sur des images d'art. Shatford étend le
+	modèle en 1986 en l'appliquant à tout type d'image.
+	
+	Basée sur les trois niveaux de description proposé par Panofsky (soit:
+	pre-iconographical description", "iconographical analysis", iconographical
+	interpretation"), Shatford catégorise en "Generic Of" (objet commun),
+	"Specific Of" (entitée nommée), "About" (sentiments, émotions, abstractions,
+	symboles).
+	
+	Shatford ajoute à chacun de ses 3 niveaux des facètes: "who facet",
+	"what facet", "where facet", "when facet".
+	
+	Ainsi elle propose une matrice 3x4 pour la classification des descriptions
+	d'images, c'est le modèle de Panofsky/Shatford.
+	
+	
+	Autre travail important: Jaimes and Chang (2000), propose une classification
+	des descriptions sur 10 niveaux basé sur de la syntaxe et de la sémantique:
+	plus le niveaux est élevé, d'avantage de connaissance est nécessaire
+	pour formuler la description:
+	
+	4 niveaux pour les niveaux perceptuels (1 pour le type (painting/drawing/photograph/black
+	and white/color/number of color), 3 niveaux pour les LLD (couleur,
+	texture, forme)).
+	
+	Les 6 autres niveaux sont les niveaux conceptuels qui peuvent être
+	vu comme une extension de la matrice de Panofsky/shatford, la différence
+	est que Jaimes and Chang doublent les 3 niveaux de Shatford en "description
+	d'objet" et "description de la scène".
+	
+	
+	Eakins, 1998, fait également un travail similaire mais en partant
+	des requêtes sur les images, et non en amont à partir des index.
+	
+	
+	Une étude de Heidorn, 1999, examine la façon dont les utilisateurs
+	décrivent des objets en langages naturel, l'expérience ce base sur
+	une recherche d'image de fleur par des novices et des experts. L'expérience
+	conduit au résultat que les novices utilises fréquemment des annologies
+	visuelles "ressemble à X", d'où en conclure l'importance des descriptions
+	conceptuelles dans le processus de recherche.
+	
+	
+	Les auteurs proposent dans leurs frameworks de prendre les points
+	commun de Jaimes and Chang, et Eakins soit 3 top-niveaux: le niveaux
+	de l'information non visuelle (i.e. les metadata), le niveaux perceptuel
+	et le niveau conceptuel.
+	
+	Chaque niveaux est composés de classes qui représentent les catégories
+	des descriptions d'images, ainsi classes == catégories de descriptions.
+	
+	La description d'une image ne peut pas utiliser toutes les classes
+	du framework, seulement celles qui représente des features importantes
+	sont utilisées.
+	
+	Le niveau non visuel peut être VRA ou DublinCore.
+	
+	
+	D'après Hillman 2001, les metadata sont les informations que les libraires
+	ont traditionnellement introduit dans leurs catalogues.
+	
+	Une description est non-visuelle si sont information ne peux pas être
+	dérivée depuis le contenu de la resource visuelle, et si l'information
+	est objective, i.e. n'est pas affectée par aucune interprétation.}
+}
+
+@ARTICLE{HollinkSchreiberWielingaWS07,
+  author = {Laura Hollink and Guus Schreiber and Bob Wielinga},
+  title = {Patterns of semantic relations to improve image content search},
+  journal = {Web Semant.},
+  year = {2007},
+  volume = {5},
+  pages = {195--203},
+  number = {3},
+  address = {Amsterdam, The Netherlands, The Netherlands},
+  doi = {http://dx.doi.org/10.1016/j.websem.2007.05.002},
+  issn = {1570-8268},
+  publisher = {Elsevier Science Publishers B. V.}
+}
+
+@ARTICLE{huang1997iiu,
+  author = {Huang, J. and Kumar, S.R. and Mitra, M. and Zhu, W.J. and Zabih,
+	R.},
+  title = {Image indexing using color correlograms},
+  journal = {Proceedings of the 1997 Conference on Computer Vision and Pattern
+	Recognition (CVPR'97)},
+  year = {1997},
+  pages = {762},
+  owner = {nicolas},
+  review = {dans cet article, l'auteur utilise des autocorrelogrammes de couleurs
+	comme primitives, où le corrélogramme représente les corrélations
+	de couleurs entre pairs de pixels séparés par plusieurs distances.},
+  timestamp = {2008.08.25}
+}
+
+@INPROCEEDINGS{HuiskesCIVR08,
+  author = {Huiskes,, Mark J. and Lew,, Michael S.},
+  title = {Performance evaluation of relevance feedback methods},
+  booktitle = {CIVR '08: Proceedings of the 2008 international conference on Content-based
+	image and video retrieval},
+  year = {2008},
+  pages = {239--248},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1386352.1386387},
+  isbn = {978-1-60558-070-8},
+  location = {Niagara Falls, Canada}
+}
+
+@INPROCEEDINGS{HuiskesMIR08,
+  author = {Huiskes,, Mark J. and Lew,, Michael S.},
+  title = {The MIR flickr retrieval evaluation},
+  booktitle = {MIR '08: Proceeding of the 1st ACM international conference on Multimedia
+	information retrieval},
+  year = {2008},
+  pages = {39--43},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1460096.1460104},
+  isbn = {978-1-60558-312-9},
+  location = {Vancouver, British Columbia, Canada},
+  review = {Dans la review, l'auteur parle de dataset utilisant le "pooling" (en
+	citant un rapport de Jones & Rijsbergen), soit disant qu'avec cette
+	méthode, toutes les données ne sont pas annotées, mais les seules
+	retournées sont celles qui le sont.
+	
+	
+	Les auteurs parle de:
+	
+	 * descriptive keywords
+	
+	 * text description
+	
+	
+	nombre de tags moyens par image: 8.94
+	
+	1386 tags qui occurrent dans au moins 20 images.
+	
+	
+	Dans le dataset:
+	
+	 * images et leurs licenses.
+	
+	 * raw tags (obtained by the user), tags (cleaned by flickr, i.e.
+	removing capitalization, spaces and various characters).
+	
+	 * EXIF raw and EXIF metadata (dans EXIF raw, les codecs sont des
+	valeurs numériques etc., ces valeurs sont remplacées par leur qualification
+	commune dans la version clean, par exemple, le CODEC 6 est JPEG).
+	
+	 * annotations:
+	
+	 1. potential labels, partially relevant, l'annotateur interpréte
+	la pertinence du topic dans un contexte général.
+	
+	 2. relevant labels, fully relevant, l'utilisateur interprete le topic
+	(the tag is like a search topic), in a narrow sense, les images sont
+	seulement si le tag concept est en accord avec l'interprétation subjective
+	de l'annotateur.
+	
+	
+	Pour les annotations, des tags ont été choisis comme topics. L'annotation
+	se fait sur ces topics.
+	
+	Les topics généraux ont été choisis ainsi.
+	
+	 1. ils correspondent à tes tags Flickr très communs.
+	
+	 2. ils contiennent des tags additionnels qui peuvent être vus comme
+	des subtopics.
+	
+	(sunset est un cas particulier, qui peut être vu comme un tags additionnel
+	au tag night). 
+	
+	Les corrélations topics / sub-topics ne se trouve pas dans les documents
+	du dataset, mais sont indiqués dans le papier (table 2).
+	
+	Les topics suffixés par une asterisk ne sont pas des tags Flickr communs
+	dans le dataset, mais les auteurs les jugent suffisament utiles pour
+	l'annotation et la subtopicality, pour justifier leurs inclusions.
+	
+	
+	Les annotations par topics sont rankés, les annotations ont d'abord
+	été effectuées en utilisant les topics les plus généraux.
+	
+	
+	On peut diviser les tags en catégories, les plus utiles pour la recherche
+	sont ceux qui décrivent clairement des images, de préférence avec
+	une relation directe au contenu visuel de l'image.
+	
+	
+	Une des raisons à ne pas oublier, qui justifie l'utilisation de topic/subtopic,
+	c'est aussi le coût de l'annotation: en commençant par des topics
+	généraux, le coût de l'annotation pour les topics plus préçis.
+	
+	
+	Avant de conclure les auteurs propose les challenges suivant:
+	
+	 1. détection de concept visuel / topic (i.e. topic classification
+	task).
+	
+	 2. propagation de tags.
+	
+	 3. suggestion de tags: soit une liste de tags proposés pour une images,
+	donner un rang de pertinence pour ces tags.}
+}
+
+@ARTICLE{inoue2004nab,
+  author = {Inoue, M.},
+  title = {On the need for annotation-based image retrieval},
+  journal = {ACM SIGIR 2004 Workshop on “Information Retrieval in Context”},
+  year = {2004},
+  owner = {nicolas},
+  timestamp = {2008.05.14}
+}
+
+@INPROCEEDINGS{JacobsSiggraph95,
+  author = {Jacobs,, Charles E. and Finkelstein,, Adam and Salesin,, David H.},
+  title = {Fast multiresolution image querying},
+  booktitle = {SIGGRAPH '95: Proceedings of the 22nd annual conference on Computer
+	graphics and interactive techniques},
+  year = {1995},
+  pages = {277--286},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/218380.218454},
+  isbn = {0-89791-701-4}
+}
+
+@ARTICLE{jeon2003aia,
+  author = {Jeon, J. and Lavrenko, V. and Manmatha, R.},
+  title = {Automatic image annotation and retrieval using cross-media relevance
+	models},
+  journal = {Proceedings of the 26th annual international ACM SIGIR conference
+	on Research and development in informaion retrieval},
+  year = {2003},
+  pages = {119--126},
+  owner = {nicolas},
+  publisher = {ACM New York, NY, USA},
+  review = {L'interêt du CMRM selon Rui Xiaogang rapport à TM, CRM, est qu'il
+	permet de faire "both image annotation and ranked retrieval".
+	
+	
+	Les auteurs introduisent le CMRM où une distribution jointe des blobs
+	et des mots est apprise à partir d'un ensemble d'image d'entrainement
+	annotées avec une vérité terrain.
+	
+	A la différence des translation model, CMRM suppose des correlations
+	many-to-many entre keywords et blob-tokens, alors que les translation
+	models suppose 1-to-1.
+	
+	En conséquence, CMRM prend naturellement en compte des informations
+	de context.
+	
+	
+	Synthèse:
+	
+	Modèle génératif, probabiliste.
+	
+	FACMRM est plus de deux fois meilleur en précision que l'état de l'art
+	-> Translation Model pour l'annotation d'image.
+	
+	« comme dans [Duygulu et al., 02] nous supposons que les régions dans
+	les images peuvent être décrits en utilisant un petit vocabulaire
+	de blobs ».
+	
+	Les blobs sont générés à partir de descripteurs images en utilisant
+	des techniques de clustering.
+	
+	Etant donnée un ensemble d'image annotée, les auteurs montre d'un
+	modèle probabiliste leur permet de prédire la probabilité de produire
+	un mot en fonction d'un blob dans une image.
+	
+	
+	Le but de l'expansion de requête est de réduire l'ambiguité.},
+  timestamp = {2008.05.27}
+}
+
+@ARTICLE{JinJinKhanParbhakaranCVPR2008,
+  author = {Jin, Y. and Jin, K. and Khan, L. and Prahakaran, B},
+  title = {The randomized approximating graph algorithm for image annotation
+	refinement problem},
+  journal = {Computer Vision and Pattern Recognition Workshops, 2008. CVPR Workshops
+	2008. IEEE Computer Society Conference on},
+  year = {2008},
+  volume = {Volume , Issue , 23-28 June 2008},
+  pages = {1 - 8},
+  owner = {nicolas},
+  review = {article lié à celui-ci (de la même équipe):
+	
+	1. Khan, L., Improving image annotation using fuzzy pruning and association
+	rule mining (article de workshop).
+	
+	2. Jin, khan, Wang, Awad, Image annotation by multiple evidence and
+	WordNet.
+	
+	
+	Intro: beaucoup d'algorithme d'AIA de nos jours (Automatic Image Annotation).
+	
+	Mais le gap semantic est toujours là, à savoir que les techniques
+	AIA annotent les images avec beaucoup de bruit (les noisy keywords).
+	Des techniques de raffinement sont alors apparues pour enlever ces
+	noisy-keywords des annotations.
+	
+	Les auteurs proposent un KBIAR Knowledge-Based Image Annotation Refinement.
+	
+	
+	D'après les auteurs c'est Jin, Y. qui a proposé la première méthode
+	de KBIAR (Image annotation by combining multiple evidence and WordNet),
+	après de nombreux travaux s'en sont inspiré:
+	
+	1. Jing, L. and al., An adaptative graph model for automatic image
+	annotation (fusing visual content feature and keyword correlation).
+	
+	2. Wang, C., Image annotation refinement using Random Walk with Restarts,
+	(MS Research Asia) (re-ranker les annotations, c'est globalement
+	le même principe que Bartolini, I. avec son système "Imagination")
+	(le main auteur à aussi publier une méthode de raffinement utilisant
+	des chaînes de markov).
+	
+	
+	L'article propose une méthode de raffinement des annotations basée
+	sur kun MAX-CUT (construction d'un graphe dont les vertex sont les
+	keywords et les poids des edges sont les distances sémantiques),
+	notamment un Randomized Approximation Weighted MAX-CUT (WMC, Weighted
+	MAX-CUT), par une programmation semi-definie (généralisation de la
+	programmation linéaire).
+	
+	
+	Pour l'évaluation les auteurs utilisent le jeu de ECCV'02 basé sur
+	Corel (le dataset construit pour Duygulu, Object recognition as machine
+	translation: Learning a lexicon for a fixed image vocabulary).},
+  timestamp = {2008.10.13}
+}
+
+@ARTICLE{JinKhanJinPrabhakaran08,
+  author = {Jin, Y. and Khan, L. and Prabhakaran, B.},
+  title = {To be Annotated or not? : the Randomized Approximating Graph Algorithm
+	for Image Annotation Refinement Problem},
+  journal = {ICDE2008 Workshop April, 2008 Cancun, Mexico},
+  year = {2008},
+  owner = {nicolas},
+  review = {Dans cet article, l'auteur replace de l'élimination des keywords érronés
+	(non pertinents) en annotation image en un problème de partitionnement
+	de graphe, i.e. un problème MAX-CUT pondéré.
+	
+	(utilise un algorithme déterministe polynomial du MAX-CUT, et montre
+	que trouver une solution optimale pour éliminer les keywords non
+	pertinents dans le graphe est un problème NP-complet).
+	
+	Propose une méthodologie KBIAR Knowledge-Based Image Annotation Refinement
+	(toujours avec un algo déterministe polynomial-temps, dit aussi a
+	randomized approximation graph algorithm).
+	
+	
+	Dans leur article précédent, "Image annotation combining multiple
+	evidence and WordNet", les auteurs ont montré que la distance WordNet
+	JNC est la plus intéressante.},
+  timestamp = {2008.10.03}
+}
+
+@ARTICLE{jin2005iac,
+  author = {Jin, Y. and Khan, L. and Wang, L. and Awad, M.},
+  title = {Image annotations by combining multiple evidence \& wordNet},
+  journal = {Proceedings of the 13th annual ACM international conference on Multimedia},
+  year = {2005},
+  pages = {706--715},
+  abstract = {The development of technology generates huge amounts of non-textual
+	information, such as images. An efficient image annotation and retrieval
+	system is highly desired. Clustering algorithms make it possible
+	to represent visual features of images with finite symbols. Based
+	on this, many statistical models, which analyze correspondence between
+	visual features and words and discover hidden semantics, have been
+	published. These models improve the annotation and retrieval of large
+	image databases. However, current state of the art including our
+	previous work produces too many irrelevant keywords for images during
+	annotation. In this paper, we propose a novel approach that augments
+	the classical model with generic knowledge-based, WordNet. Our novel
+	approach strives to prune irrelevant keywords by the usage of WordNet.
+	To identify irrelevant keywords, we investigate various semantic
+	similarity measures between keywords and finally fuse outcomes of
+	all these measures together to make a final decision using Dempster-Shafer
+	evidence combination. We have implemented various models to link
+	visual tokens with keywords based on knowledge-based, WordNet and
+	evaluated performance using precision, and recall using benchmark
+	dataset. The results show that by augmenting knowledge-based with
+	classical model we can improve annotation accuracy by removing irrelevant
+	keywords.},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  review = {Le traditionnel translation model montre ses limites pour le matching
+	de keywords avec des régions segmentés. Dans la database Corel, la
+	désambiguation entre cat et tiger est impossible si on s'appuie uniquement
+	sur des low-features.
+	
+	
+	L'auteur d'appuie sur un algo de clustering qui rend possible la représentation
+	des features visuelles avec des symboles finis. Ainsi, avec des modèles
+	statistiques qui analyze la correspondance entre ces features visuelles
+	et les mots, peuvent découvrir une sémantique cachée dans les images.
+	Cependant, ces systèmes produisent beaucoup de keyword non pertinent
+	pendant l'annotation.
+	
+	Dans cet article l'auteur propose une nouvelle approche pour augmenter
+	le modèle classique avec WordNet.
+	
+	Dans cet article l'auteur utilise des mesures de similarités pour
+	pruner les irrelevant keywords (l'approche est semblable dans mon
+	système, je voudrais utiliser un algo de désambiguisation de terme
+	pour effectuer la selection d'une bonne combinaison de keyword en
+	sortie d'un CBIR).
+	
+	L'auteur utilise plusieurs mesures de similarité sémantique puis opère
+	une fusion sur les résultats pour prendre une décision finale en
+	utilisant la combinaison d'évidence de Dempster-Shafer.
+	
+	
+	L'auteur conclut que les systèmes comme TM, celui de [Kang, Jin, Chai,
+	CIKM'04], CMRM ont comme faiblesse qu'ils considèrent toutes les
+	features comme également importante, et leurs annotations contiennent
+	de nombreux noisy keywords. D'un autre côté dans son système, l'auteur
+	applique une selection de feature pondérés et utilise des bases de
+	connaissances pour améliorer l'annotation.
+	
+	
+	L'auteur utilise TM comme modèle statistique pour obtenir des keywords
+	pour annotation, mais les mesures sémantiques proposées dans l'article
+	restent applicables avec CMRM ou CRM, il appelle ça méthode TMHM,
+	"TM using hybrid measure".
+	
+	Avec TM & CMRM, chaque image est représentée par un ensemble de keywords
+	et de token visuels. Les tokens visuels sont classifiés en groupe
+	(des blob-token), par clustering de l'espace des features pour toutes
+	les régions du dataset. A chaque token visuel est associé le label
+	du cluster (ou blob-token) auquel il appartient, (déterminer à partir
+	d'un algo EM sur la vérité terrain de l'image, ie. l'annotation sans
+	doute humaine, et la répartition des token visuels).
+	
+	Pour adresser le problème de correspondance, l'auteur doit donc répondre
+	aux problèmes suivants:
+	
+	1. segmentation d'image en des segments/tokens visuels sensés;
+	
+	2. clustering des segments visuels pour generer des blob-tokens;
+	
+	3. déterminer la corrélation entre les keywords associés et les blob-tokens
+	visuels;
+	
+	
+	L'auteur utilise N-Cut pour la segmentation en un nombre de token
+	visuel. Chaque token est représenté par un vecteur de couleur, texture,
+	shape etc.
+	
+	Chaque segment de l'image de Corel est représenté par 30 features.
+	
+	
+	Le clustering est tout d'abord fait en utilisant un k-means avec un
+	poids égal sur chaque feature. Puis pour chaque cluster, la feature
+	la plus importante est identifiée, et les plus insignifiantes sont
+	abandonnées (pour faire face au caractère "grande dimension" des
+	données images).
+	
+	L'algo du k-means est itéré jusque convergence. En fait, dans la dernière
+	étape où la feature la plus importante est identifiée, un mécanisme
+	de pondération des features est utiliser, un poids est assigné à
+	chaque feature en fonction de la pertinence de cette feature pour
+	ce cluster, la méthode d'estimation de cette pertinence est basé
+	sur des analyses d'histogrammes voir [Wang, Khan, Automatic image
+	annotation and retrieval using weighted feature selection, 2005].
+	
+	
+	Pour le calcul des liens entre keyword et blob-token, une table de
+	probabilité est construite.
+	
+	Pour cela une matrice représentant le dataset est utilisée, N lignes
+	pour les N images du dataset, W premières colonnes pour les W keywords,
+	et B dernières colonnes pour les B blob-tokens calculés. Puis la
+	table de probabilité est calculée en implémentant differentes stratégie
+	de calcul de poids.
+	
+	Parmis ces différentes méthodes:
+	
+	1. unweighted matrix: calcule la fréquence d'utilisation d'un keyword
+	pour une image, et la fréquence d'apparition d'un blob-token dans
+	l'image;
+	
+	2. correlation method
+	
+	3. cosine method
+	
+	
+	La phase d'auto-annotation peut alors être utiliser: l'auteur calcul
+	la distance de chaque segment de l'image sujette à l'annotation avec
+	tous les centroïds des blob-tokens, l'image est alors représentées
+	avec les keywords du blob-token le plus près pour chaque segment.
+	L'annotation est générée en utilisant les keywords assignés à tous
+	les segments dans l'image.
+	
+	
+	La dernière étape est les mesures de similarité sémantique: très important
+	comme base pour enlever les noisy keywords et garder les bons keywords.
+	
+	L'auteur affirme d'un ensemble de keywords apporte le context/semantique
+	d'une image.
+	
+	Il fait du "concept detection" et "noisy words exclusion".
+	
+	distance sémantique = 1 - similarité sémantique
+	
+	
+	mesure sur wordnet, 3 catégories: 
+	
+	1. approches basées sur les noeuds (Resnik, mais pour Resnik il faut
+	utiliser un corpus comme SemCor, pour obtenir les probabilités de
+	chaque concept, et calculer combien de fois apparait le concept dans
+	le corpus);
+	
+	2. sur les distances (Jiang-Conrath);
+	
+	3. gloss-based (Banerjee-Pedersen);
+	
+	
+	L'auteur montre les défauts de chaque méthode de calcul de similarité
+	sémantique, et en conclut qu'il est évident qu'on ne peut utiliser
+	qu'une seule méthode et que l'approche dont il a besoin est de fusionner
+	les différentes méthodes.
+	
+	Cette fusion est faite par la Dempster-Shafer Evidence Combination
+	dont JNC, LIN, BNP measure sont les sources de preuves. Khan utilise
+	la règle de Dempster qui est bien connue pour permettre l'aggrégation
+	de plusieurs preuves dans un même ensemble de référence.
+	
+	
+	Pour choisir les différentes mesure de similarité a fusionner, l'auteur
+	à fait un test de comparaison: utiliser TM pour faire annoter des
+	données qui contiennent des noisy keywords (deux test, 50% de noisy
+	keywords puis 33%), puis faire des tests de cohérence des keywords
+	retenus pour annotation en utilisant des mesures de similarité une
+	à une. Les trois meilleures sont retenues et utiliser dans la fusion:
+	JNC, LIN, BNP.
+	
+	
+	Khan dit que sur une image, JNC pourrait jouer un rôle dans l'abandon
+	d'un keyword, dans une autre image ce pourrait être BNP qui pourrait
+	être très importante.
+	
+	
+	Le dataset est celui utilisé pour TM (Kobus) basé sur Corel Image
+	Gallery 1,000,000 (???)
+	
+	feature vector de dimension 30, vocabulaire de 374 mots, 42,379 image
+	objects à partir de 4500 images d'entrainement répartis sur 500 blobs.
+	
+	puis un algo EM est appliqué pour annoter des keywords pour chaque
+	images automatiquement => c'est le TM model.
+	
+	
+	Il est évident que TMHD ne permet pas d'ajouter des keywords corrects
+	à une image, mais seulement de garder ceux qui le sont et de pruner
+	ceux qui ne le sont pas.
+	
+	
+	Résultats:
+	
+	precision de TMHD=33.11%, TM=14.21%
+	
+	rappel le même dans les deux méthodes étant donné que les keywords
+	pertinent ne sont pas abandonné (mais c'est seulement si la précision
+	est de 100%, je qui laisse perplexe...)
+	
+	
+	Critiques:
+	
+	======
+	
+	En fait dans TM, Duygulu attaque aussi le problème des synonymes (ou
+	synonymie par hypernymie) dans son vocabulaire.
+	
+	Ces termes sont des synonymes dans son vocabulaire parce qu'il le
+	sont en linguistique, mais aussi parce qu'ils peuvent l'être car
+	ils sont indistinguable en utilisant le jeu de feature utilisé.},
+  timestamp = {2008.05.14}
+}
+
+@ARTICLE{jing2004kpi,
+  author = {Jing, F. and Li, M. and Zhang, H.J. and Zhang, B.},
+  title = {Keyword propagation for image retrieval},
+  journal = {Circuits and Systems, 2004. ISCAS'04. Proceedings of the 2004 International
+	Symposium on},
+  year = {2004},
+  volume = {2},
+  owner = {nicolas},
+  review = {Le système proposé est un système de ABIR, chaque image est représenter
+	par deux types de feature: keyword et visual feature.
+	
+	Pour chaque keyword, on a un SVM qui est calculé et qui représente
+	le modèle du keyword pour le contenu de la database.
+	
+	
+	Les auteurs proposent dans cet article un framework de propagation
+	de mot-clefs pour combiner de façon transparente les représentations
+	mot-clefs et les représentation visuelles en recherche d'image.
+	
+	
+	Dans ce framework un ensemble de modèles statistique est constuit
+	sur les bases de features visuelles extraites d'images annotées par
+	l'utilisateur pour representer des concepts sémantiques, et utilisées
+	pour propager des mot-clefs sur d'autres image.
+	
+	Les auteurs utilisent la notion de "concept sémantique", mais est-ce
+	vraiment des concepts sémantiques qui sont utilisés? on peut dire
+	que oui dans un sens, car contrairement au MMG+RWR, le système proposé
+	modèlise les keywords sur la database, alors que dans le MMG+RWR
+	nous n'avons qu'un calcul de probabilité, pas une réelle modélisation
+	des keywords.
+	
+	
+	De plus, ce framework utilise du RF pour obtenir d'avantage d'images
+	implicitement etiquetées par l'utilisateur et ainsi mettre à jour
+	le modèle.
+	
+	Présenté ainsi, ce pourrais être le système de J. Urban.
+	
+	Le système est vu par les auteurs comme un modèle basé sur les keywords,
+	qui a la fonction d'accumulation et de mémorisation de la connaissance
+	apprise par RF (apprentissage basé sur des SVM).
+	
+	
+	d'après l'auteur: "semantics of images can be accurately represented
+	by keywords, as long as keyword annotation are accurate and complete",
+	il y a le "accurately" qui me gène beaucoup...
+	
+	
+	D'après les auteurs leur système possède les avantages suivant:
+	
+	1. RF utilisé pour raffiner online les mesures de similarités en fonction
+	des préférences utilisateurs;
+	
+	2. RF utilisé pour mettre à jour en offline le modèle de keywords.
+	
+	
+	Les modèles de keywords sont des SVM binaires duals (avec SVM Light)
+	entrainés sur les images étiquetées avec des exemples positifs et
+	des exemples négatifs. Le but des SVM est de calculer la confiance
+	dans l'association de chaque keywords pour chaque image (ie. le poids
+	de chaque keyword).
+	
+	L'auteur utilise une méthode proposé par Platt pour transformer la
+	sortie du SVM en probabilité, cela passe par l'entraînement des paramètres
+	d'une fonction sigmoide pour mapper la sortie du SVM en probabilités.
+	
+	Le kernel du SVM est un Laplacian Kernel comme proposé dans [Chapelle,
+	Haffner, Vapnik, SVMs for histogram-based image classification, 1999],
+	qui est le plus approprié pour les features telles que les histogrammes
+	de couleurs.
+	
+	
+	Mon système pourrait améliorer quelque chose içi, le poids de chaque
+	mot-clefs pourrait être dérivé par un réseau sémantique depuis un
+	mot-clé dont on connait déjà le poids.
+	
+	
+	Au final, le système est très similaire au MMG+RWR, car il permet
+	d'obtenir un keyword feature vector dont la dimension est le nombre
+	total de keyword dans la database, chaque élément du vecteur est
+	la confiance dans l'association du keyword avec l'image.
+	
+	
+	Il y a une gestion de la database avec le RF d'une manière similaire
+	à celle de J. Urban.
+	
+	
+	Propose un framework de propagation de keyword composé d'un ensemble
+	de modèle statistique basé sur les caractéristiques visuels d'images
+	annotée manuellement pour représenter des concepts sémantique et
+	utilisé pour propager des keywords sur des images non annotées.
+	
+	
+	Decripteurs globaux de couleur sur les images (pas de segmentation).
+	
+	
+	=> Un point intéréssant de ce système est qu'il utilise du relevance
+	feedback pour obtenir de nouvelle image annotée par l'utilisateur
+	(et donc avec un certain facteur de confiance), et pour augmenter
+	les données de référence de son système.
+	
+	
+	Utilise des SVM pour combiner keyword et caractéristique visuelle.
+	
+	
+	« C'est un effort à long terme d'améliorer les pouvoirs de représentation
+	sémantique des descripteurs visuels, une approche efficace est d'incorporer
+	du relevance feedback et des techniques d'apprentissage, online et
+	offline, pour apprendre de meilleurs représentation des images et/ou
+	de raffiner les requêtes ».},
+  timestamp = {2008.06.10}
+}
+
+@ARTICLE{jing2008ppi,
+  author = {Jing, Y. and Baluja, S.},
+  title = {Pagerank for product image search},
+  year = {2008},
+  abstract = {In this paper, we cast the image-ranking problem into the
+	
+	task of identifying “authority” nodes on an inferred visual
+	
+	similarity graph and propose an algorithm to analyze the
+	
+	visual link structure that can be created among a group
+	
+	of images. Through an iterative procedure based on the
+	
+	PageRank computation, a numerical weight is assigned to
+	
+	each image; this measures its relative importance to the
+	
+	other images being considered. The incorporation of visual
+	
+	signals in this process differs from the majority of large-
+	
+	scale commercial-search engines in use today. Commercial
+	
+	search-engines often solely rely on the text clues of the pages
+	
+	in which images are embedded to rank images, and often en-
+	
+	tirely ignore the content of the images themselves as a rank-
+	
+	ing signal. To quantify the performance of our approach in
+	
+	a real-world system, we conducted a series of experiments
+	
+	based on the task of retrieving images for 2000 of the most
+	
+	popular products queries. Our experimental results show
+	
+	significant improvement, in terms of user satisfaction and
+	
+	relevancy, in comparison to the most recent Google Image
+	
+	Search results.},
+  owner = {nicolas},
+  publisher = {ACM New York, NY, USA},
+  review = {Ce travail est une extension de la réf. [7], dans lequel la similarité
+	des images est utilisée pour trouver "un plus représentatif", une
+	image canonique à partir des résultats de la recherche d'image, ce
+	n'est pas la même tâche de le ranking pur et dur, cependant le ranking
+	sur un résultat d'un moteur de recherche doit prendre en compte une
+	diversité des résultats pour optimiser un minimum de satisfaction
+	utilisateur.
+	
+	
+	Le but de l'article est de proposer une méthode de Ranking et de sélection
+	des images à présenter comme résultat (les plus significatives par
+	"thème" d'image).
+	
+	Les auteurs disent "le but d'un système de recherche d'images est
+	de proposer des résultats qui sont pertinents pour la requête et
+	suffisament divers pour couvrir des variations visuelles et sémantiques
+	des concepts matchant la requête".
+	
+	C'est un problème que ne peuvent résoudre les moteurs qui sont basés
+	sur le texte, étant donné qu'ils ne contrôlent pas la concordance
+	sémantique texte-image, promouvoir la diversité des résultats est
+	délicat car basé sur un procédé non fiable (il faut cependant prendre
+	en compte que PageRank donne un indice de fiabilité en quelques sortes,
+	dans le sens de 'authority').
+	
+	
+	Cet article propose un graphe de similarité visuelle basé sur des
+	image-features, c'est présenté comme un truc sensass' mais c'est
+	déjà très utilisé, eg.:
+	
+	 * EGC 2007, Gosselin, Lebrun, Recherche d'images par noyaux sur graphes
+	de régions, bien que la structure du graphe soit nettement différente
+	mais cite l'article de Lowe comme les auteurs du présent article;
+	
+	 ** encore plus rapprochant: MMG+RWR de Faloutsos, ou ICS de Urban
+	(dans celui là, pas de segmentation, pas de noeuds région, on a des
+	noeuds image) qui utilisent des marches aléatoire quasi identhique
+	à un PageRank;
+	
+	Mais c'est le pourquoi qui est intéressant dans cet article: le ranking,
+	le but est de sélectionné les images canonique, ie. représentative.
+	
+	
+	Un point très fort de leur article: le jeu de test, utilisant directement
+	Google Image, les auteurs disent que c'est le plus grand dataset
+	utilisé parmis les travaux publié. 
+	
+	De plus, basant leur dataset sur les catégories d'objets très recherchés
+	sur Google, leurs résultats sont basés sur des requêtes qui touchent
+	un maximum de personnes sur des cas réels.
+	
+	
+	L'auteur dit quelque chose de très intéressant: ce qui est commun
+	dans les images, n'est pas connu à priori. 
+	
+	C'est tout le problème des systèmes d'annotation d'image qui utilisent
+	une base d'image de référence, ils cherchent des similarités entre
+	l'image à annoter et les images qu'il connait et auxquelles est associé
+	une VT.
+	
+	
+	Autre point important dit par l'auteur: La similarité peut être adaptée
+	aux types et distributions d'image attendues: par exemple pour des
+	recherches de personnes, une similarité faciale, des color features
+	pour des paysages, les locals features pour de l'architecture ou
+	des images de produits etc.
+	
+	C'est globalement vers là où je voudrais aller dans mon système, mais
+	je voudrais aller plus loin, ie. les resources sémantique et/ou linguistique
+	utilisées pour la sémantisation de l'annotation peuvent être pluggée
+	dans la structure de donnée en fonction du type et/ou du domaine
+	métier de la collection d'image...
+	
+	
+	Propose de voir le problème du ranking d'image comme une tâche d'identification
+	des authority nodes dans un graphe de similarité visuelle.
+	
+	Propose un algorithme pour analyser la structure des liens visuels
+	qui peut être créer sur un groupe d'image.
+	
+	A partir d'une procédure itérative basée sur le PageRank, un poids
+	est assigné à chaque image, pour mesurer son importance relative
+	aux autres images considérées.
+	
+	L'ajout d'informations visuelles dans le processus est une nouveauté
+	par rapport à la majorité des moteurs de recherche à grande échelle
+	commerciaux en usage aujourd'hui.
+	
+	La plupart des systèmes ne considèrent que le texte dans la page dans
+	laquelle les images sont imbriquées pour ranker les images, et ne
+	considèrent pas le signal visuel comme un facteur de ranking, il
+	y a trois raisons à cela selon les auteurs:
+	
+	1. la recherche texte est un problème bien étudié et apporte de réel
+	succès;
+	
+	2. la tâche fondamentale de l'analyse d'image, à savoir la détection
+	d'objet dans les images comme un humain, est un problème encore largement
+	non résolu;
+	
+	3. dans les cas où la tâche d'analyse d'image est adressée avec succès,
+	le processus requis est très couteux en comparaison de celui employé
+	pour analyser le texte d'une webpage;
+	
+	
+	Le problème n'est pas seulement les algorithmes de traitement du signal,
+	mais également la croissance moyenne de la taille des images et des
+	volumes de données.
+	
+	
+	Pour l'auteur le signal important dans une collection d'image est
+	le thème visuel commun qu'il peut y avoir sur un ensemble d'images,
+	pour cela l'auteur propose de procéder en deux étapes:
+	
+	 1. trouver les features communes aux images (par SIFT + Difference
+	of Gaussian DoG pour calculer les points d'interet + orientation
+	histogram feature);
+	
+	 2. utiliser l'information trouvée dans 1. pour ranker les images:
+	les auteurs montrent que compter le nombre de feature en commun n'apporte
+	pas de bons résultats, ils proposent alors d'utiliser un graphe avec
+	PageRank.
+	
+	
+	La mesure de similarité entre deux images est: le nombre de point
+	d'interets partagés divisé par la moyenne des points d'interets des
+	deux images.
+	
+	
+	Les expériences sont menées sur les 2000 requêtes les plus populaires
+	de Google Product.
+	
+	Parmis ces requêtes, il y a les requêtes avec concepts visuels homogène,
+	par exemple plusieurs images du même objets, plusieurs dérivation
+	du même produit, par exemple des photos de Mona-Lisa différentes
+	les une des autres. Le but est alors de discriminer les images les
+	plus représentative de l'objet.
+	
+	Autre point: les requêtes avec concepts visuels hétérogènes:
+	
+	jaguar.
+	
+	monet paintings (peinture de monet, et monet en peinture par renoir).
+	
+	
+	Un point important relevé par les auteurs: plutôt que de faire un
+	calcul de centralité (PageRank), ne peut-on pas utiliser une heuristique
+	simple, à savoir prendre les images qui ont le plus grand degré dans
+	le graphe (ce qui permet de capturer la notion de well-connected
+	disent les auteurs), mais cela ne permet pas d'identifier des concepts
+	distincts, le graphe étant de similarité, ce n'est pas ce qu'on veut
+	(c'est pas très pertinent comme remarque).
+	
+	
+	Résultats:
+	
+	======
+	
+	L'expérience réalisées est de confronter les résultats de Google avec
+	leur méthode (qui fusionne les résultats Google avec leur ranking
+	par plus représentatif).
+	
+	Il y a beaucoup moins d'image non pertinente avec leur système. On
+	peut se demander quelle en est la raison! mais les auteurs ne l'explique
+	pas.
+	
+	Les résultats sont biaisés par le type de requête, sur des produits,
+	les logos deviennent un problème, étant bien reconnu par SIFT, les
+	logos sont reconnus sur toutes les images du produits en question
+	(c'est un logo, un logo est concu de manière à ce qu'il soit reconnaissable,
+	visible).
+	
+	
+	Quelques critiques:
+	
+	===========
+	
+	C'est un peu faire du neuf avec du vieux.
+	
+	En fait il ne propose pas du tout d'algorithme, c'est le PageRank
+	appliqué aux images (en plus, la formulation est identhique à MMG+RWR
+	de Faloutsos).
+	
+	Comme tout système il est sensible aux mesures de similarité des features,
+	d'autant plus pour un dataset aussi large que le leur, mais les auteurs
+	utilisent pour cela des SIFT, ce qu'il y a de mieux.
+	
+	
+	Les auteurs disent qu'ils modélisent le comportement utilisateur attendu,
+	mais c'est __en considérant__ que l'utilisateur cherche l'image la
+	plus représentative du concept recherché.
+	
+	De plus la méthode proposée permet de trouver l'image la plus représentative
+	mais c'est un effet de bord car cette technique est en réalité parfaite
+	pour la détection de faux, de copies d'images sujettes à copyright,
+	ie. trouver parmis une image laquelle est à l'origine de toutes les
+	autres, c'est flagrant pour Mona-Lisa (j'avais vu un travail sur
+	des techniques pour faire cela d'un type de l'INA à l'INRIA Rocq.).
+	
+	On pourrait imaginer qu'en fait la photo recherchée est une parodie
+	de Mona-Lisa. Mais c'est un faux problème, les auteurs attaquent
+	le problème de la présentation des résultats, et donc trouve tout
+	son sens içi, on peut imaginer que l'utilisateur clic sur Mona-Lisa
+	et qu'alors les différentes versions dérivées de l'original soient
+	présentés à l'utilisateur, c'est ainsi parfait pour la navigation
+	dans une base d'image (et qui fait furieusement pensé à l'article
+	de Gosselin et Lebrun cité plus haut).
+	
+	
+	Le graphe de similarité utilisé est non dirigé, c'est dû à la relation
+	de similarité utilisée, qui est une relation faible, is_similaire_to
+	est une relation commutative.
+	
+	Il pourrait être intéressant d'utiliser (comme dans le MMG de Faloutsos
+	et ses dérivés), une relation forte, is_nearest_neighbor n'est pas
+	commutatif.
+	
+	Leur système permet un ranking pour une présentation des résultats,
+	un tel système peut aussi être utilisé pour la navigation par similarité
+	dans des bases d'image (cf. Gosselin, Lebrun).
+	
+	
+	Autre point: l'utilisateur qui fait une recherche sur google image,
+	ne cherche pas une image en particulier (c'est rare), mais cherche
+	une session de navigation où les images se rapprochent de ce qu'il
+	cherche.
+	
+	
+	Les auteurs n'explique pas pourquoi leur système délivre moins de
+	résultats non pertinent. Est-ce parce que la présentation de "plus
+	représentatif" permet de factoriser les images et donc que globalement
+	il peut y avoir moins de faux positif? C'est plus probablement parce
+	que parmis les classes de faux positifs (dans le sens de 'thème'
+	tel que définit par les auteurs), il n'y a pas de classe suffisament
+	grande pour le plus représentatif de chaque classe soit très populaire
+	(dans le sens de authority).
+	
+	
+	Un point qui n'est pas abordé: la compléxité calculatoire, le calcul
+	du pagerank peut être une opération très couteuse, surtout s'il utilise
+	leur système ainsi:
+	
+	affichage de la première page de résultat, 20 résultats, chaque résultats
+	est le plus représentatif d'une classe avec un pagerank elevé.
+	
+	page 2: les 20 résultats suivant sont calculés de façon identhique
+	mais en elevant du graphe les 20 résultats de la page 1, puis recalcul
+	du pagerank.
+	
+	etc.
+	
+	
+	En fait, il pourrait être très intéressant de faire un système adaptatif
+	avec leur système, qui pourrait prendre en compte une dimension temporelle,
+	une version plus ciblé des thèmes...},
+  timestamp = {2008.06.30}
+}
+
+@ARTICLE{JingBajulaIEEE08,
+  author = {Jing,, Yushi and Baluja,, Shumeet},
+  title = {VisualRank: Applying PageRank to Large-Scale Image Search},
+  journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+  year = {2008},
+  volume = {30},
+  pages = {1877--1890},
+  number = {11},
+  address = {Washington, DC, USA},
+  doi = {http://dx.doi.org/10.1109/TPAMI.2008.121},
+  issn = {0162-8828},
+  publisher = {IEEE Computer Society}
+}
+
+@ARTICLE{kang2004rtm,
+  author = {Kang, F. and Jin, R. and Chai, J.Y.},
+  title = {Regularizing translation models for better automatic image annotation},
+  journal = {Proceedings of the thirteenth ACM international conference on Information
+	and knowledge management},
+  year = {2004},
+  pages = {350--359},
+  owner = {nicolas},
+  publisher = {ACM New York, NY, USA},
+  review = {Dans cet article l'auteur propose deux modifications possible des
+	modèles de traduction classique pour l'annotation (comme TM) pour
+	résoudre le problème que les keywords avec une fréquence d'utilisation
+	faible ont peu de chance d'être utiliser pour annoter une image.
+	
+	Les résultats sont dit meilleurs.},
+  timestamp = {2008.05.27}
+}
+
+@INPROCEEDINGS{Kennedy07,
+  author = {Lyndon Kennedy and Mor Naaman and Shane Ahern and Rahul Nair and
+	Tye Rattenbury},
+  title = {How flickr helps us make sense of the world: context and content
+	in community-contributed media collections},
+  booktitle = {MULTIMEDIA '07: Proceedings of the 15th international conference
+	on Multimedia},
+  year = {2007},
+  pages = {631--640},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1291233.1291384},
+  isbn = {978-1-59593-702-5},
+  location = {Augsburg, Germany},
+  review = {Analyse de Flickr par approche combinées tag-based, location-based
+	et content-based.
+	
+	Dans ce travail, l'auteur veut automatiquement extraire des repères
+	visuels et leurs locations.
+	
+	
+	
+	Utilise deux approches dans son papier:
+	
+	- location driven: construit une carte géographique avec des tags
+	géolocalisés: extraction de tags représentatifs d'une région géographique
+	donnée par clustering (k-means) sur la distance géographique (threshold
+	50km).
+	
+	
+	- tag-driven: extraction de lieux et d'évènement sémantique à partir
+	des tags Flickr, le but étant d'identifier les tags qui représente
+	des place et/ou event. L'auteur définit simplement les "place tags"
+	qui exhibent des significant spatial patterns, et les "event tags"
+	qui exhibent des temporal patterns.
+	
+	Le schéma de métadonnées des tags dans une community-contributed media
+	collection peut être utilisé pour extraire la sémantique de ces tags.
+	Pour cela l'auteur utilise une approche développée dans un de ces
+	précédents article SSI Scale-Structure Indentification.
+	
+	
+	Ces deux approches lui permettent de faire une approche location-tag-vision
+	pour retrouver des images de repère liés à une geography. La notion
+	de landmarks, i.e. repère visuel sur une location est très importante
+	dans son article.
+	
+	
+	En 2007, Flickr == 20 millions d'images géotaggées.
+	
+	
+	De Flickr, nous pouvons obtenir:
+	
+	- photo
+	
+	- time
+	
+	- location
+	
+	- a lightweight annotation model (taxonomy)}
+}
+
+@ARTICLE{Khan2006,
+  author = {Khan, L.},
+  title = {Improving image annotations using fuzzy pruning and association rule
+	mining},
+  journal = {MDM/KDD'06},
+  year = {2006},
+  owner = {nicolas},
+  timestamp = {2008.05.14}
+}
+
+@CONFERENCE{lavrenko2003mls,
+  author = {Lavrenko, V. and Manmatha, R. and Jeon, J.},
+  title = {A model for learning the semantics of pictures},
+  booktitle = {Proceedings of Advance in Neutral Information Processing},
+  year = {2003}
+}
+
+@ARTICLE{lew2006cbm,
+  author = {Lew, M.S. and Sebe, N. and Djeraba, C. and Jain, R.},
+  title = {Content-based multimedia information retrieval: State of the art
+	and challenges},
+  journal = {ACM Transactions on Multimedia Computing, Communications, and Applications
+	(TOMCCAP)},
+  year = {2006},
+  volume = {2},
+  pages = {1--19},
+  number = {1},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  timestamp = {2008.05.13}
+}
+
+@ARTICLE{li2006rtc,
+  author = {Li, J. and Wang, J.Z.},
+  title = {Real-time computerized annotation of pictures},
+  journal = {Proceedings of the 14th annual ACM international conference on Multimedia},
+  year = {2006},
+  pages = {911--920},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  review = {ALIPR, Automatic Linguistic Indexing of Pictures - Realtime.
+	
+	
+	Le but du système proposé par les auteurs est de faire un système
+	pour le web, ou les communautés de partage de photo en ligne.
+	
+	Ce système apprends des concept sémantique en utilisant des images
+	exemples pour chaque concept.
+	
+	
+	Les objectifs du système sont:
+	
+	- Le système doit répondre en temps-réel et proposer une bonne précision
+	dans le tagging.
+	
+	- Le système est en fait semi-supervisée car l'amélioration des annotations
+	est faite de façon manuelle (RF), de cette façon le système améliore
+	sa détection car les images nouvellement taggées font partie ultérieurement
+	du système.
+	
+	De plus, de cette façon le système permet d'avoir un feedback utilisateur
+	sur l'ensemble des keywords proposés par le système (d'une manière
+	similaire à celle de J. Urban et son ICG, Image-Context Graph, ie.
+	c'est du relevance feedback et un apprentissage actif): Le système
+	peut ainsi raffiner la détection d'un tag en particulier, en fonction
+	des tags sélectionner par l'utilisateur (succès) et non sélectionné
+	(échec).
+	
+	
+	Les concepts connus du systèmes sont listable: http://www.alipr.com/words.html
+	
+	
+	Le système propose dans sa forme initial 15 keywords comme résultat
+	de l'annotation, dont au moins 1 est pertinent d'après les auteurs
+	dans 98% des cas.},
+  timestamp = {2008.08.20}
+}
+
+@ARTICLE{liu2006agm,
+  author = {Liu, J. and Li, M. and Ma, W.Y. and Liu, Q. and Lu, H.},
+  title = {An adaptive graph model for automatic image annotation},
+  journal = {Proceedings of the 8th ACM international workshop on Multimedia information
+	retrieval},
+  year = {2006},
+  pages = {61--70},
+  owner = {nicolas},
+  publisher = {ACM New York, NY, USA},
+  review = {Système de CBIR basé sur le Manifold Ranking Learning.
+	
+	Expérimentations conduites sur des jeux d'images Web et sur Corel
+	(les datasets de Duygulu, ECCV et JMLR):
+	
+	1. sur ECCV: les auteurs segmentent avec N-Cuts, et pour chaque images
+	sélectionne les 10 régions les plus larges et ils extraient des low-features
+	de dimension 30 pour chaque région.
+	
+	
+	Propose une structure pour générer un graphe de similarité adaptatif,
+	le NSC Nearest Spanning Chain, que les auteurs veulent robuste face
+	au distribution des données, et facile à implémenter.
+	
+	Ainsi, on peut résumer leur système ainsi:
+	
+	1. dans un premier temps, construire le Adaptive Similarity Graph,
+	avec une NSC Nearest Spanning Chain.
+	
+	La struture de NSC est proposée dans le but de ne pas avoir à utiliser
+	un k-NN ou epsilon-ball pour la construction du graphe de similarité,
+	d'après les auteurs le choix du paramètres k pour le k-NN et epsilon
+	pour le epsilon-ball est critique.
+	
+	Le GCap utilise un index spatial pour la calcul du k-NN, la structure
+	de NSC permet en quelques sortes de faire face aux large volume de
+	donnée car elle est basé sur de la statistique pour calculer le plus
+	proche voisin (mais un R-tree est aussi fait pour les large volume
+	de donnée). Cependant, même ainsi, toutes les images doivent bien
+	avoir un plus proche voisin de calculé, je ne comprend pas vraiment
+	l'avantage des NSC...
+	
+	
+	2. dans un second temps utiliser wordnet pour obtenir des corrélations
+	word-to-word et la co-occurrence pair à pair pour ajuster la matrice
+	d'étiquetage (labelling matrix), ie. étendre les annotations et pruner
+	les annotations non pertinente pour les images.
+	
+	
+	===== Notes à propos de l'historique des systèmes de CBIR =====
+	
+	Historiquement, pour les auteurs, nous avons des systèmes QBK (query-By-Keyword)
+	comme une simple extension des systèmes de recherche sur le texte.
+	Les annotations sont faites manuellement, ce qui amène à des problèmes
+	d'inconsistence et à la subjectivité des annotateurs, de plus avec
+	l'explosion des données cette approche n'est plus utilisable. 
+	
+	Dans les années 90, un schéma alternatif est utilisé, les CBIR et
+	des requêtes QBE Query-By-Example, cependant à cause du gap sémantique
+	les performances des systèmes de CBIR sont loin d'être satisfaisant.
+	
+	
+	Comparé à la QBE, la QBK est plus pratique et plus simple pour les
+	utilisateurs, de plus les keywords peuvent réfléchir de la sémantique
+	haut niveau.
+	
+	Si l'annotation automatique pouvait être un problème résolu, le problème
+	de la recherche d'image peut être simplifiée en un problème de recherche
+	dans du texte, on peut ainsi utiliser les algorithmes de recherches
+	sur le texte pour retrouver des images par ranking entre les annotations
+	des images et les requêtes.
+	
+	
+	Historiquement, les systèmes d'annotation d'images:
+	
+	1. les méthodes de classifications: chaque mot annoté est considéré
+	comme une classe, et chaque "mot sémantique" est considéré comme
+	un classifier. Utilisant cette méthode, nous trouvons:
+	
+	[J. Li, J.Z. Wang, Automatic linguistic indexing of pictures by a
+	statistical modeling approach]
+	
+	[C. Claudio, C. Gianluigi, S. Raimondo, Image annotation using SVM]
+	
+	[ E. Chang & al., CBSA: content-based soft annotation for multimodal
+	image retrieval using bayes point machines]
+	
+	[C. Gustavo, V. Nuno, a database centric view of semantic image annotation
+	and retrieval]
+	
+	==> les auteurs ajoutent que parce que chaque "mot sémantique" devrait
+	être représenté par un classifier, cette approche n'est pas scalable.
+	
+	
+	2. les méthodes de modélisation probabilistes:apprendre le modèle
+	d'association probabiliste entre les images et les mot-clés.
+	
+	[P. Duygulu, Object recognition as machine translation: learning a
+	lexicon for a fixed image vocabulary]
+	
+	On trouve dans ces systèmes des modèles de mélange probabiliste hiérarchique
+	comme les GMM Gaussian Mixture Model, LDA Latent Dirichlet Allocator,
+	correspondance LDA.
+	
+	CMRM de [J. Jeon, V. Lavrenko, R. Manmatha, Automatic image annotation
+	and retrieval using cross-media relevance], utilise les keywords
+	partagés par des images similaires pour annoter de nouvelles images.
+	
+	CRM de [R. Manmatha, V. Lavrenko, J. Jeon, A model for learning the
+	semantics of pictures]
+	
+	MBRM de [S.L. Feng, R. Manmatha, V. Lavrenko, Multiple Bernouilli
+	Relevance Models for Image and Video annotation]
+	
+	Ces méthodes statistique requiert un processus d'estimation des paramètres
+	qui est très couteux.
+	
+	
+	3. les méthodes basées sur les graphes; une seule référence est donnée,
+	celle du GCap de Faloutsos.
+	
+	A l'avantage d'être domaine indépendant (une fois qu'on a écrit la
+	procédure pour produire les noeuds régions du GCap).
+	
+	=====},
+  timestamp = {2008.08.25}
+}
+
+@ARTICLE{ma1999ntn,
+  author = {Ma, W.Y. and Manjunath, BS},
+  title = {NeTra: A toolbox for navigating large image databases},
+  journal = {Multimedia Systems},
+  year = {1999},
+  volume = {7},
+  pages = {184--198},
+  number = {3},
+  abstract = {We present here an implementation of NeTra, a prototype image retrieval
+	system that uses color, texture, shape and spatial location information
+	in segmented image regions to search and retrieve similar regions
+	from the database. A distinguishing aspect of this system is its
+	incorporation of a robust automated image segmentation algorithm
+	that allows object- or region-based search. Image segmentation significantly
+	improves the quality of image retrieval when images contain multiple
+	complex objects. Images are segmented into homogeneous regions at
+	the time of ingest into the database, and image attributes that represent
+	each of these regions are computed. In addition to image segmentation,
+	other important components of the system include an efficient color
+	representation, and indexing of color, texture, and shape features
+	for fast search and retrieval. This representation allows the user
+	to compose interesting queries such as “retrieve all images that
+	contain regions that have the color of object A, texture of object
+	B, shape of object C, and lie in the upper of the image”, where the
+	individual objects could be regions belonging to different images.
+	A Java-based web implementation of NeTra is available at http://vivaldi.ece.ucsb.edu/Netra.
+	
+	
+	Key words:Color – Texture – Shape – Query by spatial location – Content-based
+	image retrieval – Image databases – Image segmentation},
+  owner = {nicolas},
+  publisher = {Springer},
+  review = {Dans cet article, les auteurs montre que la segmentation améliore
+	de façon significative le retrieval d'image quand les images contiennent
+	de multiple objets complexe.},
+  timestamp = {2008.05.16}
+}
+
+@ARTICLE{matas95color,
+  author = {J. Matas and R. Marik and J. Kittler},
+  title = {The color adjacency graph representation of multi-coloured objects},
+  year = {1995},
+  owner = {nicolas},
+  review = {L'auteur propose un graphe de région pour modéliser l'agencement des
+	régions entre-elles},
+  text = {J. Matas, R. Marik, and J. Kittler. The color adjacency graph representation
+	of multi-coloured objects. Technical report, University of Surrey
+	VSSP-TR-1/95, 1995.},
+  timestamp = {2008.05.13},
+  url = {citeseer.ist.psu.edu/matas95color.html}
+}
+
+@ARTICLE{meier2003eos,
+  author = {Meier, W.},
+  title = {{eXist: An Open Source Native XML Database}},
+  journal = {LECTURE NOTES IN COMPUTER SCIENCE},
+  year = {2003},
+  pages = {169--183},
+  publisher = {Springer},
+  review = {eXist provides a schema-less storage of XML documents in hierarchical
+	collections.
+	
+	(dans XediX la spécification d'une DTD est obligatoire il me semble,
+	à vérifier...).
+	
+	
+	la recherche fulltext utilise Lucene, ainsi la recherche par proximité
+	des keywords et par regexp est possible.}
+}
+
+@INPROCEEDINGS{MihalceaFaruqueSIGLEX04,
+  author = {Mihalcea R., Faruque E.},
+  title = {SenseLearner: Minimally Supervised Word Sense Disambiguation for
+	All Words in Open Text},
+  booktitle = {in Proceedings of ACL/SIGLEX Senseval-3, Barcelona, Spain, July 2004},
+  year = {2004},
+  owner = {nicolas},
+  review = {Synthèse:
+	
+	Méthode entrainé à partir d'un petit jeu de donnée, et généralise
+	les concepts appris à partir des données d'entraînement pour la désambiguisation,
+	et ainsi la méthode ne nécessite pas un classifier pour chaque mot
+	à désambiguiser.
+	
+	=> permet de désambiguiser des termes non présent dans les données
+	d'apprentissage.
+	
+	
+	Utilise SemCor (Miller, Leacock, Randee, Bunker, A semantic concordance,
+	1993) pour apprendre un modèle sémantique du language et WordNet
+	pour dériver des généralisations sémantiques sur les mots qui n'apparaissent
+	pas dans le corpus annoté.
+	
+	Le point important de cette méthode est que le jeu de donnée pour
+	l'apprentissage est restreint, ensuite si il y a ambiguité sur un
+	mot qui n'est pas connu dans les données d'apprentissage, on utilise
+	WordNet pour généraliser, ce qui fait 2 modules: 
+	
+	1.le Semantic Langage Model (issu de l'apprentissage);
+	
+	2.Semantic Generalisations using Syntactic Dependencies and a Conceptual
+	Network (méthode appliquée aux mots non couvert par le Semantic Langage
+	Model).
+	
+	Utilise Timbl memory based algorithm (Daelemans et al, Timbl: Tilburg
+	memory based learner, 2001).
+	
+	64.6% d'exactitude sur Senseval English all words task.
+	
+	
+	Notes:
+	
+	citation de l'article « la plupart des éfforts pour résoudre ce problème
+	(de désambiguisation) sont concentrés vers de l'apprentissage supervisé
+	où chaque occurrence pour un mot particulier, dont le sens est taggé,
+	est transformé en un vecteur de caractéristiques, lequel est utilisé
+	dans un processus d'apprentissage automatique. L'applicabilité de
+	tels algorithmes supervisés est cependant limités au quelques mots
+	dont des données avec sens taggé sont disponibles, et leur exactitude
+	est fortement dépendante de la quantité de donnée taggée disponible ».
+	
+	
+	En fait, dans le module 1 (apprentissage du SemCor), prend en compte
+	le mot et son contexte environnement (mot avant et après), et le
+	part-of-speech de ce contexte.
+	
+	Par exemple:
+	
+	noun: on prend le premier noun, verb ou adj avant le noun cible dans
+	une fenêtre d'au plus 5 mots à gauche, et leur part-of-speech
+	
+	verbs: le premier mot avant, le premier mot après, et leurs part-of-speech.
+	
+	adj: le premier mot après, dans une fenêtre de 5 mots, et son part-of-speech.
+	
+	
+	Pour chaque mot du corpus d'entraînement un feature vector est construit
+	et ajouté à l'ensemble d'entraînement correspondant (celui des nouns,
+	des verbs ou des adj), l'étiquette de chaque feature vector est word#sense.},
+  timestamp = {2008.10.01}
+}
+
+@PHDTHESIS{millet2008,
+  author = {Millet, C.},
+  title = {Annotation automatique d'images : annotation cohérente et création
+	automatique d'une base d'apprentissage},
+  school = {ENST, Paris},
+  year = {2008},
+  owner = {nicolas},
+  review = {CONCLUSIONS de C. Millet: le but de sa thèse est de mettre au point
+	un système complètement automatique d'annotation d'images, en tentant
+	d'y incorporer des informations sémantique. Le système en entrée
+	doit pouvoir prendre une liste de concept à apprendre, et génère
+	en sortie des modèles qui permettent de détecter ces objets. Pour
+	cela son système propose:
+	
+	- une création automatique de la base de donnée d'apprentissage (c'est
+	pas tout à fait vraiment, c'est pas complètement automatique).
+	
+	- une classification hiérarhique de scène, car différents type de
+	scène ont besoin de traitement différent, et ne contiendront pas
+	les même objets (évaluée avec ImagEval part 5, classée 2ième avec
+	une MAP de 0.62).
+	
+	- détection d'un objet dans une image et détection du fond.
+	
+	- désambiguisation en utilisant les relations spatiales sur les fonds,
+	et le contexte pour les objets, pour venir à une annotation sématique
+	cohérente.
+	
+	Sa méthode de détection de clipart est très intéressante, rapide et
+	efficace comparée aux méthodes de la littératures (SVM ou k-NN).
+	
+	Il introduit également une méthode de segmentation des images, en
+	séparant l'objet au centre d'une image du fond: l'interêt est double
+	=> 1. apprendre l'objet segmenté, 2. la détection du fond dans les
+	images avec l'utilisation de relations spatiales pour leur désambiguisation
+	(le ciel est au dessus des arbres, les bâtiments sont au dessus de
+	l'herbe etc.), afin d'avoir une annotatioin spatialement cohérente.
+	Pour cela il a ajouté une connaissance sémantique sur les relations
+	spatiales relatives entre les différents fonds. La désambiguiisation
+	est aussi proposée par le contexte, avec un apprentissage de relations
+	contexte /objets, cette désmabiguisation est testée avec les deux
+	approches: apprentissage par base d'images (comme dans la litératture),
+	par corpus de texte externe (approche un peu plus nouvelle).
+	
+	
+	CRITIQUES: à propos de sa désambiguisation (que se soit celle basée
+	sur les relations spatiales dans les fonds, ou du contexte des objets),
+	cette désambiguisation n'est pas basée sur de la sémantique, il dit
+	que c'est de la sémantique mais ce juste des relations apprises de
+	façon statistique sur son jeu de donnée.
+	
+	Pour C. Millet introduire de la sémantique dans son système, c'est
+	introduire les relations spatiales et en prenant en compte le contexte.
+	
+	
+	Algorithme de segmentation utilisé: Hierarchical Watershed (LPE, Marcotegui).
+	
+	Cite l'article de [Eakins] qui distingue 3 niveaux de requêtes dans
+	les CBIR:
+	
+	1. niveau 1: recherche à partir d'atttributs primitifs (couleur, texture,
+	forme, position spatiale dans les images), c'est typiquement de la
+	QBE, "trouve des images comme celle-ci".
+	
+	2. niveau 2: recherche d'objets d'un type donné identifié par les
+	descripteurs extraits de ces objets, "trouve des images de fleurs".
+	
+	3. niveau 3: recherche par attributs abstrait, impliquant un certain
+	nombre de raisonnement haut niveau pour comprendre l'agencement des
+	objets et de la scène, le sentiment qu'il évoque "trouve des images
+	de fêtes d'anniversaire".
+	
+	Les niveaux 2 et 3 sont ce que l'on considère comme des recherche
+	sémantique d'image. L'écart entre le niveau 1 et 2 constitue le fossé
+	sémantique. Les niveaux 2 et 3 sont plus utilisés en pratique car
+	ils permettent une recherche d'image par mot-clés.
+	
+	D'après des études sur les requêtes utilisateurs sur plusieurs banques
+	d'images, ce sont les requêtes de niveaux 2 qui sont les plus utilisées,
+	le niveau 3 consititue une part significative tout de même, notamment
+	pour les banques d'images d'art.
+	
+	En pratique les requêtes de niveau 1 sont peu utilisées car difficile
+	à écrire.
+	
+	
+	Pour pouvoir accéder aux requêtes de niveaux 2 et 3, il faut pouvoir
+	annoter les images.
+	
+	Le problème de la recherche par annotation est qu'il faut premièrement
+	que l'annotation soit disponible, mais de plus, l'annotation est
+	en général faite sans règles aucunes, ie. deux images similaires
+	peuvent avoir un ensemble de mot-clé complètement différent.
+	
+	
+	Les méthodes d'annotation automatique utilisent des techniques d'apprentissage
+	et des descripteurs de bas niveau pour apprendre des concepts et
+	générer des mot-clés automatiquement. Cependant le niveau d'abstraction
+	obtenu par ces méthodes d'annoation automatique est encore très faible
+	et ne permet pas des requête de niveau selon Eakins.
+	
+	
+	Utilisation des relations spatiales dans le système de C. Millet est
+	introduit pour désambiguiser les fonds (ciel, mer, herbe etc.).
+	
+	
+	Dans son état de l'art, C. Millet rescence les travaux de classification
+	d'image dans une approche orientée image: indoor / outdoor, scènes
+	de ville ou de nature. Parmis eux, les travaux de Yavlinsky (auteur
+	de Behold) & al., Lavrenko & al., Metlzer & al., Feng & al., qui
+	utilise les même bases de 5000 images de Corel sur un vocabulaire
+	de 371 mots, décomposée en 4500 images d'apprentissage et 500 images
+	de test, pour Yavlinsky 16% de précision et 19% de rappel: montre
+	les limite des systèmes de CBIR scene-oriented lorsque l'on cherche
+	à reconnaitre des centaines de classes.
+	
+	
+	Parmis l'état de l'art des systèmes qui annotent des images dans une
+	approche region-based, on trouve les systèmes qui annotent des régions
+	à partir d'une image annotées, ie. les keywords sont appliquées à
+	l'image entière. Cette approche est intéressante, car elle ne nécessite
+	pas d'avoir une base de donnée de région annotée (et donc potentiellement
+	des segmentation à la main pour l'apprentissage et la vérité terrain
+	pour l'évaluation), mais plutôt une base de donnée d'image annotées.
+	
+	C'est typiquement le cas avec le GCap de Faloutsos, annotation est
+	appliquée à l'image entière cependant les similarités visuelles sont
+	calculés à l'aide d'un découpage en région, on peut penser que c'est
+	plus robuste ainsi.
+	
+	
+	C. Millet fait la distinction entre les systèmes qui utilisent de
+	la sémantique pour produire une annotation à partir de descripteurs
+	bas-niveau et les systèmes qui utilise de la sémantique pour raffiner
+	l'annotation.
+	
+	
+	Les méthodes qui annotent les images qui sont region-oriented, utilisent
+	des techniques de regroupement (clustering), et dépendent de la qualité
+	de ce regroutement pour l'apprentissage de régions.
+	
+	==> Yan & al. propose d'utiliser le multiple instance learning et
+	notamment l'algorithme PWDD (Point-Wise Diverse Density), est un
+	apprentissage supervisé qui permet d'apprendre les meilleurs descripteurs
+	ainsi que les meilleures régions permettant de discriminer l'objet.
+	Pour Yang & al., ces régions sont ensuite utilisées pour entrainer
+	un classifier bayésien permettant l'annotation de nouvelles images.
+	
+	
+	L'idée d'utiliser des images du web pour apprendre des concepts est
+	de Fergus et al. 
+	
+	
+	Parmis les systèmes de démonstration en ligne, seul deux sont pertinents:
+	ALIPR et Behold.
+	
+	Pour Behold, 56 concepts pour la recherche par similarité sont entraînés:
+	
+	36 concepts expérimentaux: comme 'animal', je trouve cela bizarre,
+	cela ne devrait pas être un concept visuel, mais animal devrait être
+	obtenu par inférence sur de la connaissance explicite).
+	
+	18 concepts non expérimentaux: plage, bateau, batiment etc.
+	
+	
+	La technique des bag-of-keywords est expliquée dans la thèse de C.
+	Millet, mais il ne l'utilise pas, il dit que cette technique à été
+	pour la première fois utilisé par Csurka et al. qui l'ont appelée
+	bag-of-keypoints.
+	
+	D'après Millet, c'est une technique de plus en plus utilisé et qui
+	apporte de bon résultat, même si un article (de Fei-Fei & Perona)
+	dans sa biblio montre que dans le cas de la classification de scène,
+	les descripteurs denses (par grilles régulière) donnent de meilleurs
+	résultats que les descripteurs diffus (par point d'interêt).
+	
+	
+	C. Millet propose un arbre de décision pour guider la reconnaissance,
+	notamment lever les ambiguités pour améliorer la reconaissance. Dans
+	sa hiérarchie, chaque image appartient à deux classes: une nature
+	(photographie, clipart, carte, peinture) et un type (couleur, N&B,
+	niveaux de gris recolorisées).
+	
+	La tâche 5 de la campagne ImagEval sur la classification de scène
+	à été définie en s'inspirant des travaux de la thèse de C. Millet.
+	
+	
+	C. Millet s'est beaucoup intéressé à la qualité des images, par exemple
+	une image d'un objet trop petit n'est pas utilisable car les descripteurs
+	de texture par exemple ne seront peu ou pas pertinent, de même si
+	l'objet est trop près ou qu'il ne soit pas entièrement visible dans
+	l'image, tout cela fait de mauvais représentant d'une classe d'image.
+	C'est ainsi que C. Millet à écrit un guide pour prendre de bonne
+	photo par exemple.
+	
+	
+	Cela peut être très utile étant donné qu'il est plus facile d'extraire
+	un objet d'une image lorsque l'on connait sa couleur qui C. Millet.
+	
+	Ainsi Millet propose un lexique pour les noms de couleurs liés à des
+	fouchettes de triplets dans l'espace de couleur HSV.
+	
+	C. Millet fait la différence entre les objets manufacturés et les
+	objets naturels. Les objets fabriqués par l'homme sont décrits plus
+	par leur fonctionnalité, tandis que les objets naturels par leur
+	couleur ou leur texture.
+	
+	C. Millet propose aussi d'étendre une étude préalablement démarrée
+	par Grefenstette, qui est d'obtenir des informations comme la couleur
+	d'un objet, en utilisant des resources texte issues du web, par des
+	requête comme "ours bruns" par exemple, puis d'inclure aussi la catégorie
+	de l'objet "les ours sont des animaux bruns" par exemple.
+	
+	(J'imagine que c'est le genre de connaissance que l'on peut trouver
+	dans OpenMind ???)
+	
+	Cependant, on trouve plus facilement la couleur d'un objet manufacturé
+	dans le texte d'une page web que la couleur d'un objet naturel (puisque
+	le nom de l'objet naturel donne en général sa couleur, tandis que
+	pour le nom d'un objet manufacturé renseigne surtout sur sa fonctionnalité).
+	
+	Ainsi, pour la construction de la base d'apprentissage d'image d'objet
+	manufacturé, les requêtes sur les moteurs web sont étendus avec une
+	couleur (pour atténuer le polychromatisme des objets manufacturé,
+	les requêtes ne sont pas étendues pour les objets naturels.
+	
+	C. Millet propose également une méthode pour obtenir la couleur des
+	objets par le contenu, en utilisant une fenêtre au centre des images
+	et une moyenne sur un grand nombre d'image.
+	
+	
+	Ben-Haim et al. proposent de segmenter les images en plusieurs régions
+	puis de classer les régions pour trouver des ensembles de régions
+	similaires (c'est un peu l'approche du GCap avec un 1-NN, mais avec
+	un k-NN avec k>1, on en vient à une approche similaire).
+	
+	Russel et al. proposent d'utiliser plusieurs algo de segmentation
+	sur chaque image pour pallier aux défauts des algo de segmentation.
+	
+	C. Millet conclut que leurs tests de regroupement de régions similaires
+	représentent souvent le contexte (ciel, herbe, ville), ou contient
+	des régions sombres tels que les ombres ou des régions noirs.
+	
+	Notes perso: faut-il y voir une mesure de similarité des images inadéquate
+	???
+	
+	
+	C. Millet propose ainsi 5 algorithmes de segmentation, dont certains
+	basés sur le nom de la couleur (de l'objet) extrait par des ressources
+	textes. Il conclut que ça manque quand même de finesse, dans certains
+	cas l'objet et le fond (surtout pour les animaux situés dans leur
+	environnements) font considérés comme un seul objet, ainsi la méthode
+	textuelle permettant de connaitre la couleur d'un objet manque de
+	finesse, mais par la suite Millet utilise sa méthode d'extraction
+	de la couleur des objets par le contenu.
+	
+	(exemple, couleur des dauphins: entre bleu et gris, mais l'eau dans
+	laquelle ils vivent est bleu).
+	
+	il propose également d'augmenter la précision des images de la base
+	auto-construite par une série de filtre (l'objet doit représenter
+	plus de 20% de l'image, ne doit pas toucher plus de 80% du bord de
+	l'image, la distance du baycentre de la région représentant l'objet
+	ne doit pas être plus grande que 40ù de la distance centre de l'image
+	<-> bord).},
+  timestamp = {2008.08.27}
+}
+
+@ARTICLE{milne7csr,
+  author = {Milne, D.},
+  title = {Computing Semantic Relatedness using Wikipedia Link Structure},
+  journal = {Proc. of NZCSRSC’07},
+  owner = {nicolas},
+  review = {L'auteur propose WLVM Wikipedia Link Vector Model, une mesure de la
+	similarité sémantique basé non pas sur le contenu textual mais sur
+	la structure hyperlink de wikipedia.
+	
+	Prends en supposé qu'une requête n'est pas une instrusction d'intention,
+	mais un résumé, quelques mots ou phrases pour trouver l'information
+	recherchée.
+	
+	Ecrire une bonne requête suppose qu'on doit prédire quelle informations
+	le document doit contenir, mais aussi quels sont les termes qui peuvent
+	être utilisés pour exprimer cela.
+	
+	
+	L'utilisateur du moteur de recherche doit donc faire un pont entre
+	ce qu'il peut décrire et l'information qu'il cherche.},
+  timestamp = {2008.06.05}
+}
+
+@ARTICLE{mojsilovic2000mar,
+  author = {Mojsilovic, A. and Kovacevic, J. and Hu, J. and Safranek, R.J. and
+	Ganapathy, S.K.},
+  title = {Matching and Retrieval Based on the Vocabulary and Grammar of Color
+	Patterns},
+  journal = {IEEE TRANSACTIONS ON IMAGE PROCESSING},
+  year = {2000},
+  volume = {9},
+  number = {1},
+  owner = {nicolas},
+  review = {dans cet article l'auteur extrait les couleurs les plus importante
+	contenues dans une image, en se basant sur une quantification de
+	l'espace de couleur HSV, cette méthode à pour avantage de calculer
+	des primitives moins complexe que les histogrammes tout en conservant
+	les mêmes informations de couleurs sans toutefois intégrer d'informations
+	sur les relations spatiales.},
+  timestamp = {2008.05.13}
+}
+
+@CONFERENCE{mori1999iwt,
+  author = {Mori, Y. and Takahashi, H. and Oka, R.},
+  title = {Image-to-word transformation based on dividing and vector quantizing
+	images with words},
+  booktitle = {First International Workshop on Multimedia Intelligent Storage and
+	Retrieval Management},
+  year = {1999},
+  review = {Synthèse:
+	
+	
+	Ce n'est pas un modèle basé sur du machine learning, mais une approche
+	dite de co-occurrence model.
+	
+	
+	Modèle basé sur les co-occurences.
+	
+	Deux processus dans la méthode:
+	
+	1.diviser chaque image en sous-image avec keywords;
+	
+	2.produire un vector quantization de la sous-image pour faire des
+	clusters.
+	
+	Ressemble beaucoup au MMG+RWR dans le principe, chaque annotation
+	pour une image est le résultat d'une affinité avec une sous-image
+	du système.
+	
+	
+	
+	
+	Propose une méthode de transformation image-to-word basée sur un apprentissage
+	statistique depuis des images auquelles des mots sont attachées.
+	
+	Procède en 3 étapes:
+	
+	1.chaque image est divisé en sous-image et chaque sous-image hérite
+	des keywords de l'image d'origine;
+	
+	2.toutes les parties d'images sont quantifiées dans un vecteur pour
+	construire un cluster;
+	
+	3.la probabilité de chaque keyword dans chaque cluster est estimé
+	statistiquement;
+	
+	
+	Ce type de système doit bien fonctionner que si un jeu d'images d'entraînement
+	est grand.
+	
+	« nous pouvons espérer que le taux de mots innapropriés graduellement
+	baisse avec l'accumulation de schéma similaire (ie., image+keyword) ».}
+}
+
+@INPROCEEDINGS{753227,
+  author = {Henning Müller and Stéphane Marchand-Maillet and Thierry Pun},
+  title = {The Truth about Corel - Evaluation in Image Retrieval},
+  booktitle = {CIVR '02: Proceedings of the International Conference on Image and
+	Video Retrieval},
+  year = {2002},
+  pages = {38--49},
+  address = {London, UK},
+  publisher = {Springer-Verlag},
+  isbn = {3-540-43899-8},
+  review = {les auteurs sont cité pour [Mueller, H., Geissbuhler, A., Marchand-Maillet,
+	S. and Clough, P. (2004), Benchmarking image retrieval applications,
+	In proceedings of the Seventh International Conference on Visual
+	Information Systems, San Francisco, USA, September 8-10, 2004], qui
+	est l'un des articles qui présente très bien ImageCLEF.}
+}
+
+@ARTICLE{WalrusNatsev04,
+  author = {Apostol Natsev and Rajeev Rastogi and Kyuseok Shim},
+  title = {WALRUS: A Similarity Retrieval Algorithm for Image Databases},
+  journal = {IEEE Transactions on Knowledge and Data Engineering},
+  year = {2004},
+  volume = {16},
+  pages = {301-316},
+  number = {3},
+  address = {Los Alamitos, CA, USA},
+  doi = {http://doi.ieeecomputersociety.org/10.1109/TKDE.2003.1262183},
+  issn = {1041-4347},
+  publisher = {IEEE Computer Society}
+}
+
+@INPROCEEDINGS{NavigliEACL06,
+  author = {Navigli, Roberto},
+  title = {Online Word Sense Disambiguation with Structural Semantic Interconnections},
+  booktitle = {Proc. of 11th Conference of the European Association for Computational
+	Linguistics, comp. volume (EACL 2006), Trento, Italy, April 3-7th,
+	2006, pp. 107-110.},
+  year = {2006},
+  owner = {nicolas},
+  review = {Synthèse:
+	
+	Propose dans cet article l'algorithme SSI Structural Semantic Interconnections,
+	un algorithme non supervisé de désambiguisation de mots pour le language
+	naturel, basé sur de la connaissance.
+	
+	Les expérimentations sont faîtes sur un WordNet étendu avec des relations
+	related-to extraite de
+	
+	 « Oxford Collocations, the Longman Activator, collocation web sites
+	etc ». Des collocations de mots sont détectés dans ces ressources
+	puis mappées dans l'inventaire de sens de WordNet de manière semi-automatique
+	(Navigli, Semi-automatic extension of large-scale linguistic knowledge
+	bases, 2005) et transformé en arc related-to.
+	
+	Définition de WSD selon Navigli: WSD est la tâche de formalisation
+	du sens attendu d'un mot dans un contexte, en sélectionnant le sens
+	approprié à partir d'un lexique de manière automatique.
+	
+	Lors de leur évaluations, SSI est meilleur que le meilleur système
+	non-supervisé (Villarejo et al., 2004), et il est quelques points
+	en dessous des deux meilleurs supervisés: Gambl et SenseLearner.
+	
+	Précision et rappel sur senseval-3: précision=60.4% et rappel=60.4%.
+	
+	
+	Notes:
+	
+	senseval compétition international en coopération avec l'ACL de WSD,
+	senseval-4 prague.
+	
+	sur le website de Navigli, un lien vers OpenMind => à creuser.
+	
+	WordNet::Similarity package (Pedersen et al., 2004), ce package fournit
+	une variété de mesure de parenté pour déterminer la similarité entre
+	paire de mots.
+	
+	Basé sur ce package, (Patwardhan et al., 2005) apporte un package
+	de WSD WordNet::SenseRelate.
+	
+	Parmis l'état de l'art en WSD, les algorithmes les plus performants
+	à Senseval-3: Gambl (Decadt et al., 2004), SenseLearner (Mihalcea,
+	Faruque, 2004). Mais ces deux systèmes sont supervisés, l'application
+	de ces systèmes sur des phrases d'un domaine ouvert n'est pas garanti
+	à de bonne performance que celle obtenu lors de Senseval.
+	
+	
+	Une application intéressante selon Navigli de la production d'un graphe
+	sémantique pour la sélection du sens d'un mot est la validation du
+	sens des annotations, quand des validateurs nécessitent des preuves
+	pour décider du choix d'un sens quand des annotators sont en désaccord
+	(Navigli, Experiments on the validation of sense annotations assisted
+	ly lexical chains, 2006).},
+  timestamp = {2008.10.01}
+}
+
+@ARTICLE{navigli05ieee,
+  author = {Roberto Navigli and Paola Velardi},
+  title = {Structural Semantic Interconnections: A Knowledge-Based Approach
+	to Word Sense Disambiguation},
+  journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+  year = {2005},
+  volume = {27},
+  pages = {1075--1086},
+  number = {7},
+  address = {Washington, DC, USA},
+  doi = {http://dx.doi.org/10.1109/TPAMI.2005.149},
+  issn = {0162-8828},
+  publisher = {IEEE Computer Society}
+}
+
+@INPROCEEDINGS{05-67,
+  author = {Noel O'Connor and Edward Cooke and Herve le Borgne and Michael Blighe
+	and Tomasz Adamek.},
+  title = {The AceToolbox: Low-Level Audiovisual Feature Extraction for Retrieval
+	and Classification},
+  booktitle = {2nd IEE European Workshop on the Integration of Knowledge, Semantic
+	and Digital Media Technologies},
+  year = {2005},
+  location = {London, U.K.},
+  owner = {nicolas},
+  timestamp = {2008.05.28}
+}
+
+@ARTICLE{pan2004amc,
+  author = {Pan, J.Y. and Yang, H.J. and Faloutsos, C. and Duygulu, P.},
+  title = {Automatic multimedia cross-modal correlation discovery},
+  journal = {Proceedings of the 2004 ACM SIGKDD international conference on Knowledge
+	discovery and data mining},
+  year = {2004},
+  pages = {653--658},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  review = {Basé sur un translation model (modèle de traduction, ou modèle de
+	réécriture), Pan & al. propose une méthode pour découvrir les corrélations
+	entre les images features et les keywords. Ils appliquent la corrélation
+	and une cosine method (? ou ça?), une SVD, mais l'idée est basé sur
+	un TM avec la supposition que toutes les features sont importantes
+	et pas d'utilisation de knowledge base.
+	
+	
+	Mais le problème des modèles de traduction est que les keywords fréquent
+	sont associés à de nombreux segment d'image différents, mais les
+	keywords peu fréquent ont peu de chance d'être assignés.},
+  timestamp = {2008.05.27}
+}
+
+@ARTICLE{pass1996hrc,
+  author = {Pass, G. and Zabih, R.},
+  title = {Histogram refinement for content-based image retrieval},
+  journal = {IEEE Workshop on Applications of Computer Vision},
+  year = {1996},
+  pages = {96--102},
+  owner = {nicolas},
+  review = {Dans cet article les auteurs distinguent, pour la construction des
+	histogrammes de couleurs, les pixels appartenant à des régions uniformes
+	ou non pour construire un histogramme de vecteur de couleur cohérente
+	et incohérente. 
+	
+	Cette approche intégre un peu d'information spatiale.},
+  timestamp = {2008.05.13}
+}
+
+@PHDTHESIS{PopescuThesis08,
+  author = {Popescu, A.},
+  title = {Structures linguisitiques pour la recherche d'images sur Internet},
+  year = {2008},
+  owner = {nicolas},
+  review = {Internet: environnement très riche, dynamique et faiblement structuré.},
+  timestamp = {2008.11.13}
+}
+
+@INPROCEEDINGS{1291455,
+  author = {Adrian Popescu},
+  title = {Large scale semantic structures for image retrieval},
+  booktitle = {MULTIMEDIA '07: Proceedings of the 15th international conference
+	on Multimedia},
+  year = {2007},
+  pages = {1017--1019},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1291233.1291455},
+  isbn = {978-1-59593-702-5},
+  location = {Augsburg, Germany},
+  owner = {nicolas},
+  timestamp = {2008.06.27}
+}
+
+@ARTICLE{puzicha1999eed,
+  author = {Puzicha, J. and Buhmann, JM and Rubner, Y. and Tomasi, C.},
+  title = {Empirical evaluation of dissimilarity measures for color andtexture},
+  journal = {Computer Vision, 1999. The Proceedings of the Seventh IEEE International
+	Conference on},
+  year = {1999},
+  volume = {2},
+  owner = {nicolas},
+  review = {Dans cet article l'auteur présente les méthodes de comparaison d'histogramme
+	de couleur, la divergence de Jeffrey, et la divergence de Jensen-Shannon.},
+  timestamp = {2008.05.13}
+}
+
+@ARTICLE{217725,
+  author = {Ralambondrainy,, H.},
+  title = {A conceptual version of the K-means algorithm},
+  journal = {Pattern Recogn. Lett.},
+  year = {1995},
+  volume = {16},
+  pages = {1147--1157},
+  number = {11},
+  address = {New York, NY, USA},
+  doi = {http://dx.doi.org/10.1016/0167-8655(95)00075-R},
+  issn = {0167-8655},
+  publisher = {Elsevier Science Inc.}
+}
+
+@ARTICLE{rui1999irc,
+  author = {Rui, Y. and Huang, T.S. and Chang, S.F.},
+  title = {Image Retrieval: Current Techniques, Promising Directions, and Open
+	Issues},
+  journal = {Journal of Visual Communication and Image Representation},
+  year = {1999},
+  volume = {10},
+  pages = {39--62},
+  number = {1},
+  owner = {nicolas},
+  publisher = {Elsevier},
+  timestamp = {2008.05.13}
+}
+
+@ARTICLE{russell2008lda,
+  author = {Russell, B.C. and Torralba, A. and Murphy, K.P. and Freeman, W.T.},
+  title = {LabelMe: A Database and Web-Based Tool for Image Annotation},
+  journal = {International Journal of Computer Vision},
+  year = {2008},
+  volume = {77},
+  pages = {157--173},
+  number = {1},
+  owner = {nicolas},
+  publisher = {Springer},
+  review = {Les idées dérrière la construction de LabelMe sont: 
+	
+	- l'apprentissage de centaine de concept et les images emcombrées
+	(cluterred).
+	
+	- le besoin d'avoir des bases de données d'images "weakly labeled"
+	pour la reconnaissance d'objets.
+	
+	
+	Parmis les méthodes d'apprentissage à partir d'annotation faible citées:
+	
+	
+	- Matching Words and Pictures, Barnard, segmentation sur Corel.
+	
+	- Object class recognition by unsupervised scale-invariant learning,
+	Fergus & Perona, détection de point d'interet sur la base Caltech.
+	
+	- plus récémment: les techniques de bag-of-word pour découvrir la
+	catégorie des objets depuis des images que l'on sait contenir l'objet
+	(base de donnée image d'apprentissage avec ground-truth).
+	
+	
+	Le succès de ces méthodes pose la question suivante: A t-on besoin
+	d'images avec des annotations plus détaillées (ce qui demande un
+	travail plus important que juste une légende ~ keyword annotation).
+	
+	
+	Comparaison de LabelMe avec Caltech: (Caltech-5 en fait), cette base
+	Caltech ne contient que 5 classes, chaque objet rempli plus ou moins
+	l'image. Cette base est convenable pour tester et entrainer un classifier
+	image binaire (pour décider si l'image contient ou non l'objet),
+	mais cette base n'est pas faite pour la détection d'objet ou sa localisation.
+	
+	A noter qu'il est possible d'obtenir 95% de bonne classification sur
+	ce dataset, c'est considérer comme trop facile, et pas intéressant
+	pour avancer dans le domaine. De plus, le manque de fond (background)
+	empeche de proposer des algorithmes qui font usage d'information
+	contextuelle pour la localisation des objets (A noter cependant,
+	qu'on peut toujours faire de la localisation non contextuelle en
+	utilisant une mosaïque de l'image et tester si l'objet est présent
+	ou non dans l'un des patchs).
+	
+	Fei-Fei est à l'origine de Caltech-101 (construit avec Google Image
+	Search).
+	
+	De même que Caltech-5, Caltech-101 est convenable pour la reconnaissance
+	de catégorie et non pour la détection d'objet.
+	
+	
+	Comparaison avec PASCAL-VOC: VOC intégre les databases du MIT CSAIL
+	objets et scène (tout comme LabelMe mais LabelMe y a ajouté des annotations).
+	
+	databases du MIT CSAIL: http://web.mit.edu/torralba/www/database.html
+	
+	
+	Comparaison avec ESP Game / Peekaboom:
+	
+	ESP-Game (Luis Von Ahn), http://captcha.net/esp-search.html
+	
+	http://hunch.net/~jl/ESP-ImageSet/search.shtml est un moteur de recherche
+	sur les images de ESPGame, (68k images environ), et http://hunch.net/~learning/ESP-ImageSet.tar.gz
+	contient ces images et leurs annotations.
+	
+	ESP Game ne propose que des captions tandis que LabelMe propose des
+	polygonal outlines.
+	
+	Peekaboom est aussi un jeu à deux joueur, (Boom et Peek), Boom clic
+	sur l'image, pour pointer un objet, et Boom doit dire quel est l'objet.
+	Si Peek a deviner, les jouers inversent leurs rôles.
+	
+	
+	Les auteurs parlent de la granularité de l'annotation qui est un problème:
+	doit-on annoter crowd, ou annoter chaque person. C'est le problème
+	également de la granularité de la segmentation, comme confronter
+	par le benchmark de segmentation de Berkeley (segbench): comment
+	segmenter les images ?
+	
+	
+	Dans LabelMe la décision de la composition de l'annotation est laissée
+	à l'utilisateur, ainsi cela reflète la façon naturelle de segmenter
+	l'image.
+	
+	De même, le choix des syntagmes qui compose l'annotation est laissé
+	à l'utilisateur (pas de vocabulaire fixe), ie. le choix de la description
+	est laissé à l'utilisateur.},
+  timestamp = {2008.09.16}
+}
+
+@INPROCEEDINGS{saenko:ulv,
+  author = {Saenko, K. and Darrell, T.},
+  title = {Unsupervised Learning of Visual Sense Models for Polysemous Words},
+  year = { 2008 },
+  journal = {Proceedings of the Twenty-Second Annual Conference on Neural Information
+	Processing Systems (NIPS), Vancouver, Canada, to appear},
+  timestamp = {2009.03.11}
+}
+
+@ARTICLE{SchroffICCV077a,
+  author = {Schroff, F. and Criminisi, A. and Zisserman, A.},
+  title = {Harvesting Image Databases from the Web},
+  journal = {Computer Vision, 2007. ICCV 2007. IEEE 11th International Conference
+	on},
+  year = {2007},
+  pages = {1-8},
+  month = {Oct.},
+  doi = {10.1109/ICCV.2007.4409099},
+  issn = {1550-5499},
+  keywords = {Bayes methods, Web sites, estimation theory, image classification,
+	image retrieval, meta data, support vector machines, text analysis,
+	visual databasesBayes posterior estimator, SVM visual classifier,
+	Web page, World Wide Web, automatic image ranking, high-quality image,
+	image alternative tag, image database, image filename, image reranking,
+	image title tag, meta data, object identifier, text based Web search
+	querying, visual features},
+  timestamp = {2009.03.11}
+}
+
+@MASTERSTHESIS{shabou2007,
+  author = {Shabou, A.},
+  title = {Indexation, recherche et classification d'objets: approches par bag-of-keypoints},
+  year = {2007},
+  owner = {nicolas},
+  review = {Représentation des images du système par des histogrammes de fréquences
+	de mot visuels (ie. éléments du codebook).
+	
+	Ces histogrammes sont des oBoF, organized-Bag-of-Features (des BoF
+	construit avec un ordre d'écriture, encodant une relation spatiale
+	des features).
+	
+	
+	L'indexation repose entièrement sur le codebook généré à partir de
+	la base d'apprentissage.
+	
+	
+	Le système proposé fonctionne ainsi:
+	
+	A. phase d'apprentissage sur une base d'objet d'apprentissage:
+	
+	 1. détecteurs Harris-Laplace sur chaque image pour la détection des
+	IP (Interest Points);
+	
+	 2. calcul du vecteur SIFT sur chaque points d'interets;
+	
+	 3. k-means sur les vecteurs SIFT en SIFT-centre (ce qui permet d'obtenir
+	un bag-of-keypoints si j'ai bien compris);
+	
+	B. construction du dictionnaire de mot visuel:
+	
+	 1. k-means sur les SIFT-centres sur toutes la base;
+	
+	 2. construction du dictionnaire; 
+	
+	C. construction de la signature associée à chaque objet (ie. image?),
+	ie. bag-of-features:
+	
+	 1. calculer l'histogramme des SIFT de chaque objet en fonction des
+	SIFT du codebook (distance de similarité euclidienne);
+	
+	 2. normalisation de l'histogramme;
+	
+	D. apprentissage des classes d'objets par SVM:
+	
+	 1. extraction des caractéristiques de chaque classe d'objets d'apprentissage;
+	
+	 2. construction des hyperplans séparateurs;
+	
+	
+	Les vecteurs SIFT sont de dimension 128.
+	
+	
+	Un mot visuel est un cluster de SIFT-centre sur toutes la base d'apprentissage
+	(ce qui permet de diminuer la dimension des histogrammes de mots
+	visuels et ne garder de l'information pertinente).
+	
+	Les clusters forment ainsi un dictionnaire de mots visuels (codebook),
+	et chaque image de la base (ie. chaque objet pour Shabou) est représentée
+	par un histogramme de fréquence d'apparition des mots visuels. 
+	
+	Une fois la base d'image indexée, la recherche ou la classification
+	d'objets par la technique de bag-of-keypoints est basé sur la similarité
+	entre le signature de l'objet question et les signatures de la base
+	d'apprentissage.
+	
+	
+	Construction du dictionnaire visuel: le dictionnaire doit vérifier
+	des propriétés de richesse (pour représenter les détails des objets),
+	et de compacité (pour alléger la représentation de l'objet).
+	
+	
+	Pour chaque image, on construit un histogramme dont les bins sont
+	les mots du codebook et les poids sont les fréquences d'apparition
+	dans l'image. Cet histogramme est la signature de l'image, c'est
+	un bag-of-features.
+	
+	Mais les bag-of-feature classique ne prennent pas en compte les informations
+	spatiales entre les mots visuels qui pourtant correspondent à une
+	partie de l'information pertinente, ainsi l'auteur propose une version
+	modifié du bag-of-features.
+	
+	L'auteur veut une signature qui ne soit pas trop discriminative, (car
+	sinon la technique ne serait utilisable que pour la mise en correspondance
+	d'objet, ie. matching), alors qu'on veut plutôt de la classification,
+	ainsi la signature doit caractériser une classe d'appartenance de
+	l'objet plutôt que l'objet lui-même.
+	
+	L'auteur propose de découpé l'image en utilisant une grille régulière
+	rectangulaire (on a Bi, les blocs), ainsi la signature peut être
+	découpée en segment (on a Si, les segments), chaque segment correspond
+	à un bloc dans l'image.
+	
+	Les bins dans chaque segments sont les mot visuels qui apparaissent
+	dans le bloc d'image associé, et leurs poids est la fréquence d'apparition
+	du mot visuel pondéré par sa fréquence d'apparition dans toute la
+	grille.
+	
+	Ainsi la signature est ordonnée selon le sens de parcours des blocs
+	de la grille, l'auteur nomme cela un oBoF, organized-bag-of-features.
+	
+	Mais il faut aussi prendre en compte que dorénavant la taille de signature
+	est variable.
+	
+	
+	La distance utilisée est de type "ground distance" (distance au sol
+	en fr), ie. qui prend en compte la distance entre les bins, de plus
+	cette distance doit prendre en compte que les signatures sont de
+	tailles variable.
+	
+	
+	Les XP sont menés sur Corel1000, et ImagEval.
+	
+	Les résultats sont proches de ceux obtenus dans les campagnes d'évaluation
+	(comme ImagEval). (Par ailleurs, il cite le ENSEA-ETIS!)
+	
+	Les résultats (les courbes ROC) sont meilleurs pour la tâche de classification
+	que pour la tâche de recherche d'objet par le contenu.
+	
+	
+	critiques:
+	
+	======
+	
+	Il y a une incohérence dans ses explications: dans sa méthode pour
+	génerer le codebook: k-means sur les IP puis calcul de SIFT (comme
+	indiqué dans son schéma global), ou bien calcul des SIFT pour tous
+	les IP de l'image puis k-means???
+	
+	Je suppose que son schéma est incorrect, mais on ne sait pas vraiment...
+	
+	
+	L'auteur ne décrit pas très bien ce qu'il entends par 'objets', il
+	fait une détection des IP sur des "images"!
+	
+	Qu'est-ce qu'un objet? un cluster de IP avec SIFT associés qui revient
+	suffisament souvent dans toute la base pour avoir une existence comme
+	cluster dans un k-means?
+	
+	
+	On peut supposer que la base d'image ne contient que des images d'objets,
+	ie. chaque image contient un et un seul objet principalement (comme
+	dans la thèse de C. Millet du CEA-LIST-LIC2M également d'ailleurs),
+	ainsi chaques images est représentative d'un objet.
+	
+	L'auteur s'y perd un peu, il parle de signature d'image, des fois
+	de signature d'objet...
+	
+	La signature est au moins définie ainsi: c'est un bag-of-feature.
+	
+	Cela simplifie grandement les choses, le problème n'est pas vraiment
+	de détecter un objet mais de classer l'image dans le sens "contient
+	ou ne contient pas tel mot visuel".
+	
+	
+	C'est très intéressant la décomposition oBof (organized-Bag-of-Features)
+	de l'image en bloc, cela fait penser à des ondelettes.
+	
+	
+	Formulation intéréssante: "la classification d'image est un problème
+	différent de la recherche d'objet dans les images, mais c'est un
+	problème complémentaire. En effet, dans la recherche d'objet on recherche
+	un objet similaire à un objet donné, mais dans la construction de
+	la base, on ne sait pas encore quels sont les objets. Si nous connaissons
+	a priori la classe de l'objet, nous pouvons alors proposer la classification",
+	ie. utilisé des techniques comme les SVM etc, c'est la différence
+	entre clustering et classification.
+	
+	
+	Pour la classification (si j'ai bien compris), il fait autant de SVM
+	qu'il a d'objet à classifier dans sa base, (classifier binaire, OUI
+	|| NON), n'y a t-il pas un autre moyen de faire?
+	
+	
+	Les résultats (les courbes ROC) sont meilleurs pour la tâche de classification
+	que pour la tâche de recherche d'objet par le contenu.
+	
+	On peut trouver cela bizarre, car on peut penser que les SIFT sont
+	des descripteurs assez rigides, ie. n'offrant pas assez de souplesse
+	pour dégager une 'classe' d'objet (ie. l'objet et ses version dérivées),
+	mais cela est sans doute apporter par les k-means.
+	
+	Cependant, que les SIFT soient des descripteurs rigides pourrait se
+	voir confirmer par le fait qu'en recherche d'image, les résultats
+	du système de l'auteur sont moins bons (et c'est pour cela que les
+	SIFT sont encore peut utiliser en recherche d'image).
+	
+	Mais d'une façon générale, la reconnaissance d'objet est difficile
+	car les scènes perturbées par de nombreux paramètres (lumière, point
+	de vue, occlusion, cluter etc.), ainsi le système proposé par l'auteur
+	offre de meilleur résultats en classification qu'en recherche d'objet.
+	
+	
+	Dans sa conclusion l'auteur confond image & objet, bien qu'il peut
+	faire de la recherche d'objet en soumettant une image qui représente
+	son objet... c'est délicat...(d'après les screenshots dans son rapport
+	en zoomant, on voit qu'on peut sélectionner une fenêtre à la souris,
+	une sélection, ça pourrait raffiner la sélection de ce qu'il pourrait
+	appeler 'objet').
+	
+	
+	L'auteur montre bien l'apport du clustering sur les SIFT "en représentant
+	l'image par des patches locaux construit sur toute une base contenant
+	différentes images de même objets avec des conditions d'acquision
+	différentes". Bien que, encore uen fois "objet" ne veux rien dire,
+	cf. "afrique" dans corel-1000 => il est où l'objet???
+	
+	C'est içi qu'il est intéressant de noter que le MMG de Faloutsos ou
+	le ICS de Urban pourrait en faire autant, ne pas préparé le système
+	pour faire de la classif mais introduire une notion de mot visuel
+	(avec éventuellement l'aide des noeuds texte).
+	
+	
+	L'indexation repose entièrement sur le codebook généré à partir de
+	la base d'apprentissage, d'où un problème de cette approche pourrait
+	être la mise à jour de cette base, l'acquisition de nouvelle image
+	force la reconstruction du codebook? (d'où un interêt pour le MMG,
+	sa modularité, je devrais mettre l'accent là dessus dans ma thèse,
+	les approches par mot visuels ne sont pas forcément la bonne approche
+	pour des bases de données de grandes dimension qui demande des mise
+	à jours!!!!, c'est très important, l'apprentissage ne peut pas être
+	incrémental!!!).},
+  timestamp = {2008.07.04}
+}
+
+@INPROCEEDINGS{sinha07icsc,
+  author = {Ravi Sinha and Rada Mihalcea},
+  title = {Unsupervised Graph-basedWord Sense Disambiguation Using Measures
+	of Word Semantic Similarity},
+  booktitle = {ICSC '07: Proceedings of the International Conference on Semantic
+	Computing},
+  year = {2007},
+  pages = {363--369},
+  address = {Washington, DC, USA},
+  publisher = {IEEE Computer Society},
+  doi = {http://dx.doi.org/10.1109/ICSC.2007.107},
+  isbn = {0-7695-2997-6},
+  review = {Synthèse:
+	
+	Une méthode non supervisée basé sur les graphes pour faire de la WSD
+	capable de rivaliser avec l'état de l'art des méthodes non supervisée
+	sur Senseval.
+	
+	61.22% d'exactitude sur les nouns (mieux de que les 60.9% en utilisant
+	le sens le plus fréquent dans WordNet, mais moins bon que les 67%
+	de Gambl sur le jeu de donnée est auteurs de Gambl qui inclus Senseval
+	english all words).
+	
+	
+	De plus, l'article présente des évaluations comparatives sur:
+	
+	1.différentes mesures de similarité sémantique (teste sur 6 mesures
+	classique);
+	
+	2.différents algorithmes de calcul de centralité dans un graphe;
+	
+	Les évaluations montre que les différentes relations de similarités
+	sémantiques classique (Leacock&Chodorow, Lesk, Wu&Palmer, Resnik,
+	Lin, Jiang&Conrath) n'offre pas les même performance suivant le part-of-speech
+	auquel elles sont appliquées (noun, verb, adj, ou adv), montre également
+	par leurs expérimentations lesquels il est pertinent d'utiliser en
+	fonction du part-of-speech.
+	
+	
+	==> Très intéréssant car la méthode combine les relations de similarité
+	sémantique.
+	
+	
+	==> Un apport de cette approche est que la centralité est calculée
+	sur un graphe composé de tous les sens de tous les mots du contexte
+	=> particulièrement adapté à un contexte composé de plusieurs termes
+	ambigu (c'est pas forcément évident dans SSI, car comme l'algorithme
+	est itératif l'ordre dans lequel les mots du contexte sont désambiguiser
+	est important).
+	
+	
+	==> Ne considère pas le contexte comme un sac de mot, car les dépendances
+	entre étiquettes de sens pour les mots ne sont pas calculées si la
+	distance entre les mots dans le contexte est supérieur à un seuil
+	DistMax.
+	
+	
+	Notes:
+	
+	La méthode est une généralisation de l'algorithme random walk d'étiquetage
+	de séquence de donnée présenté dans un article précédent (Mihalcea,
+	2005, Large vocabulary unsupervised word sense disambiguation with
+	graph-based algorithms for sequence data labeling).
+	
+	
+	Construit un graphe dans lequel 2 types de noeuds: noeuds terme, et
+	des étiquettes sens.
+	
+	Puis les arcs sont construit par calcul de dépendances entre étiquettes
+	de sens pour les différents mots du contexte, ce calcul est fait
+	par une fonction Dependency qui encode la relation entre les sens
+	d'un mot (c'est là qu'on utilise les 6 mesures de parenté sémantique
+	retenues pour la méthode).
+	
+	Puis les vertex sont pondérés par leur mesure de centralité en fonction
+	du poids des arcs (en test 4: indegree, closeness, betweenness, PageRank).
+	
+	
+	Pour la sélection des mesures de similarité en fonction des POS, utilise
+	un jeu de test sur WordNet::Similarity (Patwardhan, Banerjee, Pedersen).
+	
+	jiang-conrath est la meilleur pour les nouns, leacock-chodorow pour
+	les verbs.
+	
+	Pour les adj et adv c'est lesk qui est utilisée.
+	
+	
+	(d'après leurs tests, sur nouns et verbs, Lin et Resnik sont les plus
+	mauvaises).
+	
+	
+	La mesure de Lesk est basé sur l'algorithme proposé par Lesk [Lesk,
+	1986, Automatic sense disambiguation using machine readable dictionaries:
+	How to tell a pine cone from an ice cream cone], comme une solution
+	au problème de WSD, il est basé sur le chevauchement de définition
+	apporté par des dictionnaires. Ce qui est intéréssant dans l'algorithme
+	de Lesk est qu'il n'est pas limité au réseau sémantique mais peut
+	utilisé des dictionaires externes.
+	
+	
+	Un des problèmes important dans le fait d'utiliser différentes mesures
+	de similarité sémantique est que les différentes mesures donne des
+	résultats dans des échelles différentes, il y a donc une étape de
+	normalisation des poids des arcs du graphes.
+	
+	
+	L'algorithme de centralité donne un score associé aux noeuds sens,
+	c'est le sens qui à le score le plus élevé qui est sélectioné.
+	
+	
+	L'auteur dit qu'avec un algorithme d'apprentissage on pourrait améliorer
+	l'exactitude de la WSD de cette méthode en apprennant les dépendances
+	entre étiquettes sens (dans leur méthode par exemple, un seuil MaxDist
+	est utilisé pour ne pas considérer les chemins trop long entre les
+	noeuds sens).}
+}
+
+@ARTICLE{smeulders2000cbi,
+  author = {Smeulders, A.W.M. and Worring, M. and Santini, S. and Gupta, A. and
+	Jain, R.},
+  title = {Content-Based Image Retrieval at the End of the Early Years},
+  year = {2000},
+  owner = {nicolas},
+  publisher = {IEEE Computer Society},
+  timestamp = {2008.05.13}
+}
+
+@INPROCEEDINGS{SpyrouMylonasAvrithis08,
+  author = {E. Spyrou and Ph. Mylonas and Y. Avrithis},
+  title = {A Visual Context Ontology for Multimedia High-Level Concept Detection},
+  year = {2008},
+  publisher = {5th International Workshop in Modeling and Reasoning in Context (MRC),
+	Held at HCP 08, Delft, The Netherlands, 9-12 June 2008},
+  review = {Dans cet article l'auteur décrit en détails les types de relations
+	contextuel evidente dans le contenu du document multimédia.
+	
+	
+	Une représentation de la connaissance du context visuel pour différents
+	types "d'entité de contenu": images, régions, région type (résultant
+	d'un clustering, i.e. c'est la région centroïde), concepts hauts-niveaux.
+	
+	
+	Cette ontologie du contexte visuel contient des différentes relations
+	entre les entités de contenu telles que les images, les régions,
+	les types de régions et les concepts haut-niveaux. De cette manière
+	des auteurs veulent simplifier les approches de détection d'objets
+	vers l'interprétation sémantique.
+	
+	La notion de contexte visuel à déjà été très utilisé en détection
+	d'objets et classification automatique de scène.
+	
+	
+	L'ontologie est floue.
+	
+	La base d'apprentissage est annotée.
+	
+	Utilise un dictionnaire visuel (les régions types), ça construction
+	est simple: segmentation de toutes les images de la base d'apprentissage,
+	extraction des descripteurs, k-Means avec un nombre de clusters selectionné
+	expérimentalement. Les régions les plus des centroïdes sont selectionnées
+	pour former le "region thesaurus", i.e. les "region types".
+	
+	
+	Les auteurs disent qu'ils ont une représentation mid-level avec les
+	régions types de leur dictionnaire visuel.
+	
+	
+	Intra-relations entre concepts haut niveaux:
+	
+	(1) relation sémantique.
+	
+	(2) relation topologique.
+	
+	(3) relation de co-occurrence.},
+  url = {http://www.image.ece.ntua.gr/publications.php}
+}
+
+@MASTERSTHESIS{Stathopoulos07,
+  author = {Stathopoulos, V.},
+  title = {Semantic Relationships in Multi-modal Graphs for Automatic Image
+	Annotation \& Retrieval},
+  school = {Department of Computing Science, University of Glasgow},
+  year = {2007},
+  owner = {nicolas},
+  review = {le graphe ICG permet l'automatic captionning et le retrieval.
+	
+	il permet un nombre de feature qui peut être différent pour les image
+	node.
+	
+	dans le ICG, il n'y a que des global feature (tel que décrit par Urban,
+	p110 de sa thèse), donc chaque image est représenter par un même
+	nombre de feature vector (qui est le nombre de feature supportés
+	par le system).
+	
+	
+	
+	ARTICLE SCIENCE DIRECT param alpha du random walk.},
+  timestamp = {2008.09.30}
+}
+
+@ARTICLE{stricker1995sci,
+  author = {Stricker, M. and Orengo, M.},
+  title = {Similarity of color images},
+  journal = {Proc. SPIE Storage and Retrieval for Image and Video Databases},
+  year = {1995},
+  volume = {2420},
+  pages = {381--392},
+  owner = {nicolas},
+  publisher = {San Jose CA USA},
+  review = {utilise les moments de premier ordre des distribution tel que la moyenne
+	et la variance.},
+  timestamp = {2008.05.13}
+}
+
+@ARTICLE{tirilly:adi,
+  author = {Tirilly, P. and Claveau, V. and Gros, P.},
+  title = {Annotation d’images sur de grands corpus r{\'e}els de donn{\'e}es},
+  owner = {nicolas},
+  review = {Dans cet article l'auteur se penche sur les systèmes de recherche
+	d'information basé sur les annotations, et veut mettre en place une
+	expérience qui vérifie d'adéquation des outils de recherche d'information
+	textuel et visuel.
+	
+	
+	Ils veut tester l'approche en utilisant une base de documents bimodaux
+	image+texte, sur chaque image une légende est associée.
+	
+	(les documents sont issus du site http://www.tv5.org, des dépèches,
+	images de presse).
+	
+	Le test consiste à faire une recherche textuel (utilisant le système
+	OKAPI), ie. en utilisant les légendes d'une part.
+	
+	D'autre part, faire une recherche sur les descripteurs numérique (des
+	histogrammes à cumul additif pondérés par le Laplacien, voir boujemaa
+	2004).
+	
+	Puis, suit une comparaison entre les résultats donnés par la recherche
+	textuel et ceux par la recherche visuelle.
+	
+	
+	S'il existe une corrélation en la recherche textuelle et la recherche
+	visuelle, l'auteur pense que le système identifie un concept contenu
+	dans le texte et dans l'image de la même manière, et ainsi, utiliser
+	une technique de propagation de mot clefs est légitime.
+	
+	Inversement, s'il n'y a aucune corrélation entre les résultats, cela
+	que le système identifie des concepts différents.
+	
+	
+	L'auteur conclut par son expérience que les deux systèmes étudiés
+	montre une forte non corrélation entre la recherche par mot-clefs
+	et la recherche visuelle. Cela ne signifie pas que l'annotation d'image
+	est impossible à réaliser, mais qu'elle soulève des difficultés non
+	révélées par des travaux sur des bases trop spécifiques.
+	
+	D'autre part, pour l'auteur, cela montre le besoin d'un modèle qui
+	prenne en considération une utilisation conjointe et cohérente des
+	descripteurs textuel et visuel.},
+  timestamp = {2008.06.06}
+}
+
+@ARTICLE{tong06,
+  author = {Tong, H. and Faloutsos, C. and Pan, J.-P.},
+  title = {Fast Random Walk with Restart and Its Applications},
+  year = {2006},
+  pages = {613--622},
+  address = {Washington, DC, USA},
+  booktitle = {ICDM '06: Proceedings of the Sixth International Conference on Data
+	Mining},
+  doi = {http://dx.doi.org/10.1109/ICDM.2006.70},
+  isbn = {0-7695-2701-9},
+  publisher = {IEEE Computer Society}
+}
+
+@ARTICLE{Tousch07,
+  author = {Tousch, A-M.},
+  title = {Exploitation de connaissances pour l'analyse sémantique d'images
+	fixes et vidéos: application à la détection et reconnaissance d'objets},
+  year = {2007},
+  owner = {nicolas},
+  timestamp = {2009.01.12}
+}
+
+@INPROCEEDINGS{TouschMIR08,
+  author = {Tousch, A.M. and Herbin, S., and Audibert, J.Y.},
+  title = {Semantic Lattices for Multiple Annotation of Images},
+  booktitle = {ACM International Conference on Multimedia Information Retrieval
+	(MIR)},
+  year = {2008},
+  address = {Vancouver, Canada},
+  month = {Oct},
+  pdf = {http://www.enpc.fr/certis/publications/papers/MIR08.pdf},
+  review = {Annotation multilabel d'images par IP/SIFT et SVM. utilisation d'un
+	treillis sémantique pour les annotations, à chaque concept est associé
+	des indices visuels (un SVM-one-class), et des mesures sont utilisées
+	pour déterminer un degré de confiance dans l'annotation. Prend le
+	concept le plus préçis détecté et remonte vers la racine.}
+}
+
+@INPROCEEDINGS{tsatsaronis2007wsd,
+  author = {Tsatsaronis, G. and Vazirgiannis, M. and Androutsopoulos, I.},
+  title = {Word sense disambiguation with spreading activation networks generated
+	from thesauri},
+  booktitle = {proceedings of IJCAI 2007 , Hyderabad, India},
+  year = {2007},
+  review = {Synthèse:
+	
+	Algorithme non supervisé de WSD basé sur la génération SAN Spreading
+	Activation Network (tel que introduit par Quillian, 1969) à partir
+	de thésaurus.
+	
+	C'est une nouvelle approche dans l'état de l'art de considérer tous
+	les types de relations sémantiques dans un système de WSD basé sur
+	des réseaux de neurones, et de plus propose un schéma de pondération
+	des arcs dans le SAN.
+	
+	
+	Les expérimentations sur Senseval-2 montre que la méthode rivalise
+	avec l'état de l'art des méthodes non-supervisée.
+	
+	L'apport principal de la méthode, qui n'est pas ou très peu présent
+	dans l'état de l'art, est d'utiliser un thésaurus et les relations
+	inter-POS qu'il peut proposer: antonymy, domain terms, attributes
+	etc.
+	
+	Par exemple, [Patwardhan & al., 2003, Using measure of semantic relatedness
+	for word sense disambiguation] et [Barnerjee, Pedersen, 2003, Extended
+	Gloss overlap as measure of semantic relatedness] n'utilisent que
+	les relations d'hypernymie, et ignore les relations inter-POS comme
+	l'antonymie.
+	
+	=> Ce base sur [Veronis, Ide, 1990, Word Sense Disambiguation with
+	very large neural network extracted from readable machine dictionairies]
+	mais change la façon de construire le réseau de neurones.
+	
+	Deux expérimentations avec leur algorithme, avec et sans gloss, les
+	résultats montre que sans les gloss l'exactitude de la désambiguisation
+	est meilleure. Les auteurs justifient cela par le fait que de nombreux
+	mots dans les définitions ne sont pas pertinents pour le sens que
+	la définition exprime, et donc que l'usage du gloss introduit des
+	liens non pertinents dans le SAN.
+	
+	
+	Notes:
+	
+	Méthode de [Veronis, Ide, 1990, Word Sense Disambiguation with very
+	large neural network extracted from readable machine dictionairies]:
+	
+	=> Utilise le gloss des sens des mots à désambiguiser pour produire
+	le SAN.
+	
+	Dans la construction du réseau, il y a des poids positifs pour les
+	arcs d'activation (« activatory edges ») pour les couples (sens,
+	mot du gloss pour ce sens), et des poids négatifs pour les arcs d'inhibition
+	(« inhibitory edges ») pour les couples (sens 2 de t, sens 1 de t).
+	
+	La construction du réseau doit être très couteuse en mémoire et temps
+	(« the network continues to grow in the same manner, until nodes
+	that correspond to a large part or the whole of the thesaurus have
+	been added. Note that each edge is bi-directional, and each direction
+	can have a different weight »).
+	
+	
+	
+	La méthode de l'auteur:
+	
+	N'utilise pas le gloss, mais seulement des relations synset-synset.
+	
+	[Veronis et al.] n'utilise pas des relation sens-sens, et il y a les
+	mots des gloss en intermédiaire, de plus les auteurs veulent utiliser
+	toutes les relations disponible dans un thesaurus. 
+	
+	De plus dans [Veronis et al.], les poids d'activation/d'inhibition
+	sont +1/-1, tandis que les auteurs veulent utiliser un schéma de
+	pondération qui prend en compte l'importance de la relation sémantique.
+	
+	Contrairement à la méthode Veronis où l'expansion du réseau de neurone
+	utilise tout le thésaurus, la méthode d'expansion de l'article s'arrête
+	quand il existe un chemin entre chaque paire de mot initiaux (ceux
+	à désambiguiser), alors le réseau est considéré connecté.
+	
+	
+	Fait un parralèle de la pondération TF/IDF, chaque noeud du réseau
+	est un document, et les arcs sontles tokens 
+	
+	=> ETF Edge Type Frequency, pour promouvoir les arcs dont le type
+	est le plus fréquent parmis les arcs sortant.
+	
+	=> INF Inverse Node Frequency, pour promouvoir les arcs dont le type
+	est rare dans le SAN.
+	
+	
+	La sélection du sens d'un mot est le dernier sens avant que tous les
+	noeuds soit inactifs, qui a eu la plus grande activation.}
+}
+
+@INPROCEEDINGS{UrbanJoseMIR06,
+  author = {Urban, J. and Jose, J. M.},
+  title = {Adaptive image retrieval using a Graph model for semantic feature
+	integration},
+  booktitle = {MIR '06: Proceedings of the 8th ACM international workshop on Multimedia
+	information retrieval},
+  year = {2006},
+  pages = {117--126},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1178677.1178696},
+  isbn = {1-59593-495-2},
+  location = {Santa Barbara, California, USA},
+  review = {Présente un retrieval model et un learning framework dans l'optique
+	de faire de l'interactive information retrieval.
+	
+	Decris comment des relations sémantiques entre objets multimédia basées
+	sur l'interaction avec l'utilisateur peuvent être apprises puis intégrées
+	avec des features visuelles et textuelles dans un framework unifié.
+	
+	Propose la construction d'un graphe pour à la fois la similarité des
+	features et des relations sémantiques, ICG Image-context graph.
+	
+	De plus, propose un short-term et un long-term relevance feedback
+	learning in his model by adapting the link weights in the ICG.
+	
+	Le short-term learning est apporté par un adjusting link weight, et
+	le long-term learning est apporté par un adding peer-links, ie. les
+	liens entre documents.
+	
+	Dans son application feedback est apporté par le regroupement d'image
+	par l'utilisateur.
+	
+	Avec le temps (ie. expérience utilisateur), les relations sémantiques
+	sont renforcées lesquelles reflète l'usage en contexte des images.
+	
+	Ne pourrait-on pas critiquer le fait que cela doit consommer beaucoup
+	de resource de calcul, car dans le cas du MMG introduit par Faloutsos,
+	le graphe pouvait être calculer une fois pour toute, dans son ICG
+	Urban ajoute de nombreuses relations entre nodes et les valeur des
+	arcs peuvent de même très changeante.
+	
+	
+	A priori, son graphe ICG ressemble à un graphe MMG, mais pas de découpage
+	en région, mais plusieurs types de feature par image.
+	
+	Le ICG ressemble beaucoup au MMG avec des ajouts: des edges entre
+	noeuds image, leurs créations est basés sur le groupement des images
+	fait par l'utilisateur.
+	
+	
+	Elle introduit de nombreux type d'arc dans son graphe pour ne pas
+	avoir de dangling nodes, je ne comprend pas vraiment mais ainsi la
+	transformation pour créer une matrice stochastique irréductible représentant
+	le ICG est plus aisément écrite ???
+	
+	
+	La thèse de Urban est que l'information contextuelle est apporté par
+	l'utilisateur tandis que l'approche annotation-based apporte de l'information
+	sur des concepts très général (indoor/outdoor).
+	
+	Dans son système, une requête est formée d'images exemple et/ou de
+	keywords.
+	
+	
+	Urban définis le steady state probability vector comme étant "the
+	long-run proportion of time the chain M spends in each state", elle
+	fait un parrallèle avec le PageRank où les scores pagerank serait
+	équivalent à la stationnary distribution d'une chaine de markov associée
+	avec le graphe du web.
+	
+	Le short-term learning corresponderait à une adaptation pendant une
+	session de recherche (modification des poids des arcs), et le long-term
+	learning serait une modification de la structure du graphe (ajout
+	de lien entre les noeuds documents, ie. regroupement car sémantique
+	commune jugée par l'utilisateur).
+	
+	
+	Etant donné qu'elle ajoute une relation de cooccurence entre document
+	(regroupé par l'utilisateur), elle propose utiliser les termes associés
+	aux documents pour calculer un tf/idf.
+	
+	
+	Peer feature and textual annotation (ie. keyword) sont stockés dans
+	un index inversé.
+	
+	
+	citation de Smeulders: "semantic features aim at encoding interpretations
+	of the image which may be relevant to the application" => deux points
+	cléfs: interprétation et context-dependant.
+	
+	Pour Urban le rôle de l'approche sémantique est de replace l'espace
+	des LLF Low Level Features avec un high-level semantic space, plus
+	près des concepts abstrait que l'utilisateur a à l'esprist quand
+	il regarde une image.
+	
+	La plupart des tentatives vers des semantics features peuvent être
+	catégoriser en deux classes: annotation-based et user-based, pourrait-on
+	voir cela comme un parrallèle des approches top-down et bottom-up?
+	sachant que les approches bottom-up sont user-assisted?
+	
+	
+	D'après urban:
+	
+	annotation-based: method relies on an annotated corpus from which
+	semantic concepts can be learnt and propagated to other images.
+	
+	user-based: learn semantic concepts from the user directly.
+	
+	
+	paramètres du pagerank: si alpha est petit le randomwalk met l'accent
+	sur la structure du graphe, s'il est grand il met l'accent sur les
+	tendances à la téléportation et aussi vers une moindre convergence
+	du calcul itératif du pagerank. Dans l'article original de Page&Brin,
+	alpha=0.15 à été proposé.
+	
+	L'article sur les GCap de Faloutsos, alpha=0.65 à été trouvé plus
+	convenable, lequel peux être expliquer comme étant le diametre du
+	graph.}
+}
+
+@ARTICLE{urban2004ecm,
+  author = {Urban, J. and Jose, J. M.},
+  title = {Evidence combination for multi-point query learning in content-based
+	image retrieval},
+  journal = {Multimedia Software Engineering, 2004. Proceedings. IEEE Sixth International
+	Symposium on},
+  year = {2004},
+  pages = {583--586},
+  owner = {nicolas},
+  review = {Présente un retrieval model et un learning framework dans l'optique
+	de faire de l'interactive information retrieval.
+	
+	Decris comment des relations sémantiques entre objets multimédia basées
+	sur l'interaction avec l'utilisateur peuvent être apprises puis intégrées
+	avec des features visuelles et textuelles dans un framework unifié.
+	
+	Propose la construction d'un graphe pour à la fois la similarité des
+	features et des relations sémantiques, ICG Image-context graph.
+	
+	De plus, propose un short-term et un long-term relevance feedback
+	learning in his model by adapting the link weights in the ICG.
+	
+	Le short-term learning est apporté par un adjusting link weight, et
+	le long-term learning est apporté par un adding peer-links, ie. les
+	liens entre documents.
+	
+	Dans son application feedback est apporté par le regroupement d'image
+	par l'utilisateur.
+	
+	Avec le temps (ie. expérience utilisateur), les relations sémantiques
+	sont renforcées lesquelles reflète l'usage en contexte des images.
+	
+	Ne pourrait-on pas critiquer le fait que cela doit consommer beaucoup
+	de resource de calcul, car dans le cas du MMG introduit par Faloutsos,
+	le graphe pouvait être calculer une fois pour toute, dans son ICG
+	Urban ajoute de nombreuses relations entre nodes et les valeur des
+	arcs peuvent de même très changeante.
+	
+	
+	A priori, son graphe ICG ressemble à un graphe MMG, mais pas de découpage
+	en région, mais plusieurs types de feature par image.
+	
+	Le ICG ressemble beaucoup au MMG avec des ajouts: des edges entre
+	noeuds image, leurs créations est basés sur le groupement des images
+	fait par l'utilisateur.
+	
+	
+	Elle introduit de nombreux type d'arc dans son graphe pour ne pas
+	avoir de dangling nodes, je ne comprend pas vraiment mais ainsi la
+	transformation pour créer une matrice stochastique irréductible représentant
+	le ICG est plus aisément écrite ???
+	
+	
+	La thèse de Urban est que l'information contextuelle est apporté par
+	l'utilisateur tandis que l'approche annotation-based apporte de l'information
+	sur des concepts très général (indoor/outdoor).
+	
+	Dans son système, une requête est formée d'images exemple et/ou de
+	keywords.
+	
+	
+	Urban définis le steady state probability vector comme étant "the
+	long-run proportion of time the chain M spends in each state", elle
+	fait un parrallèle avec le PageRank où les scores pagerank serait
+	équivalent à la stationnary distribution d'une chaine de markov associée
+	avec le graphe du web.
+	
+	Le short-term learning corresponderait à une adaptation pendant une
+	session de recherche (modification des poids des arcs), et le long-term
+	learning serait une modification de la structure du graphe (ajout
+	de lien entre les noeuds documents, ie. regroupement car sémantique
+	commune jugée par l'utilisateur).
+	
+	
+	Etant donné qu'elle ajoute une relation de cooccurence entre document
+	(regroupé par l'utilisateur), elle propose utiliser les termes associés
+	aux documents pour calculer un tf/idf.
+	
+	
+	Peer feature and textual annotation (ie. keyword) sont stockés dans
+	un index inversé.
+	
+	
+	citation de Smeulders: "semantic features aim at encoding interpretations
+	of the image which may be relevant to the application" => deux points
+	cléfs: interprétation et context-dependant.
+	
+	Pour Urban le rôle de l'approche sémantique est de replace l'espace
+	des LLF Low Level Features avec un high-level semantic space, plus
+	près des concepts abstrait que l'utilisateur a à l'esprist quand
+	il regarde une image.
+	
+	La plupart des tentatives vers des semantics features peuvent être
+	catégoriser en deux classes: annotation-based et user-based, pourrait-on
+	voir cela comme un parrallèle des approches top-down et bottom-up?
+	sachant que les approches bottom-up sont user-assisted?
+	
+	
+	D'après urban:
+	
+	annotation-based: method relies on an annotated corpus from which
+	semantic concepts can be learnt and propagated to other images.
+	
+	user-based: learn semantic concepts from the user directly.
+	
+	
+	paramètres du pagerank: si alpha est petit le randomwalk met l'accent
+	sur la structure du graphe, s'il est grand il met l'accent sur les
+	tendances à la téléportation et aussi vers une moindre convergence
+	du calcul itératif du pagerank. Dans l'article original de Page&Brin,
+	alpha=0.15 à été proposé.
+	
+	L'article sur les GCap de Faloutsos, alpha=0.65 à été trouvé plus
+	convenable, lequel peux être expliquer comme étant le diametre du
+	graph.},
+  timestamp = {2008.08.25}
+}
+
+@ARTICLE{WangJingCVPR07,
+  author = {Changhu Wang and Feng Jing and Lei Zhang and Hong-Jiang Zhang},
+  title = {Content-Based Image Annotation Refinement},
+  journal = {Computer Vision and Pattern Recognition, 2007. CVPR '07. IEEE Conference
+	on},
+  year = {2007},
+  pages = {1-8},
+  month = {June},
+  doi = {10.1109/CVPR.2007.383221},
+  keywords = {Markov processes, content-based retrieval, image retrieval, information
+	analysis, visual databasesMarkov chain, Markov process, content-based
+	image annotation refinement, image management, image retrieval, query
+	image processing},
+  timestamp = {2009.03.09}
+}
+
+@ARTICLE{wang2006iar,
+  author = {Wang, C. and Jing, F. and Zhang, L. and Zhang, H.J.},
+  title = {Image annotation refinement using random walk with restarts},
+  journal = {Proceedings of the 14th annual ACM international conference on Multimedia},
+  year = {2006},
+  pages = {647--650},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  timestamp = {2008.05.14}
+}
+
+@INPROCEEDINGS{WangJingMultimedia06,
+  author = {Wang,, Changhu and Jing,, Feng and Zhang,, Lei and Zhang,, Hong-Jiang},
+  title = {Image annotation refinement using random walk with restarts},
+  booktitle = {MULTIMEDIA '06: Proceedings of the 14th annual ACM international
+	conference on Multimedia},
+  year = {2006},
+  pages = {647--650},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  doi = {http://doi.acm.org/10.1145/1180639.1180774},
+  isbn = {1-59593-447-2},
+  location = {Santa Barbara, CA, USA},
+  timestamp = {2009.03.09}
+}
+
+@ARTICLE{wang2006doh,
+  author = {Wang, H. and Liu, S. and Chia, L.T.},
+  title = {Does ontology help in image retrieval?: a comparison between keyword,
+	text ontology and multi-modality ontology approaches},
+  journal = {Proceedings of the 14th annual ACM international conference on Multimedia},
+  year = {2006},
+  pages = {109--112},
+  abstract = {Ontologies are effective for representing domain concepts and relations
+	in a form of semantic network. Many efforts have been made to import
+	ontology into information matchmaking and retrieval. This trend is
+	further accelerated by the convergence of various high-level concepts
+	and low-level features supported by ontologies. In this paper we
+	propose a comparison between traditional keyword based image retrieval
+	and the promising ontology based image retrieval. To be complete,
+	we construct the ontologies not only on text annotation, but also
+	on a combination of text annotation and image feature. The experiments
+	are conducted on a medium-sized data set including about 4000 images.
+	The result proved the efficacy of utilizing both text and image features
+	in a multi modality ontology to improve the image retrieval.},
+  owner = {nicolas},
+  publisher = {ACM Press New York, NY, USA},
+  review = {Université de Nangyang, Singapore
+	
+	D'après les auteurs, les techniques de CBIR+informations textuelles
+	sont soit très limitées, soit non efficace.
+	
+	
+	Résumé des 3 approches:
+	
+	1. CBIR extracting image features like dominant color, color histogram,
+	texture, object shape etc.
+	
+	2. text-based approches
+	
+	3. ontologies-based approaches
+	
+	
+	Le papier propose une ontology multimodale en 3 parties:
+	
+	1. conceptual (~domaine)
+	
+	2. text-IR
+	
+	3. visual-CBIR
+	
+	=> Ils construisent une ontologie (mais pas de WordNet, ni de TopOntology)
+	sur le domaine "canine", en dérivant la définition formelle et la
+	connaissance du domaine de "BBC Science & Nature Animal Category").
+	
+	L'ontologie construite en 3 partie:
+	
+	1. Animal domain ontology
+	
+	2. textual description ontology => used to encapsulate high-level
+	narrative animal description
+	
+	3. visual description ontology
+	
+	
+	Cet article est intéressant car il dresse entre différentes approches:
+	keyword vs text ontology vs multimodality ontology.},
+  timestamp = {2008.04.30}
+}
+
+@ARTICLE{598342,
+  author = {Webb,, Geoffrey I. and Pazzani,, Michael J. and Billsus,, Daniel},
+  title = {Machine Learning for User Modeling},
+  journal = {User Modeling and User-Adapted Interaction},
+  year = {2001},
+  volume = {11},
+  pages = {19--29},
+  number = {1-2},
+  address = {Hingham, MA, USA},
+  issn = {0924-1868},
+  publisher = {Kluwer Academic Publishers}
+}
+
+@ARTICLE{yoshitaka1999scb,
+  author = {Yoshitaka, A. and Ichikawa, T.},
+  title = {A survey on content-based retrieval for multimedia databases},
+  journal = {Knowledge and Data Engineering, IEEE Transactions on},
+  year = {1999},
+  volume = {11},
+  pages = {81--93},
+  number = {1},
+  owner = {nicolas},
+  timestamp = {2008.05.16}
+}
+
+@ARTICLE{Zhu08,
+  author = {Zhu, S. and Liu, Y.},
+  title = {Image annotation refinement using semantic similarity correlation},
+  journal = {ICPR'08},
+  year = {2008},
+  owner = {nicolas},
+  review = {C'est un article de poster.
+	
+	Raffinement d'annotations par co-occurrences + FastRWR sur une matrice:
+	
+	M(a_i, a_j) = N(a_i, a_j) / min(N(a_i), N(a_j))
+	
+	
+	N(a_i, a_j) est le nombre de co-occurrences des keywords a_i et a_j.
+	
+	N(a_i) est l'utilisation du keyword dans la base d'apprentissage.
+	
+	
+	Les annotations candidates sont obtenues par un modèle à propagation
+	de keywords, c'est le modèle décrit par Wang, dans Wang & al., image
+	Annotation in a Progressive Way. Il faut choisir un nombre de keyword
+	candidats.
+	
+	
+	Sur leur test, dans l'illustration du papier, le MBRM relève 5 keywords
+	candidats, et la phase IRWR-MBRM relève aussi 5 keywords (il n'y
+	a pas de pruning d'annotation non pertinente???). (pourtant le papier
+	cite Latifur Khan...).},
+  timestamp = {2009.02.03}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: groupsversion:3;}
+
+@comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:CBIR-reviews\;0\;1291455\;datta2005cbi\;forsyth2002cvm
+\;jing2004kpi\;lew2006cbm\;rui1999irc\;smeulders2000cbi\;tirilly:adi\;
+urban2004ecm\;yoshitaka1999scb\;;
+1 ExplicitGroup:CBIR-systems\;0\;ardizzoni1999wrb\;bartolini:iai\;duyg
+ulu2002orm\;jeon2003aia\;jing2008ppi\;kang2004rtm\;li2006rtc\;ma1999nt
+n\;pan2004amc\;shabou2007\;;
+1 ExplicitGroup:features\;0\;05-67\;deselaers:IR08\;fire:clef06:lncs\;
+haralick1973tfi\;huang1997iiu\;matas95color\;mojsilovic2000mar\;pass19
+96hrc\;puzicha1999eed\;stricker1995sci\;;
+1 ExplicitGroup:ontology in Image Retrieval\;0\;wang2006doh\;;
+1 ExplicitGroup:annotations improving techniques\;0\;Khan2006\;jin2005
+iac\;liu2006agm\;millet2008\;mrfi\;russell2008lda\;wang2006iar\;;
+1 ExplicitGroup:annotation-based Image Retrieval\;0\;inoue2004nab\;;
+1 ExplicitGroup:semantic similarity\;0\;milne7csr\;;
+1 ExplicitGroup:image segmentation\;0\;felzenszwalb2004egb\;;
+1 ExplicitGroup:WSD\;0\;banerjee02cicling\;tsatsaronis2007wsd\;;
+}

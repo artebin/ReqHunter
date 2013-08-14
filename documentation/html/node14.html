@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ReqHunter</TITLE>
+<META NAME="description" CONTENT="ReqHunter">
+<META NAME="keywords" CONTENT="document">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="document.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="document.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html178"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html176"
+  HREF="document.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html170"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html179"
+  HREF="node15.html">Writing a XML schema</A>
+<B> Up:</B> <A NAME="tex2html177"
+  HREF="document.html">ReqHunter - a Requirements</A>
+<B> Previous:</B> <A NAME="tex2html171"
+  HREF="node13.html">Conclusion</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+ReqHunter</A>
+</H1>
+
+<P>
+ReqHunter is not user friendly. To use this software you need to implement the ReqHunter API. This API is very simple and straighforward, but as this implementation is required we can say that users of ReqHunter are mostly Java developers or people that know a bit of Java programming. It is a constraint in the usage of the software but hence you can define the structure of your requirements, the format of the references (associated to each requirement) and a lot of things.
+<BR>
+<BR>
+The real interest of Reqhunter is to provide a environment for working on the user requirements easily.
+
+<BR>
+Examples of requirements are given Table <A HREF="#table:rmtoo_req">1</A> which contains a requirement from rmtoo and Table <A HREF="#table:rare_req">2</A> which contains a requirement from the RARE project.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="table:rmtoo_req"></A><A NAME="54"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+A requirement from rmtoo</CAPTION>
+<TR><TD><IMG
+ WIDTH="561" HEIGHT="247" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{figure}\centering
+\begin{tabular}{ \vert p{\linewidth} \vert }
+\hline
+...
+...sHotSpot AtcsReqTopicCohe AtcsTopicCohe \\
+\hline
+\end{tabular}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="table:rare_req"></A><A NAME="68"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+A requirement from the RARE project</CAPTION>
+<TR><TD><IMG
+ WIDTH="561" HEIGHT="141" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{figure}\centering
+\begin{tabular}{ \vert p{\linewidth} \vert }
+\hline
+...
+...on:} T \\
+\textbf{Source:} SoW I8.7.* \\
+\hline
+\end{tabular}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+These two type of requirements are very different. First their structures are different, the number of fields and their names. The semantics attached to each field is different. And constraints underlying the values of some fields (as the field "Effort estimation" in Table <A HREF="#table:rmtoo_req">1</A> or the field "Priority" in Table <A HREF="#table:rare_req">2</A>) may exists.
+
+<P>
+ReqHunter is composed of three processes:
+
+<OL>
+<LI>context extraction,
+</LI>
+<LI>requirement management,
+</LI>
+<LI>applicable document generation.
+</LI>
+</OL>
+
+<P>
+Figure <A HREF="#fig:reqhunter_api">4</A> represents the UML class diagram the three classes to implement.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:reqhunter"></A><A NAME="78"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+ReqHunter</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>	<IMG
+  WIDTH="801" HEIGHT="493" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Diagram1.png"
+ ALT="Image Diagram1"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+To use ReqHunter you need at least two things: (1) a XML schema that represents your requirements, and (2) an implementation of the three classes in Figure <A HREF="#fig:reqhunter">3</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:reqhunter_api"></A><A NAME="84"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+UML class diagram of the ReqHunter API</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>	<IMG
+  WIDTH="876" HEIGHT="481" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ReqHunter_API-1.jpg"
+ ALT="Image ReqHunter_API-1"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html180"
+  HREF="node15.html">Writing a XML schema for your type of requirement</A>
+<LI><A NAME="tex2html181"
+  HREF="node16.html">Implementation of the API</A>
+<LI><A NAME="tex2html182"
+  HREF="node17.html">Content extraction</A>
+<LI><A NAME="tex2html183"
+  HREF="node18.html">Requirements database</A>
+<LI><A NAME="tex2html184"
+  HREF="node19.html">Applicable documents production</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html178"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html176"
+  HREF="document.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html170"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html179"
+  HREF="node15.html">Writing a XML schema</A>
+<B> Up:</B> <A NAME="tex2html177"
+  HREF="document.html">ReqHunter - a Requirements</A>
+<B> Previous:</B> <A NAME="tex2html171"
+  HREF="node13.html">Conclusion</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Nicolas James
+2011-07-19
+</ADDRESS>
+</BODY>
+</HTML>

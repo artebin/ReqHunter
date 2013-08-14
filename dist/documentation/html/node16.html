@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Implementation of the API</TITLE>
+<META NAME="description" CONTENT="Implementation of the API">
+<META NAME="keywords" CONTENT="document">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="document.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html203"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html201"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html195"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html204"
+  HREF="node17.html">Content extraction</A>
+<B> Up:</B> <A NAME="tex2html202"
+  HREF="node14.html">ReqHunter</A>
+<B> Previous:</B> <A NAME="tex2html196"
+  HREF="node15.html">Writing a XML schema</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00032000000000000000">
+Implementation of the API</A>
+</H2>
+
+<P>
+The ReqHunter API is very short and simple:
+
+<UL>
+<LI>net.trevize.reqhunter.Requirement: this class is an extension of the RequirementT class that JAXB produces from your XML Schema.
+</LI>
+<LI>net.trevize.reqhunter.RequirementFactory: this class is used by JAXB, you have to specify to JAXB that your implementation of this class is the factory of your type of requirement.
+</LI>
+</UL>
+
+<P>
+Using these two classes, ReqHunter is able to create, load and store requirements.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Nicolas James
+2011-07-19
+</ADDRESS>
+</BODY>
+</HTML>
